@@ -1,0 +1,40 @@
+---
+title: "day_1_oct_29_2016_occupancy_eda"
+output: pdf_document
+---
+
+I am going to explore this dataset: http://archive.ics.uci.edu/ml/datasets/Occupancy+Detection+#
+
+The occupancy dataset has various environmental readings from an office, as well as whether the office is occupied. The occupancy reading is derived from photos taken by the office camera.
+
+```{r}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+head(df)
+summary(df)
+```
+
+We see that for 36.5% of the samples, the office was occupied during 2015-02-02 to 2015-02-04.
+
+## Lights
+
+```{r}
+hist(df$Light)
+```
+
+Light is in Lux. The data looks very bimodal. Obviously when the lights are off, there are no one in the office, and vise versa. 
+
+```{r}
+nrow(df[df$Light != 0,])
+nrow(df[df$Light == 0,])
+cor(df$Light, df$Occupancy)
+```
+
+Wow, r=0.93 is a lot... So When it's dark, there is usually no one in the office?
+
+```{r}
+summary(df[df$Light == 0,]$Occupancy)
+summary(df[df$Light != 0,]$Occupancy)
+```
+
+This says that when lights are off, there is for sure no one in the office. But when the lights are on, 7% of the time, there are no one in the office. Soo.... we have some energy wasters in the office....
