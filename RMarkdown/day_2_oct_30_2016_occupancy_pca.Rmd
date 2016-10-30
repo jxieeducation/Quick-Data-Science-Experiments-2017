@@ -1,0 +1,64 @@
+---
+title: "day_2_oct_30_2016_occupancy_pca"
+output: pdf_document
+---
+
+I still need to read this for a quick review of PCA:
+https://tgmstat.wordpress.com/2013/11/21/introduction-to-principal-component-analysis-pca/
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+```
+
+Today I will try to interpret the PCA components and see if it yields any insight.
+
+```{r}
+X <- df[,c(-1,-7)] # remove the date and occupancy variables
+plot(X)
+```
+
+After removing all non-numerical predictors, I try to visualize the distributions of the variables. 
+
+Plots with light on one of the axis is usually very bimodal. However, this is expected as we saw yesterday that light is almost like a binary variable.
+
+```{r}
+X$has_light <- (X$Light > 0) * 1
+X <- X[,-3]
+plot(X
+)
+```
+
+Going to remove the light variable, and change the feature to simply if there was light or not. We will probably lose some information, but at the moment, the information loss should be fairly trivial.
+
+The data seems fairly standardized. So I am going to apply PCA now. I will probably try box and cox to remove any skew later.
+
+```{r}
+occ.pca <- prcomp(X, center=TRUE, scale=TRUE)
+print(occ.pca)
+plot(occ.pca, type = "l")
+```
+
+From the scree plot, we see that first 2, maybe 3 PCs are super important while 4 to 6 can be ignored.
+
+```{r}
+summary(occ.pca)
+```
+
+PC1 and PC2 describe about 95% of the variance. 
+
+```{r, echo=FALSE}
+library(ggbiplot)
+g <- ggbiplot(occ.pca, obs.scale = 1, var.scale = 1, 
+              groups = df$Occupancy, ellipse = TRUE, 
+              circle = TRUE)
+print(g)
+```
+
+The black and blue circles are the 68% (plus minus 1SD) contours for each class. 
+
+The projection onto the first 2 PCs make the data almost linearly separable. Just by eye-balling it, I think I can get a 95%+ accuracy just via the first 2 PCs. 
+
+### Looking at the first 2 principal components:
+* PC1 seems like a straight up negative scaling of everything
+* PC2's temperature, humidity, CO2 and humidity ratio basis are different

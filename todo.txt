@@ -1,0 +1,9 @@
+
+occupancy:
+- anova?
+- PCA (sparse)
+- box and cox transformation?
+- ridge, lasso, elasticnet
+
+
+
