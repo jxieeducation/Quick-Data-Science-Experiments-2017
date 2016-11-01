@@ -1,0 +1,42 @@
+---
+title: "day_3_nov_1_2016_occupancy_ttest"
+output: pdf_document
+---
+
+Today I want to run some t-tests for 2 populations (occupied vs not occupied).
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+```
+
+First I will create separate variables for when the office is occupied vs not.
+
+```{r}
+occupied <- df[df$Occupancy == 1,]
+not_occupied <- df[df$Occupancy == 0,]
+summary(occupied)
+summary(not_occupied)
+```
+
+### Humidity 
+
+We hypothesize that the humidity is different for occupied vs not occupied. Since I have no idea how humidity works, I will just run a 2-tailed test. 
+
+```{r}
+hist(occupied$Humidity)
+hist(not_occupied$Humidity)
+t.test(occupied$Humidity, not_occupied$Humidity)
+```
+
+Just eye-balling the p-value, we can tell that it's a very small value. This means that we can confidently reject the null that the humidity is equal amongst occupied vs not occupied.
+
+```{r}
+library(lsr)
+cohensD(occupied$Humidity, not_occupied$Humidity)
+```
+
+Wow I didn't know that cohen's D can go above 1. I usually just see values greater than 0.8. 
+
+It's important to remember that cohen's D doesn't actually have any statistical interpretation, just that the difference in the mean is a lot greater than the pooled standard deviation between the two samples.
+
