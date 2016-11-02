@@ -1,0 +1,34 @@
+---
+title: "day_4_nov_2_2016_occupancy_anderson_darling"
+output: pdf_document
+---
+
+Going to look at the normality of some variables.
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+```
+
+```{r}
+hist(df$CO2, breaks=20)
+```
+
+We see that the CO2 data has a positive skew. Eye balling it says that it's not normal. Let's see what Anderson-Darling says.
+
+```{r}
+library(ADGofTest)
+# sanity check
+ad.test(rnorm(100, 100, 10), pnorm, 100, 10)
+ad.test(df$CO2, pnorm, mean(df$CO2), sd(df$CO2))
+```
+
+So our hypothesis was correct. The null that CO2 is normally distributed is false.
+
+```{r}
+co2_occupied <- df[df$Occupancy == 1,]$CO2
+hist(co2_occupied, breaks=25)
+ad.test(co2_occupied, pnorm, mean(co2_occupied), sd(co2_occupied))
+```
+
+We see that if we take just the occupied co2 values, the data is more normally distributed.
