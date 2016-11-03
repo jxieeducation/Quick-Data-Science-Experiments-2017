@@ -1,0 +1,53 @@
+---
+title: "day_5_nov_3_2016_occupancy_boxcox"
+output: pdf_document
+---
+
+Going to try to do ANOVA tomorrow. Before then, I want to transform the variables to normal via box-cox and verify with QQplot.
+
+Here are some good slides on box-cox: https://www.ime.usp.br/~abe/lista/pdfm9cJKUmFZp.pdf
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+occupied <- df[df$Occupancy == 1,]
+not_occupied <- df[df$Occupancy == 0,]
+```
+
+Let's visualize the CO2 for not occupied.
+
+```{r}
+hist(not_occupied$CO2)
+qqnorm(jitter(not_occupied$CO2)); qqline(not_occupied$CO2)
+summary(not_occupied$CO2)
+```
+
+We see some really heavy positive skew. From the qqplot, we see that the line is not close to the 45 degrees line that we want to see, for a normal distribution. 
+
+Since the data is strictly positive, lambda_2 in box-cox should prob be negative or 0. 
+
+```{r}
+library(MASS)
+(m <- lm(CO2 ~ Occupancy, data=not_occupied))
+bc <- boxcox(m)
+```
+
+Here Occupancy is 0 all the time, so the lm doesn't do anything...
+
+Boxcox tries to get $$ y - X\beta ~ N(0, \sigma^2) $$ Since $\beta$ is 0, it simply tries to transform the y. 
+
+```{r}
+(trans <- bc$x[which.max(bc$y)])
+hist(not_occupied$CO2^trans)
+hist(not_occupied$CO2^-5)
+```
+
+There doesn't seem to be a good transformation... The boxcox -2 makes it left skewed, and -5 makes it almost uniform....
+
+```{r}
+(mnew <- lm(CO2^trans ~ Occupancy, data=not_occupied))
+op <- par(pty = "s", mfrow = c(1, 2))
+qqnorm(m$residuals); qqline(m$residuals)
+qqnorm(mnew$residuals); qqline(mnew$residuals)
+par(op)
+```
