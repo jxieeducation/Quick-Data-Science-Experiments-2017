@@ -1,0 +1,27 @@
+---
+title: "day_6_nov_4_2016_occupancy_anova"
+output: pdf_document
+---
+
+Doing some simple simple ANOVA today.
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+```
+
+```
+(fit <- aov(CO2 ~ Occupancy, data=df))
+summary(fit)
+```
+
+Well we see a really high F value, so prob can safely reject the null that CO2 is the same for both occupied and not occupied. 
+
+We also see that there a lot of residuals. 
+
+```{r}
+library(gplots)
+occ <- factor(df$Occupancy)
+plotmeans(df$CO2~occ,xlab="Office Occupancy",
+  ylab="CO2 Measurement", main="CO2 vs Occupancy")
+```
