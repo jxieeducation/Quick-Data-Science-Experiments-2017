@@ -1,0 +1,27 @@
+---
+title: "day_7_nov_7_2016_occupancy_tucky_anova"
+output: pdf_document
+---
+
+Going to try Anova with Tukey's method, which explains which groups are dissimilar. 
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+```
+
+```{r}
+df$LightIsZero <- (df$Light == 0) * 1
+df$Occupancy <- factor(df$Occupancy)
+df$LightIsZero <- factor(df$LightIsZero)
+myfit <- aov(df$CO2 ~ df$Occupancy + df$LightIsZero)
+(tukey <- TukeyHSD(x=myfit, 'df$Occupancy', conf.level=0.95))
+```
+
+```{r}
+plot(myfit)
+```
+
+The anova doesn't work well haha, because there are only 3 different combo of factors. When Light is never 0, when occupied. 
+
+It's also cool to see Cook's D, that alongside the qq plot pretty much gives context on what the outliars are. 
