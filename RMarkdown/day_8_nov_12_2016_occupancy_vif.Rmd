@@ -1,0 +1,68 @@
+---
+title: "day_8_nov_12_2016_occupancy_vif"
+output: pdf_document
+---
+
+Going to look at the multi-colinearity problem for the dataset. As we discovered previously, the correlation between variables are high. 
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+df <- df[,c("Temperature", "Humidity", "Light", "CO2", "HumidityRatio", "Occupancy")]
+summary(df)
+```
+
+```{r}
+library(MASS)
+df <- as.data.frame(scale(df))
+fit <- lm(Occupancy~., data=df)
+summary(fit)
+```
+
+So first things first, we notice that the adjusted R2 is 0.905 right now with all the variables. 
+
+Then we can also look at the p-values for the coefficients. The raw p-value is against the H0 that the coefficients can be equal to 0. If we take a naive alpha of 0.05, then we can reject all the nulls except for CO2, CO2 seems to be not as important to the model.
+
+```{r}
+fit$coefficients
+```
+
+Looking at the coefficients, we see that CO2, Temperature and Humidity have negative coefficients. 
+
+This is pretty weird because you'd think that more CO2 or higher temperature in office means there are people.
+
+```{r}
+t.test(df[df$Occupancy<0,]$CO2, df[df$Occupancy>0,]$CO2)
+```
+
+This simple t-test has a large negative value, meaning that the first sample (no one in office)'s CO2 level is lower than the second sample. 
+
+This suggests that there are colinearity in our dataset, because CO2 should have a positive coefficient, but instead have a negative one.
+
+```{r}
+cor(df)
+```
+
+The pearson r suggests that we have some highly correlated variables. 
+
+```{r}
+library(car)
+vif(fit)
+```
+
+Wow, uhhh that's some really high values for VIF. Typically greater than 4 means need investigation, greather than 10 means something is seriously not right.
+
+Let's remove some variables, which should be a surrogate for HumidityRatio. 
+
+```{r}
+df2 <- df[,c("Temperature", "Humidity", "Light", "CO2", "Occupancy")]
+cor(df2)
+df3 <- df[,c("Temperature", "Light", "CO2", "Occupancy")]
+cor(df3)
+df4 <- df[,c("Light", "CO2", "Occupancy")]
+cor(df4)
+
+summary(lm(Occupancy~., data=df4))
+```
+
+We can see that after getting rid of more than half our covariates, the adjusted R2 is still pretty high, only .03 lower than before.
