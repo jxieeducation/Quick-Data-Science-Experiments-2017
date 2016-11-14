@@ -1,0 +1,27 @@
+---
+title: "day_9_nov_14_2016_occupancy_chisquare"
+output: pdf_document
+---
+
+Trying to try out goodness of fit and contigency table independence tests today.
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+(prior <- mean(df$Occupancy == 0))
+```
+
+We know that 63.5% of the data points have occupancy as 0. 
+
+```{r}
+newprior <- 0.641
+empty <- sum(df$Occupancy == 0)
+notempty <- sum(df$Occupancy != 0)
+(t <- chisq.test(c(empty, notempty), p=c(newprior, 1 - newprior)))
+t$expected
+```
+
+I don't have time to do the contigency table atm... But the idea is to have a two-way table, each cell has its own expected value, and we just test if $X^2$ is above $p_\alpha$
+
+
+
