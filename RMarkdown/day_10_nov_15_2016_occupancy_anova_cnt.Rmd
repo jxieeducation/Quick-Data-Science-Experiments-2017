@@ -1,0 +1,28 @@
+---
+title: "day_10_nov_15_2016_occupancy_anova_cnt"
+output: pdf_document
+---
+
+Redoing ANOVA from a few days ago
+
+```{r, echo=FALSE}
+df <- read.csv("~/Downloads/databank/occupancy_data/datatest.txt")
+df$date <- as.POSIXct(df$date)
+```
+
+```{r}
+plot(df$CO2, df$Temperature, pch=16, cex=0.3)
+(fit <- aov(CO2 ~ Temperature, data=df))
+summary(fit)
+```
+
+The anova of CO2 vs Temperature shows a definite linear relationship, as confirmed by the ANOVA p-value.
+
+```{r}
+df$rand <- rnorm(length(df$Temperature))
+(fit <- aov(CO2 ~ rand, data=df))
+summary(fit)
+```
+
+This shows that a generated variable (as expected) does not have any relationship with CO2.
+
