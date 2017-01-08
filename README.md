@@ -2,6 +2,8 @@
 
 
 ### to do:
+* w271 folder
+* asymptotic normality of MLE (var 2nd deriv)
 * bayesian model averaging
 * Large scale L1 feature selection with Vowpal Wabbit
 * Robust regression
