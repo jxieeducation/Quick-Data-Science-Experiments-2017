@@ -3,7 +3,12 @@
 
 ### to do:
 * w271 folder
-* gaussian processes optimization
+* try qr fact again with feature standardization
+* partial least sqaure *show special case where predictors are orthogonal
+* principal component regression (http://stats.stackexchange.com/questions/82050/principal-component-analysis-and-regression-in-python)
+* conjugate gradient
+* svd to pca
+* gaussian processes test
 * asymptotic normality of MLE (var 2nd deriv)
 * bayesian model averaging
 * Large scale L1 feature selection with Vowpal Wabbit
