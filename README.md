@@ -3,7 +3,7 @@
 
 ### to do:
 * w271 folder
-* qr factorization
+* gaussian processes optimization
 * asymptotic normality of MLE (var 2nd deriv)
 * bayesian model averaging
 * Large scale L1 feature selection with Vowpal Wabbit
@@ -16,3 +16,4 @@
 
 ### done:
 * Probability calibration
+* qr factorization
