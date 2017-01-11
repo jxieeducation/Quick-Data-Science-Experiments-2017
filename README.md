@@ -4,6 +4,8 @@
 ### to do:
 * w271 folder
 * try qr fact again with feature standardization
+* reduced-rank regression (canonical correlation analysis)
+* compressed sensing
 * partial least sqaure *show special case where predictors are orthogonal
 * principal component regression (http://stats.stackexchange.com/questions/82050/principal-component-analysis-and-regression-in-python)
 * conjugate gradient
