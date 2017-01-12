@@ -7,6 +7,7 @@
 * reduced-rank regression (canonical correlation analysis)
 * compressed sensing
 * partial least sqaure *show special case where predictors are orthogonal
+* linear & quadratic discriminant analysis (same cov matrix assumption test)
 * steepest descent (https://www.rose-hulman.edu/~bryan/lottamath/steepest.pdf)
 * conjugate gradient (http://sep.stanford.edu/data/media/public/oldreports/sep44/44_14.pdf)
 * svd to pca
