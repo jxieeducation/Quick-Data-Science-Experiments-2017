@@ -4,8 +4,10 @@ http://www.math.ucla.edu/~yanovsky/Teaching/Math151B/handouts/GramSchmidt.pdf
 import numpy as np
 from sklearn.datasets import make_regression
 from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import scale
 
 X, y, coef = make_regression(n_samples=20, n_features=3, n_informative=2, bias=0.3, noise=0.1, coef=True)
+X = scale(X)
 
 print "y is approximated by coef, var(y) is %.2f, var(y_hat) is %.2f" % (np.var(y), np.var(X.dot(coef)))
 
@@ -39,8 +41,10 @@ print "4. y ~ B1 X"
 l1 = LinearRegression()
 l1.fit(X, y)
 print l1.coef_
+print l1.intercept_
 
 l2 = LinearRegression()
-l2.fit(q, y)
+l2.fit(scale(q), y)
 print l2.coef_
-print "these coef should be close if they are normalized >.>"
+print l2.intercept_
+print "these coef should be the same..."

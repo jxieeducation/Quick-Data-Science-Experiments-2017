@@ -3,19 +3,18 @@
 
 ### to do:
 * w271 folder
-* try qr fact again with feature standardization
+* ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 * reduced-rank regression (canonical correlation analysis)
 * compressed sensing
 * partial least sqaure *show special case where predictors are orthogonal
-* principal component regression (http://stats.stackexchange.com/questions/82050/principal-component-analysis-and-regression-in-python)
-* conjugate gradient
+* steepest descent (https://www.rose-hulman.edu/~bryan/lottamath/steepest.pdf)
+* conjugate gradient (http://sep.stanford.edu/data/media/public/oldreports/sep44/44_14.pdf)
 * svd to pca
 * gaussian processes test
 * asymptotic normality of MLE (var 2nd deriv)
 * bayesian model averaging
 * Large scale L1 feature selection with Vowpal Wabbit
 * Robust regression
-* ranking example
 * churn prediction example
 * gaussian processes for hyperparam optimization
 * breaking news prediction on twitter
