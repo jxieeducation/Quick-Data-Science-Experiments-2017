@@ -5,8 +5,7 @@
 * w271 folder
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 * reduced-rank regression (canonical correlation analysis)
-* compressed sensing
-* partial least sqaure *show special case where predictors are orthogonal
+* compressed sensing (http://web.yonsei.ac.kr/nipi/lectureNote/Compressed%20Sensing%20by%20Romberg%20and%20Wakin.pdf)
 * steepest descent (https://www.rose-hulman.edu/~bryan/lottamath/steepest.pdf)
 * conjugate gradient (http://sep.stanford.edu/data/media/public/oldreports/sep44/44_14.pdf)
 * svd to pca
@@ -23,3 +22,7 @@
 ### done:
 * Probability calibration
 * qr factorization
+* principal component regression
+* partial least sqaure 
+
+
