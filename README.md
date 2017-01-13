@@ -2,7 +2,8 @@
 
 
 ### to do:
-* w271 folder
+* w271 lec 1 stuff
+* linear & quadratic discriminant analysis (same cov matrix assumption test)
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 * reduced-rank regression (canonical correlation analysis)
 * compressed sensing (http://web.yonsei.ac.kr/nipi/lectureNote/Compressed%20Sensing%20by%20Romberg%20and%20Wakin.pdf)
