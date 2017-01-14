@@ -8,6 +8,8 @@
 
 ### to do:
 * w271 lec 1 stuff
+* perceptron implementation
+* show LL for logistic regression can be driven to 0 for a separable hyperplane
 * prob calibration with covariate shift
 * linear discriminant analysis (fisher and gaussian)
 * quadratic discriminant analysis
