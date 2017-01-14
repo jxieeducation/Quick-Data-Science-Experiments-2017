@@ -175,15 +175,18 @@ Continue with the example above, we can actually estimate the relative risks, wh
 
 ```{r}
 ## Estimate the Relative Ratios
+  
+# MLE of relative risk
+
 round(pi.hat1/pi.hat2, 4)
 
-## COMMENT TO BE HERE
+## var(log(pi1 / pi2)) = ...
 var.log.rr <- (1-pi.hat1)/(n1*pi.hat1) + (1-pi.hat2)/(n1*pi.hat2)
 
-## COMMENT TO BE HERE
+## reverse the log with exp
 ci <- exp(log(pi.hat1/pi.hat2)) + qnorm(p = c(alpha/2, 1-alpha/2)*sqrt(var.log.rr))
 
-## COMMENT TO BE HERE
+## round
 round(ci,4)
 
 ```
