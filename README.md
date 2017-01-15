@@ -8,6 +8,8 @@
 
 ### to do:
 * w271 lec 1 stuff
+* splines in python, b-splines?
+* bias-variance example from w205
 * perceptron implementation
 * show LL for logistic regression can be driven to 0 for a separable hyperplane
 * prob calibration with covariate shift
