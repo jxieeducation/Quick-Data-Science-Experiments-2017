@@ -9,12 +9,12 @@
 ### to do:
 * w271 lec 1 stuff
 * eigen decomposition tut (https://www.utdallas.edu/~herve/Abdi-EVD2007-pretty.pdf)
+* solve logistic regression via iterated reweighed least square
 * splines in python, b-splines?
 * bias-variance example from w205
 * perceptron implementation
-* show LL for logistic regression can be driven to 0 for a separable hyperplane
 * prob calibration with covariate shift
-* linear discriminant analysis (fisher and gaussian)
+* linear discriminant analysis (fisher and gaussian derivations)
 * quadratic discriminant analysis
 * reduced-rank regression (canonical correlation analysis)
 * compressed sensing (http://web.yonsei.ac.kr/nipi/lectureNote/Compressed%20Sensing%20by%20Romberg%20and%20Wakin.pdf)
