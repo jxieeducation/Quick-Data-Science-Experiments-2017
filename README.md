@@ -8,6 +8,7 @@
 
 ### to do:
 * w271 lec 1 stuff
+* eigen decomposition tut (https://www.utdallas.edu/~herve/Abdi-EVD2007-pretty.pdf)
 * splines in python, b-splines?
 * bias-variance example from w205
 * perceptron implementation
