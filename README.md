@@ -11,7 +11,8 @@
 * eigen decomposition tut (https://www.utdallas.edu/~herve/Abdi-EVD2007-pretty.pdf)
 * solve logistic regression via iterated reweighed least square
 * splines in python, b-splines?
-* bias-variance example from w205
+* bias-variance example from w205 lec 1
+* do bfgs on linear and logistic regression
 * perceptron implementation
 * prob calibration with covariate shift
 * linear discriminant analysis (fisher and gaussian derivations)
