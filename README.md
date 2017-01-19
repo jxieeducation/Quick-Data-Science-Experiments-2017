@@ -8,10 +8,8 @@
 
 ### to do:
 * w271 lec 1 stuff
-* eigen decomposition tut (https://www.utdallas.edu/~herve/Abdi-EVD2007-pretty.pdf)
 * solve logistic regression via iterated reweighed least square
 * splines in python, b-splines?
-* bias-variance example from w205 lec 1
 * do bfgs on linear and logistic regression
 * perceptron implementation
 * prob calibration with covariate shift
@@ -35,6 +33,8 @@
 * probability calibration
 * qr factorization
 * principal component regression
-* partial least sqaure 
+* partial least square
+* eigen decomposition tut
+* bias-variance example w207_lec_1
 
 
