@@ -1,0 +1,414 @@
+---
+title: 'Live Session - Week 2: Discrete Response Models Lecture 2'
+author: "Jeffrey Yau"
+date: "1/15/2017"
+output: pdf_document
+---
+
+# Agenda
+
+1. Q&A (estimated time: 5 minutes)
+2. An overview of this lecture and live session (estimated time: 15 minutes)
+3. An extended example (estimated time: 65 minutes)
+4. More take-home exercises (no need to turn them in, but we will ask volunteer to present their work in the next live session.)
+
+## 1. Questions?
+
+## 2. An Overivew of the Lecture (estimated time: 10 minutes)
+
+This lecture begins the study of logistic regression models, the most important special case of the generalized linear models (GLMs). It begins with a discussion of why classical linear regression models is not appropriate, from both statistical sense and practical application sense, to model categorical respone variable.
+
+Topics covered in this lecture include
+
+* An introduction to binary response models and linear probability model, covering the formulation of forme and its advantages limitations of the latter
+* Binomial logistic regression model
+* The logit transformation and the logistic curve
+* Statistical assumption of binomial logistic regression model
+* Maximum likelihood estimation of the parameters and an overview of a numerical procedure used in practice
+* Variance-Covariance matrix of the estimators
+* Hypothesis tests for the binomial logistic regression model parameters
+* The notion of deviance and odds ratios in the context of logistic regression models
+* Probability of success and the corresponding confidence intervals in the context of 
+logistic regression models
+* Common non-linear transformation used in the context of binary dependent variable
+* Visual assessment of the logistic regression model
+* R functions for *binomial distribution* 
+
+### Recap some notations:
+
+Recall that the probability mass function of the Binomial random variable is
+
+$$
+ P(W_j = w_j) = \binom{n_j}{w_j} \pi_j^{w_j} (1-\pi_j)^{n_j-w_j}
+$$
+
+where $w_j = 0,1,\dots,n_j$ where $j=1,2$
+
+  - the *link function* translates from the scale of mean response to the scale of linear predictor.
+  
+  - The linear predicator can be expressed as
+  $$\eta(\mathbf{x}) = \beta_0 + \beta_1 x_1 + \dots + \beta_k x_k$$
+  
+  - With $\mu(\mathbf{x}) = E(y | \mathbf{x})$ being the conditional mean of the response, we have in GLM 
+  
+  $$g(\mu(\mathbf{x})) = \eta(\mu(\mathbf{x}))$$
+  
+  where $g()$ denotes some non-linear transformation. In the logit case, $g() = log_e(\frac{\mu}{1-\mu})$ .
+  
+To estimate the parameters of a GLM model, MLE is used. Because there is generally no closed-form solution, numerical procedures are needed. In the case of GLM, the *iteratively weighted least squares* procedure is used. 
+
+
+\newpage
+## 3. An extended example (estimated time: 65 minutes)
+
+
+Insert the function to *tidy up* the code when they are printed out
+```{r}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+```
+
+**Instructor's introduction to the example (estimated time: 5 minutes)**
+
+When solving data science problems, always begin with the understanding of the underlying question; our first step is typically **NOT** to jump right into the data. For the sake of this example, suppose the question is *"Do females who higher family income (excluding wife's income) have lower labor force participation rate?" If so, what is the magnitude of the effect?* Note that this was not Mroz (1987)'s objective of his paper. For the sake of learning to use logistic regression in answering a specific question, we stick with this question in this example.
+
+Understanding the sample: Remember that this sample comes from *1976 Panel Data of Income Dynamics (PSID)*. PSID is one of the most popular dataset used by economists.
+
+### First, load the car library in order to use the Mroz dataset and understand the structure dataset.
+
+Typical questions you should always ask include
+
+  - What are the number of variables (or "features" as they are typically called in data science in general and machine learning in specific) and number of observations (or "examlpes" in data science)?
+  - Are there any missing values?
+  - Are these variables sufficient for you to answer you questions?
+
+*Note: in practice, you will likely query your data from many of tables and join them, but we will not do it in this example.*
+
+
+```{r}
+library(car)
+require(dplyr)
+
+str(Mroz)
+glimpse(Mroz) # glimpse can be use for any data.frame or table in R
+#View(Mroz)
+
+head(Mroz, 5)
+some(Mroz, 5)
+tail(Mroz, 5)
+
+library(Hmisc)
+describe(Mroz)
+summary(Mroz)
+
+# inc and lfp
+```
+
+### Descriptive statistical analysis of the data
+**Exercise (15 minutes): Instructor-led classwide discussion of the descriptive statistical analysis (or Exploratory Data Analysis)**
+
+An initiation of the descriptive statistical analysis:
+
+  - *Note that this descriptive statistics analysis is far from completed, and I leave it as take-home exercise for you to complete it. You are more than welcome to work with your classmates. Please volunteer to present your analysis next week.*
+
+1. No variable in the data set has missnig value. (This is very unlikely in practice, but this is a clean dataset used in many academic studies.)
+
+2. The response (or dependent) variable of interest, female labor force participation denoted as *lfp*, is a binary variable taking the type "factor".  The sample proporation of participation is 57% (or 428 people in the sample).
+
+3. There are 7 potential explanatory variables included in this data:
+  - number of kids below the age of 5
+  - number of kids between 6 and 18
+  - wife's age (in years)
+  - wife's college attendance
+  - husband's college attendance
+  - log of wife's estimated wage rate
+  - family income excluding the wife's wage ($1000)
+
+All of them are potential determinants of wife's labor force participation, although I am concern using the wage rate (until I can learn more about this variable) because only those who worked have a wage rate.  Also, we should not think of this list as exhaustive.
+
+4. Summary of the discussion of univariate, bivariate, and multivarite analyses should come here. Note that most of these variables are categorical, making scatterplot matrix not an effective graphic device to visualize many bivariate relationships in one graph.
+
+  - Students to insert observations here. Discuss
+    - the shape of the distribution, skewness, fat tail, multimodal, any lumpiness, etc
+```{r}
+table(Mroz$lfp)
+hist(Mroz$inc)
+```
+    - all of these distributional features across different groups of interest, such as number of kids in different age groups, husband's and wife's college attendance status
+    - proportion of different categories
+    - distribution in cross-tabulation (this is where contingency tables will come in handy)
+  - Think about engineering features (i.e. transformation of raw variables and/or creating new variables). Keep in mind that *log()* transformation is one of the many different forms of transformation. Note also that I use the terms *variables* and *features* interchangably. This lecture is a good place for you to review *w203*. For this specific dataset in this specific example, you may need to think about whether 
+```{r}
+hist(log10(Mroz$inc))
+```
+    - to create a variable to describe the total number of kids?
+    - to bin some of the variables? (Are some of the observations in some of the cell in the frequency or contingency tables too small?)
+    - to creat spline function of some of the variables?
+    - to transform one or more of the existing raw variables?
+    - to create polynomial for one or more of the existing raw variables to capture non-linear effect?
+    - to interact some of the variables?
+    - to create sum or difference of variables?
+    - etc
+
+**Take-home Exercises: Expand on the EDA I initiated below. Your analysis must be accompanied with detailed narrative.**
+
+```{r}
+require(dplyr)
+describe(exp(Mroz$lwg))
+min(exp(Mroz$lwg))
+
+require(ggplot2)
+#require(GGally)
+
+# Distribution of log(wage)
+ggplot(Mroz, aes(x = lwg)) +
+  geom_histogram(aes(y = ..density..), binwidth = 0.2, fill="#0072B2", colour="black") +
+  ggtitle("Log Wages") + 
+  theme(plot.title = element_text(lineheight=1, face="bold"))
+
+# log(wage) by lfp
+ggplot(Mroz, aes(factor(lfp), lwg)) +
+  geom_boxplot(aes(fill = factor(lfp))) + 
+  geom_jitter() +
+  ggtitle("Log(wage) by Labor Force Participation") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+# age by lfp
+ggplot(Mroz, aes(factor(lfp), age)) +
+  geom_boxplot(aes(fill = factor(lfp))) + 
+  geom_jitter() +
+  ggtitle("Age by Labor Force Participation") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+# Distribution of age
+summary(Mroz$age)
+ggplot(Mroz, aes(x = age)) +
+  geom_histogram(aes(y = ..density..), binwidth = 0.2, fill="#0072B2", colour="black") +
+  ggtitle("age") + 
+  theme(plot.title = element_text(lineheight=1, face="bold"))
+
+# Distribution of age by wc
+# Were those who attended colleage tend to be younger?
+ggplot(Mroz, aes(factor(wc), age)) +
+  geom_boxplot(aes(fill = factor(wc))) + 
+  geom_jitter() +
+  ggtitle("Age by Wife's College Attendance Status") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+ggplot(Mroz, aes(age, fill = wc, colour = wc)) +
+  geom_density(alpha=0.2)
+
+# Distribution of age by hc
+# Were those whose husband attended colleage tend to be younger?
+ggplot(Mroz, aes(factor(hc), age)) +
+  geom_boxplot(aes(fill = factor(hc))) + 
+  geom_jitter() +
+  ggtitle("Age by Husband's College Attendance Status") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+ggplot(Mroz, aes(age, fill = hc, colour = hc)) +
+  geom_density(alpha=0.2) +
+  ggtitle("Age by Husband's College Attendance Status") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+# Distribution of age by number kids in different age group
+ggplot(Mroz, aes(factor(k5), age)) +  
+  geom_boxplot(aes(fill = factor(k5))) + 
+  geom_jitter() +
+  ggtitle("Age by Number of kids younger than 6") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+ggplot(Mroz, aes(age, fill = factor(k5), colour = factor(k5))) +
+  geom_density(alpha=0.2) +
+  ggtitle("Age by Number of kids younger than 6") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+ggplot(Mroz, aes(factor(k618), age)) +  
+  geom_boxplot(aes(fill = factor(k618))) + 
+  geom_jitter() +
+  ggtitle("Age by Number of kids between 6 and 18") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+ggplot(Mroz, aes(age, fill = factor(k618), colour = factor(k618))) +
+  geom_density(alpha=0.2) +
+  ggtitle("Age by Number of kids  between 6 and 18") + 
+  theme(plot.title = element_text(lineheight=1, face="bold")) 
+
+# It may be easier to visualize age by first binning the variable
+table(Mroz$k5)
+table(Mroz$k618)
+table(Mroz$k5, Mroz$k618)
+xtabs(~k5 + k618, data=Mroz)
+
+table(Mroz$hc)
+round(prop.table(table(Mroz$hc)),2)
+
+table(Mroz$wc)
+round(prop.table(table(Mroz$wc)),2)
+
+xtabs(~hc+wc, data=Mroz)
+round(prop.table(xtabs(~hc+wc, data=Mroz)),2)
+```
+
+
+As a best practice, we will need to incorporate insights generated from EDA on model specification. As you see below, I will assign it as take-home exercise.  In what follows, I employ a very simple specification that uses all the variables as-is.
+
+### Linear Regression Modeling
+**Exericse (estimated time: 10 minutes (5 minutes for breakout session#1)):**
+**1. Interpret the model results. As an example, an increase in 1 child with age less than 6 decreased probability of LFP by almost 30%, holding other variables in the model constant. Does this impact make sense? Please explain.**
+**2. What do the results suggest in terms of answering our original questions?**
+**3. Related to 2, why do we need to include variables that are not income, which is our key explanatory variable of interest?**
+
+```{r}
+mroz.lm <- lm(as.numeric(lfp) ~ k5 + k618 + age + wc + hc + lwg + inc, data = Mroz)
+summary(mroz.lm)
+
+mroz.lm.min <- lm(as.numeric(lfp) ~ inc, data = Mroz)
+summary(mroz.lm.min)
+
+```
+
+#### Model diagnotic
+**Exercise 10 minutes (5 minutes for breakout session #2)):** 
+**1. Interpret the diagnostic results. I've included some diagnostic plots below, but you will have to interpret what assumption is being diagnosed in each of the plot.** 
+**2. Discuss the impact of using linear probability model on fitted values. Write more codes to aid your discussion where needed.**
+
+First and foremost, the plot of the Pearson residuals against fitted values do not appear to be random at all; it shows a very strong patterns. More importantly, most of the fitted value goes beyond 1.
+
+```{r}
+par(mfrow=c(2,2))
+plot(mroz.lm)
+
+require(car)
+par(mfrow=c(1,1))
+residualPlots(mroz.lm)
+
+# Note that I didn't pay much attention to outliers and influential observations in this specific example, but you should comment on it.
+
+summary(mroz.lm$fitted.values)
+
+par(mfrow=c(1,1))
+plot(mroz.lm$residuals, main="Autocorrelation Function of Model Residuals")
+acf(mroz.lm$residuals, main="Autocorrelation Function of Model Residuals")
+
+hist(mroz.lm$residuals)
+qqnorm(mroz.lm$residuals)
+qqline(mroz.lm$residuals)
+scatterplot(mroz.lm$fitted.values, mroz.lm$residuals,
+            smoother = loessLine, cex = 0.5, pch = 19,
+            smoother.args = list(lty = 1, lwd = 5), 
+            main = "Residuals vs Fitted Values", 
+            xlab = "Fitted Values", ylab ="Residuals")
+```
+
+#### Test CLM model assumptions
+
+**Take-home Exercise:**
+**1. Formally test each of the CLM model assumptions. Below include some codes, but you will have to be familiar with the test. This is a good place to practice reading the R documentation as well as w203 materials where these tests are covered. Do not just reference to stackoverflow.**
+**2. Interpret each of the test results. Do not just state "The test indicates that the null hypothesis is rejected." Instead, describe what hypothesis is being test. What test statistic is used (in each of the tests)? Then, explain the conclusion from the test.**
+
+
+```{r}
+# YOUR COMMENT HERE
+shapiro.test(mroz.lm$residuals)
+
+# YOUR COMMENT HERE
+require(car)
+ncvTest(mroz.lm)
+
+# YOUR COMMENT HERE
+require(lmtest)
+bptest(mroz.lm)
+
+# YOUR COMMENT HERE
+durbinWatsonTest(mroz.lm)
+
+# PERHAPS MORE TEST THAT NEEDS TO BE RUN
+```
+
+### Estimate a binary logistic regression
+```{r}
+mroz.glm <- glm(lfp ~ k5 + k618 + age + wc + hc + lwg + inc, 
+               family = binomial, data = Mroz)
+summary(mroz.glm)
+round(exp(cbind(Estimate=coef(mroz.glm), confint(mroz.glm))),2)
+```
+
+### Interpretation of model results
+**Exercise (Total: 20 minutes, including 10 minutes in Breakout session #3):**
+**Interpret everything in the summary of the model results.**
+**Interpret both the estimated coefficients in the original model result summary as well as their exponentiated versoin. Why do we exponentiate the coefficients?**
+**Interpret the effect (in terms of odds rations) of increasing k5 by 1-unit.**
+**Interpret the effect (in terms of odds rations) of increasing age by 5-units. Does it matter if the increase is from 30 to 35 or from 45 to 50?**
+
+### Visualize the effect of family income on Female LFP
+**Exercise (whole class 10 minutes):**
+**Discuss the effect of family income on Female LFP**
+
+```{r}
+round(exp(cbind(Estimate=coef(mroz.glm), confint(mroz.glm))),2)
+
+summary(Mroz)
+mroz.glm$coefficients
+str(mroz.glm$coefficients)
+coef <- mroz.glm$coefficients
+coef[1]
+min(Mroz$inc)
+
+# Effect of income on LFP for a family with no kid, wife was 40 years old, both wife and husband attended college, and wife's estimated wage rate was 1.07
+
+rm(x)
+xx = c(1, 0, 0, 40, 1, 1, 1.07)
+length(coef)
+length(xx)
+z = coef[1]*xx[1] + coef[2]*xx[2] + coef[3]*xx[3] + coef[3]*xx[3] + coef[4]*xx[4] + coef[5]*xx[5] + coef[6]*xx[6] + coef[7]*xx[7]
+z
+x <- Mroz$inc
+coef[8]
+curve(expr = exp(z + coef[8]*x)/(1+exp(z + coef[8]*x)), 
+    xlim = c(min(Mroz$inc), max(Mroz$inc)), 
+    ylim = c(0,1),
+    col = "blue", 
+    main = expression(pi == frac(e^{z + coef[inc]*inc}, 1+e^{z+coef[inc]*inc})), 
+    xlab =  expression(inc), ylab = expression(pi))
+
+# Reproduce the graph overlaying the same result from the linear model as a comparison
+curve(expr = exp(z + coef[8]*x)/(1+exp(z + coef[8]*x)), 
+    xlim = c(min(Mroz$inc), max(Mroz$inc)), 
+    ylim = c(0,2),
+    col = "blue", 
+    main = expression(pi == frac(e^{z + coef[inc]*inc}, 1+e^{z+coef[inc]*inc})), 
+    xlab =  expression(inc), ylab = expression(pi))
+
+par(new=TRUE)
+
+y2 <- mroz.lm$coefficients[8]*x
+lm.coef <- mroz.lm$coefficients
+lm.z <- lm.coef[1]*xx[1] + lm.coef[2]*xx[2] + lm.coef[3]*xx[3] + lm.coef[3]*xx[3] + lm.coef[4]*xx[4] + lm.coef[5]*xx[5] + lm.coef[6]*xx[6] + lm.coef[7]*xx[7]
+
+lines(x, lm.z + mroz.lm$coefficients[8]*x,col="green")
+
+```
+
+## 4. More take-home exercises
+
+1. Use the model *mroz.glm* and test the hypothesis the hypothesis the wife's wage had no impact on her labor force participation. Set up the test. Write down the null hypothesis. Explain which test(s) you used. State the results. Explain the results.
+
+2. Explain all of the deviance statistics in the model results (*summary(mroz.glm)*) and what do they tell us? (You answer may require you to perform further calculation using the deviance statistics.)
+
+3. Expand the EDA and propose one additional specification based on your EDA.
+
+4. Test this newly proposed model, call it mroz.glm2, and test the difference between the two models.
+
+5. Study the model parameter estiamtion algorithm: Iterated Reweighted Least Square (IRLS)
+  Reference: [linked phrase](http://www.inside-r.org/packages/cran/Rfit/docs/irls)
+
+
+
+
+
+
+
+
+
+
