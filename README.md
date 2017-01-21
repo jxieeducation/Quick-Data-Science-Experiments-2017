@@ -2,13 +2,14 @@
 
 
 ### current:
+* solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
+* naive bayes spam filter
 * robust regression
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 
 ### to do:
 * w271 lec 1 stuff
-* solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * splines in python, b-splines?
 * do bfgs on linear and logistic regression
 * perceptron implementation
@@ -37,3 +38,4 @@
 * eigen decomposition tut
 * bias-variance example w207_lec_1
 * logistic regression training on ratio and weights
+* logistic regression covariance of coefficients
