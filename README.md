@@ -15,7 +15,7 @@
 * perceptron implementation
 * prob calibration with covariate shift
 * linear discriminant analysis (fisher and gaussian derivations)
-* quadratic discriminant analysis
+* quadratic discriminant analysis (https://www.youtube.com/watch?v=JWozRg_X-Vg)
 * reduced-rank regression (canonical correlation analysis)
 * compressed sensing (http://web.yonsei.ac.kr/nipi/lectureNote/Compressed%20Sensing%20by%20Romberg%20and%20Wakin.pdf)
 * steepest descent (https://www.rose-hulman.edu/~bryan/lottamath/steepest.pdf)
