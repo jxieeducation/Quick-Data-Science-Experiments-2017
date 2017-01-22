@@ -3,14 +3,16 @@
 
 ### current:
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
-* naive bayes spam filter
+* naive bayes spam filter (w/ tricks e.g. laplace smoothing + linear interprolation, feature selection, prob calibration / show over confidence)
 * robust regression
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 
 ### to do:
 * w271 lec 1 stuff
-* splines in python, b-splines?
+* kernel smoothing with different local kernels
+* LOESS & show that boundary fit is linear
+* splines in python, b-splines, thin plate spline
 * do bfgs on linear and logistic regression
 * perceptron implementation
 * prob calibration with covariate shift
@@ -28,6 +30,7 @@
 * churn prediction example
 * gaussian processes for hyperparam optimization
 * breaking news prediction on twitter
+* multilingual spam filter
 
 
 ### done:
