@@ -9,7 +9,7 @@
 
 
 ### to do:
-* w271 lec 1 stuff
+* kernel density classification
 * splines in python, b-splines?
 * do bfgs on linear and logistic regression
 * perceptron implementation
