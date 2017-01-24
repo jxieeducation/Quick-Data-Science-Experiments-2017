@@ -10,6 +10,8 @@
 
 ### to do:
 * kernel density classification
+* rbf regression & gmm classification
+* 1NN curse of dim test w/ b-v tradeoff (pg 24, 223)
 * splines in python, b-splines?
 * do bfgs on linear and logistic regression
 * perceptron implementation
