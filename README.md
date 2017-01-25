@@ -9,13 +9,13 @@
 
 
 ### to do:
+* churn prediction example (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 * kernel density classification & kernel smoothing with different local kernels
 * rbf regression & gmm classification
 * 1NN curse of dim test w/ b-v tradeoff (pg 24, 223)
 * LOESS & show that boundary fit is linear
 * splines in python, b-splines, thin plate spline
 * do bfgs on linear and logistic regression
-* perceptron implementation
 * prob calibration with covariate shift
 * linear discriminant analysis (fisher and gaussian derivations)
 * quadratic discriminant analysis (https://www.youtube.com/watch?v=JWozRg_X-Vg)
@@ -28,7 +28,6 @@
 * asymptotic normality of MLE (var 2nd deriv)
 * bayesian model averaging
 * large scale L1 feature selection with Vowpal Wabbit
-* churn prediction example
 * gaussian processes for hyperparam optimization
 * breaking news prediction on twitter
 * multilingual spam filter
@@ -43,3 +42,5 @@
 * bias-variance example w207_lec_1
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
+* perceptron implementation
+
