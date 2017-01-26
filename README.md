@@ -3,7 +3,6 @@
 
 ### current:
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
-* naive bayes spam filter (w/ tricks e.g. laplace smoothing + linear interprolation, feature selection, prob calibration / show over confidence)
 * robust regression
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
@@ -43,4 +42,6 @@
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
 * perceptron implementation
+* naive bayes spam filter
+
 
