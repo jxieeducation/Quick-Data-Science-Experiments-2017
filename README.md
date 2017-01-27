@@ -9,6 +9,7 @@
 
 ### to do:
 * churn prediction example (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
+* bayesian model averaging & BIC
 * kernel density classification & kernel smoothing with different local kernels
 * rbf regression & gmm classification
 * 1NN curse of dim test w/ b-v tradeoff (pg 24, 223)
@@ -25,7 +26,6 @@
 * svd to pca
 * gaussian processes test
 * asymptotic normality of MLE (var 2nd deriv)
-* bayesian model averaging
 * large scale L1 feature selection with Vowpal Wabbit
 * gaussian processes for hyperparam optimization
 * breaking news prediction on twitter
