@@ -9,6 +9,8 @@
 
 ### to do:
 * churn prediction example (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
+ (http://blog.yhat.com/posts/predicting-customer-churn-with-sklearn.html)
+* decision tree imple
 * bayesian model averaging & BIC
 * kernel density classification & kernel smoothing with different local kernels
 * rbf regression & gmm classification
