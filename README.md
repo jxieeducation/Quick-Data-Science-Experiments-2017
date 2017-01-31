@@ -10,6 +10,7 @@
 ### to do:
 * churn prediction example (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 * adaboost vs SVM (https://ucb-mids.s3.amazonaws.com/prod/Machine+Learning/Readings/Week+4/ShortIntroToBoosting.pdf)
+* decision tree imple
 * bayesian model averaging & BIC
 * kernel density classification & kernel smoothing with different local kernels
 * rbf regression & gmm classification
