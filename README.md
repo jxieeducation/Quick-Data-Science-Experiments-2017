@@ -8,9 +8,13 @@
 
 
 ### to do:
+* decision tree missing values
+* isolation trees (http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf)
+* random forest variance formula (p*var + (1 - p)/beta *var
+* random forest feature importance calculation math (http://freakonometrics.hypotheses.org/19835)
+* factor analysis
 * churn prediction example (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 * adaboost vs SVM (https://ucb-mids.s3.amazonaws.com/prod/Machine+Learning/Readings/Week+4/ShortIntroToBoosting.pdf)
-* decision tree imple
 * bayesian model averaging & BIC
 * kernel density classification & kernel smoothing with different local kernels
 * rbf regression & gmm classification
@@ -45,5 +49,5 @@
 * logistic regression covariance of coefficients
 * perceptron implementation
 * naive bayes spam filter
-
+* decision tree imple
 
