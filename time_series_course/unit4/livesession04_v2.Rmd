@@ -1,0 +1,260 @@
+---
+title: 'Statistical Methods for Discrete Response, Time Series, and Panel Data: Live Session 4'
+author: "Devesh Tiwari and Jeffrey Yau"
+date: "1/30/2017"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+# Agenda
+
+1. Q&A (estimated time: 5-10 minutes)
+2. Data Analysis and Modeling Exercises (estimated time: 80 minutes) 
+
+  a. Instructor's introduction of the exercise and the dataset (estimated time: 5 minutes)
+  b. Discussion 1 (estimated time: 10 minutes)
+  c. Discussion 2 (estimated time: 10 minutes)
+  d. Discussion 3 (estimated time: 15 minutes)
+  e. Discussion 4 (estimated time: 20 minutes)
+  f. Discussion 5 (estimated time: 10 minutes)
+  g. Discussion 6 (estimated time: 10 minutes)
+
+\newpage
+# Introduction (estimated time: 5 minutes)
+In this exercise, we will explore the relationship between voters’ self identified party affiliation and their demographic characteristic. In particular, we seek to answer whether voters’ age, race, and gender influence their party choice. For this exercise we will use the data from the **American National Election Survey**, which conducted a survey several months prior to the 2016 American Presidential elections. Note that the original survey data uses survey weights, which we will not be using.
+
+The dataset “*w271_spring2017_anes.csv*” contains a handful of variables from the survey, and these variables have been cleaned and modified for this exercise. This dataset contains the following variables:
+
+**Variable Name**            |          **Explanations**
+-----------------------------|----------------------------------------------
+ftwhite, ftblack, ftmuslim   | Feeling thermometer variables where respondents are asked to rate their favorability of whites, blacks, and muslims, on a 0 – 100 scale.
+                             | 
+Presjob                      | A seven point scale indicating respondents’                                 | evaluation of President Obama. 1 = Very                                     | strongly approve; 7 = Very strongly disapprove
+                             | 
+Srv_spend                    | Seven point scale representing the degree to                                | which respondents believe that the government                               | should provide or should not provide services:                              | 1 = Government should provide many fewer                                    | services; 7 = Government should provide many                                | more services.
+                             | 
+crimespend                   | A seven point scale representing degree to                                  | which respondents think that the federal                                    | government should or should not increase                                    | federal spending on crime. 1 = Increased a                                  | great deal; 7 = Decreased a great deal
+                             | 
+ideo5                        | A five point scale of respondents’ self                                     | reported ideology. 1 = Very liberal; 5 = Very                               | conservative 
+                             | 
+party                        | Categorical variable indicating respondents’                                | party affiliation: Democrat, Independent,                                   | Republican
+                             | 
+age                          | Respondents’ age, as of 2016.
+                             | 
+race_white                   | Dummy variable taking a value of one if the                                 | respondent is white and is zero otherwise.
+                             | 
+female                       | Dummy variable taking a value of one if the                                 | respondent is female and is zero otherwise.
+
+
+# Discussion 1 (Estimated Time (10 minutes) - 5 mins in breakout session, 5 min class-wide discussion):
+
+The US has two major political parties. The Democratic Party is considered to be the ideologically libearl party while the Republican Party is considered to be the ideologically conservative party. A non-trivial proportion of American voters either identify themselves as being Independnet or supporting other parties. In this dataset, voters are either Democratic, Republican, or Independent. 
+
+\textbf{Question: What is the difference between modeling voters' party affiliation using a multinomial logistic regression model as opposed to using an ordinal  logistic regression model? Under what circumstances would be OK to use an ordinal model?}
+
+# Discussion 2: Assessing the independence of race, gender, and partisanship # (Estimated Time (10 minutes) - 5 mins in breakout session, 5 min class-wide discussion):
+
+**In a breakout session, discuss the following analysis of the dataset and EDA.**
+
+**Take home exericse: Conduct a thorough EDA, including other variables in the dataset.** For this live session, we instead focus on understanding a few bivariate relationships.
+
+Insert a function to *tidy up* the code when they are printed out
+```{r}
+rm(list = ls())
+require(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+```
+
+```{r}
+require(vcd)
+require(nnet)
+require(car)
+require(MASS)
+
+#path <- "/Users/DKT/Documents/Projects/anes2016"
+path <- "~/Documents/JStuff/Teach/w271/LiveSessions/week04"
+setwd(path)
+
+df <- read.csv("w271_spring2017_anes.csv", stringsAsFactors = FALSE, header = TRUE, sep = ",")
+```
+
+### Examine the data before conducting EDA
+```{r}
+str(df)
+
+# Number of incomplete cases in the dataset
+# There are a number of ways to accomplish this task
+# The first one will list the entire dataframe (when printed out to a pdf or html file) all of the observations with incomplete observations. The second one just count the number of missing data in each of the variables
+
+#df[!complete.cases(df),]
+sapply(df, function(x) sum(is.na(x)))
+```
+
+Let's select only the data that we need before conducting the analysis
+
+```{r}
+require(dplyr)
+df2 <- df %>%
+  select(party, age, female, race_white)
+str(df2)
+# Number of incomplete cases in the dataset
+sapply(df2, function(x) sum(is.na(x)))
+```
+
+There are still 81 observations with missing values.
+
+**Take-home Exercise: Examine if the missing value has any relationship with other variables? For instance, does all of the missing values in the party variable fall into certain age, gender, and/or race groups?**
+
+For now, we would simply exclude them in our analysis. Again, in practice, you do not just want to throw away observations without any investigation; we leave it as take-home exericse for this very simple case.
+
+Include only complete cases
+```{r}
+df3 <- df2[complete.cases(df2),]
+str(df3)
+sapply(df3, function(x) sum(is.na(x)))
+```
+
+# Discussion 3: Assessing the independence of race, gender, and partisanship # (Estimated Time (15 minutes) - 7 mins in breakout session, 8 min class-wide discussion):
+
+```{r}
+# A few descriptive statistics
+require(Hmisc)
+describe(df3)
+
+party.gender.table <- xtabs(~party + female, data = df3)
+prop.table(party.gender.table)
+chisq.test(party.gender.table)
+assocstats(party.gender.table)
+
+party.race.table <- xtabs(~party + race_white, data = df3)
+prop.table(party.race.table)
+chisq.test(party.race.table)
+assocstats(party.race.table)
+```
+
+Evidence suggests that party affiliation is not independent from respondents' gender or race. These contingnecy tables do not tell us if there is an ordered relationship between these demographic variables and party affiliation.
+
+```{r}
+prop.table(party.gender.table, 2)
+prop.table(party.race.table, 2)
+```
+
+\textbf{Based on this output, do you think that there is an ordered relationship between the demographic variables and party affiliation? Why or why not?}
+
+\textbf{Question: How could you explore the bivariate relationship between party and age? Can you think of a way where you can use a contingency table and chi-square test to test for independence?}
+
+# Discussion 4: Assessing the independence of race, gender, and partisanship in the context of a Multinomial Logistic Regression Model (Estimated Time (20 minutes) - 10 mins in breakout session, 10 min class-wide discussion):
+
+# Multinomial Logistic Regression Model
+We are going to use a multinomial logistic regression model to examine the relationship between repondents' party affiliation and their age, race, and gender. Remember that we usually do this only after we have conducted a thorough EDA and justified our modeling decision!
+
+\textbf{Question: Using the following results, interpret and discuss the model results. What do these coefficients mean? Why are there two sets of coefficients? What does it mean if we were to take the anti-log of the coefficients? If needed, write some R codes to transform the estimated parameters to interpret the results in terms of (a) odds ratios, and (b) probability in a particular party. Finally, discuss the results of the following hypothesis test.}
+
+\textbf{Question: Suppose that you only know how to use logistic regression. How would you use binary logit to answer the questions that motivated this lab? Does it make sense to create three different dummy variables for Democrat, Independent, and Republican as the dependent variables?}
+
+```{r}
+mod.nominal1 <- multinom(party ~ female + race_white + age, data = df3)
+summary(mod.nominal1)
+```
+
+
+```{r}
+exp(coefficients(mod.nominal1))
+
+# Examine statistical signficance of model and coef.
+Anova(mod.nominal1)
+test.stats <- 
+  summary(mod.nominal1)$coefficients/summary(mod.nominal1)$standard.errors
+test.stats
+# It appears as if age might not be statistically significant!
+# Let's examine statistical sig using LRT
+
+mod.nominal.noage <- multinom(party ~ female + race_white, data = df3)
+summary(mod.nominal.noage)
+anova(mod.nominal.noage, mod.nominal1)
+```
+According to the LRT, age is not a statistically signficant variable. However, it might be worth visualizing its impact on predicted probabilities. Let's examine the impact of age on respondents' party affiliation. We will generate predicted probability plots for white men between the ages of 20 and 80.
+
+# Discussion 5: Discuss the visuals of the model results. # (Estimated Time (10 minutes) - 5 minutes breakout room discussion; 5 min class-wide discussion):
+
+\textbf{Question: Why do you think that the dashed lines are parallel to the solid lines? What does this chart tell you about the impact of race and gender on party affiliation?}
+
+\textbf{Suppose you were interested in whether the relationship between party affiliation and age is different for white respondents than persons of color? How would you test this? Estimate this model, comment on the statistical signficance of this model and the interaction term, and graph the predicted probability of the party affiliation of white men by age.}
+
+```{r}
+simulated.data <- data.frame(female = 0, race_white = 1, age = 20:80)
+
+pi.hat.nom1 <- predict(mod.nominal1, newdata = simulated.data,
+                       type = "probs")
+head(pi.hat.nom1)
+tail(pi.hat.nom1)
+
+plot.new()
+x <- 20:80
+plot(x, pi.hat.nom1[,1], type = "l", col = "blue",
+     ylim = range(min(pi.hat.nom1), max(pi.hat.nom1)),
+     xlab = "Age", ylab = "Predicted probability")
+lines(x, pi.hat.nom1[,2], col = "gray")
+lines(x, pi.hat.nom1[,3], col = "red")
+
+```
+Age seems to have little relationship with the probability a white male is a Democrat, but it makes a large substantative impact on the probability a white male is Independent or Republican.
+
+Now, let's see if the same holds for women of color!
+
+```{r}
+
+simulated.data <- data.frame(female = 1, race_white = 0, age = 20:80)
+
+pi.hat.nom1.womenofcolor <- predict(mod.nominal1, newdata = simulated.data,
+                       type = "probs")
+head(pi.hat.nom1.womenofcolor)
+tail(pi.hat.nom1.womenofcolor)
+
+x <- 20:80
+plot.new()
+plot(x, pi.hat.nom1[,1], type = "l", col = "blue",
+     ylim = range(min(cbind(pi.hat.nom1, pi.hat.nom1.womenofcolor))
+                      , max(cbind(pi.hat.nom1, pi.hat.nom1.womenofcolor))),
+     xlab = "Age", ylab = "Predicted probability")
+lines(x, pi.hat.nom1[,2], col = "gray")
+lines(x, pi.hat.nom1[,3], col = "red")
+points(x, pi.hat.nom1.womenofcolor[,1], pch = 19, col = "blue", cex = 0.25)
+points(x, pi.hat.nom1.womenofcolor[,2], pch = 19, col = "gray", cex = 0.25)
+points(x, pi.hat.nom1.womenofcolor[,3], pch = 19, col = "red", cex = 0.25)
+```
+
+# Discussion 6: Discuss the results of the followig ordinal logistic regression model. # (Estimated Time (10 minutes) - 5 minutes breakout room discussion; 5 min class-wide discussion):
+
+# Proportional Odds Logistic Regression (or Ordinal Logistic Regression) Model
+For illustration purposes, let's model the relationship between respondents' party affiliation and their demographic characteristics.
+
+\textbf{Question: Why do you think these two charts are different? If you were to conduct a thorough EDA, how could you determine which model is the correct one?}
+
+```{r}
+
+mod.ordered1 <- polr(as.factor(party) ~ female + race_white + age,
+                     data = df3, method = "logistic", Hess = TRUE)
+summary(mod.ordered1)
+summary(mod.nominal1)
+
+# Generate predicted probability chart for white men, between ages 20 and 80
+simulated.data <- data.frame(female = 0, race_white = 1, age = 20:80)
+
+pi.hat.ord1 <- predict(mod.ordered1, newdata = simulated.data,
+                       type = "probs")
+head(pi.hat.ord1)
+tail(pi.hat.ord1)
+
+plot.new()
+x <- 20:80
+plot(x, pi.hat.ord1[,1], type = "l", col = "blue",
+     ylim = range(min(pi.hat.ord1), max(pi.hat.ord1)),
+     xlab = "Age", ylab = "Predicted probability")
+lines(x, pi.hat.ord1[,2], col = "gray")
+lines(x, pi.hat.ord1[,3], col = "red")
+```
+
+This predicted probability chart looks very different from the one generated from the multinomial model! In the chart generated by the multinomial model, age has no impact on whether a white male is a Democrat, whereas in this chart, age has no impact on whether a white male is Independent. The models are generating very different results!
+
