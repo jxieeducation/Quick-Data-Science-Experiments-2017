@@ -2,19 +2,19 @@
 
 
 ### current:
+* permutation importance
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * robust regression
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 
 ### to do:
-* permutation importance (http://alexperrier.github.io/jekyll/update/2015/08/27/feature-importance-random-forests-gini-accuracy.html)
+* ranking item recommendations for a user from matrix factorization
 * stacking via CV pedictions
 * stochastic search - bumping (XOR decision tree example)
 * decision tree missing values
 * isolation trees (http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf)
 * random forest variance formula (p*var + (1 - p)/beta *var
-* random forest feature importance calculation math (http://freakonometrics.hypotheses.org/19835)
 * factor analysis
 * churn prediction example (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 * adaboost vs SVM (https://ucb-mids.s3.amazonaws.com/prod/Machine+Learning/Readings/Week+4/ShortIntroToBoosting.pdf)

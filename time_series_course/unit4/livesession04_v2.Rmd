@@ -73,7 +73,7 @@ require(car)
 require(MASS)
 
 #path <- "/Users/DKT/Documents/Projects/anes2016"
-path <- "~/Documents/JStuff/Teach/w271/LiveSessions/week04"
+path <- "~/Downloads/Quick-Data-Science-Experiments-2017/time_series_course/unit4/"
 setwd(path)
 
 df <- read.csv("w271_spring2017_anes.csv", stringsAsFactors = FALSE, header = TRUE, sep = ",")
