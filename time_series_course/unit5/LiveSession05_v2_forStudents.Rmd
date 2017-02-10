@@ -1,0 +1,213 @@
+---
+title: 'Statistical Methods for Discrete Response, Time Series, and Panel Data: Live Session 5'
+author: "Devesh Tiwari and Jeffrey Yau"
+date: "2/5/2017"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+#Main Topics Covered in Lecture 5:
+
+  - Poisson probability model
+  - Poisson regression model
+  - Parameter estimation and statistical inference
+  - Variable selection (a brief introduction)
+  - Model evaluation, focusing on (in-sample) model fit
+
+#Required Readings:
+
+**BL2015:** Christopher R. Bilder and Thomas M. Loughin. Analysis of Categorical Data with R. CRC Press. 2015.
+
+  - Ch.4.1, 4.2.1 – 4.2.2
+    - skim 4.2.3
+  - 5.1 - 5.4
+    - focus on 5.1.5 ( on LASSO) and 5.2 (on model fit assessment)
+    - skim 5.1.1 - 5.1.4, 5.2.3, 5.3
+    - skip 5.1.6 
+
+# Agenda for the Live Session
+
+  1. Mid-term evaluation (10 minutes)
+  [Mid-course evaluation](https://www.surveymonkey.com/r/8YSFLD6)
+  
+  2. Exericse 1 (Estimated Time: Total - 25 minutes (Breakout 15 minutes, Classwide disscussion: 10 minutes)
+  
+  3. Exericse 2 (Estimated Time: Total - 25 minutes (Breakout 15 minutes, Classwide disscussion: 10 minutes)
+  
+  4. Exericse 3 (Estimated Time: Total - 25 minutes (Breakout 15 minutes, Classwide disscussion: 10 minutes)
+  
+  5. Optional Take-home Exericse 
+
+
+Insert the function to *tidy up* the code when they are printed out
+```{r}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+```
+
+```{r}
+# Set working directory
+wd <- "~/Downloads/Quick-Data-Science-Experiments-2017/time_series_course/unit5/"
+setwd(wd)
+```
+
+Imagine we are helping the academic committee of a high school to predict the number awards earned by students based on type of programs the student was enrolled in. The committee provides a small data sample that also includes the score of math final exam in previous years.
+
+# Exericse 1: 
+  - *Estimated Time: Total 20 minutes (Breakout 15 minutes, Classwide disscussion: 10 minutes)*
+  - Load the data (from the CSV file, *PossionEx1.csv*)
+  - Examine the dataset:
+    - What is the number of observations? 200
+    - What is the number of variable? 4 + 1
+    - Are there any redundant variables? maybe X?
+    - Are there any missing information? 0
+    - Are there any duplicated records? 
+  - Conduct EDA
+
+
+```{r}
+df = read.csv("PossionEx1.csv", stringsAsFactors = F, header=TRUE, sep=",")
+str(df)
+```
+
+The dataset contains 200 observations and 5 variables, with the variable *X* serving as an ID variable. It looks like it is redundant. We will find out below.
+
+# Checking the number of missing values for each of the variables
+```{r}
+# YOUR CODE TO BE HERE
+sapply(df, function(x) sum(is.na(x)))
+```
+YOUR NARRATIVE TO BE HERE
+
+YOUR EDA TO BE HERE
+```{r}
+head(df, 5)
+summary(df)
+
+hist(df$num_awards)
+
+table(df$prog)
+
+hist(df$math)
+
+plot(df$math, df$num_awards)
+
+df$prog <- as.factor(df$prog)
+plot(df$prog, df$num_awards)
+
+mean(df[df$prog == "Academic", c('num_awards')])
+var(df[df$prog == "Academic", c('num_awards')])
+
+mean(df[df$prog == "General", c('num_awards')])
+var(df[df$prog == "General", c('num_awards')])
+
+mean(df[df$prog == "Vocational", c('num_awards')])
+var(df[df$prog == "Vocational", c('num_awards')])
+
+t.test(df[df$prog == "Vocational", c('num_awards')], df[df$prog == "General", c('num_awards')])
+t.test(df[df$prog == "Vocational", c('num_awards')], df[df$prog == "Academic", c('num_awards')])
+t.test(df[df$prog == "General", c('num_awards')], df[df$prog == "Academic", c('num_awards')])
+# so it seems like Academic is just really good, Vocational and General are bad...
+
+```
+YOUR NARRATIVE TO BE HERE
+
+# Exericse 2: 
+  - *Estimated Time: Breakout 15 minutes, Classwide disscussion: 10 minutes*
+  - In this lecture, we study Poisson regression model, which is often a good starting points for modeling count data. There are limitations 
+  - Estimate a possion regression model. 
+    - What specification do you choose? Why? How is it related to the EDA you did above?
+    - Do you engineer any features? Why? What's the rationel behind?
+  - Interpret the regression results for both the categorical variable and the numeric variable.
+  - Find the confidence interval of the estimator using confint() function. Interpret the results. Note that you may need to write code to transform the interval to obtain meaningful interpretation.
+  - Conduct the Anova() test. Interpret the results.
+
+```{r}
+summary(m1 <- glm(num_awards ~ prog + math, family="poisson", data=df))
+summary(m2 <- glm(num_awards ~ prog + math + I(math * math), family="poisson", data=df))
+summary(m3 <- glm(num_awards ~ prog + math + math * prog, family="poisson", data=df))
+# The coefficient for math is .07. This means that the expected log count for a one-unit increase in math is .07. 
+
+exp(m1$coefficients)
+# e^cb1 - 1
+exp(m1$coefficients) - 1
+sd(df$math)
+
+require(ggplot2)
+ggplot(df, aes(x = math, y = phat, colour = prog)) +
+  geom_point(aes(y = num_awards), alpha=.5, position=position_jitter(h=.2)) +
+  geom_line(size = 1) +
+  labs(x = "Math Score", y = "Expected number of awards")
+
+
+confint(m1)
+exp(confint(m1)) - 1
+
+anova(m1, m2)
+Anova(m1)
+
+
+with(m1, cbind(res.deviance = deviance, df = df.residual,
+  p = pchisq(deviance, df.residual, lower.tail=FALSE)))
+
+df$phat <- predict(m1, type="response")
+df <- df[with(p, order(prog, math)), ]
+
+```
+YOUR NARRATIVE TO BE HERE
+
+
+# Exercise 3
+  - *Estimated Time: Breakout 15 minutes, Classwide disscussion: 15 minutes*
+  - Prediction: predict the expected number of awards by program type
+  - Conduct residual diagnostic
+  - Explain what is residual deviance.
+  - Examine the goodness of fit of the model and interpret the following results
+
+
+Prediction:
+```{r}
+# YOUR CODE TO BE HERE
+```
+YOUR NARRATIVE TO BE HERE
+
+
+Residual Diagnostic:
+```{r}
+# YOUR CODE TO BE HERE
+```
+YOUR NARRATIVE TO BE HERE
+
+Goodness of Fit Assessment:
+```{r}
+# YOUR CODE TO BE HERE
+```
+YOUR NARRATIVE TO BE HERE
+
+
+# Optional (Take-home) Exericse: 
+  - Extension to what we covered in async lecture. We calculate the robust standard errors for the parameter estimates to control for mild violation of the distribution assumption that the variance equals the mean. In your breakout session, discuss the codes and results.
+  - How are these confidence interval compared to those above?
+  - Interpret the interval results. Note that you may need to write code to transform the interval to obtain meaningful interpretation.
+  
+```{r}  
+require(sandwich)
+cov.poisson.mod1 <- vcovHC(poisson.mod1, type="HC0")
+
+std.err <- sqrt(diag(cov.poisson.mod1))
+
+r.est <- cbind(Estimate= coef(poisson.mod1), "Robust SE" = std.err,
+"Pr(>|z|)" = 2 * pnorm(abs(coef(poisson.mod1)/std.err), lower.tail=FALSE),
+LL = coef(poisson.mod1) - 1.96 * std.err,
+UL = coef(poisson.mod1) + 1.96 * std.err)
+
+round(r.est,4)
+```  
+  
+  - We use R package *sandwich*, which was introduced in w203, below to obtain the robust standard errors and calculated the p-values accordingly.
+  - Together with the p-values, we have also calculated the 95% confidence interval using the parameter estimates and their robust standard errors.
+
+
+
+

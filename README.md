@@ -2,14 +2,15 @@
 
 
 ### current:
-* permutation importance
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * robust regression
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 
 ### to do:
-* ranking item recommendations for a user from matrix factorization
+* NMF (how it enforces Non-negativity)
+* Collaborative filtering for ordinal scores (http://www.ijcai.org/Proceedings/13/Papers/449.pdf)
+* coclustering methods (recommendations)
 * stacking via CV pedictions
 * stochastic search - bumping (XOR decision tree example)
 * decision tree missing values
@@ -53,4 +54,6 @@
 * perceptron implementation
 * naive bayes spam filter
 * decision tree imple
+* permutation importance (decision tree)
+* ranking item recommendations for a user from matrix factorization
 
