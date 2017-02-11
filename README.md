@@ -9,6 +9,7 @@
 
 ### to do:
 * NMF (how it enforces Non-negativity)
+* C5.0 tree & rule interpretation
 * Collaborative filtering for ordinal scores (http://www.ijcai.org/Proceedings/13/Papers/449.pdf)
 * coclustering methods (recommendations)
 * stacking via CV pedictions
