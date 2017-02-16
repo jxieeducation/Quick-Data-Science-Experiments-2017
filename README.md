@@ -8,11 +8,16 @@
 
 
 ### to do:
-* STL (notes)
+* normalized LL
+* LDA notes (http://obphio.us/pdfs/lda_tutorial.pdf) 
+* STL notes
 * poisson regression
+* kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
+* FTRL note (http://www.eecs.tufts.edu/~dsculley/papers/ad-click-prediction.pdf)
+* L-BFGS note
 * NMF (how it enforces Non-negativity)
 * C5.0 tree & rule interpretation
-* Collaborative filtering for ordinal scores (http://www.ijcai.org/Proceedings/13/Papers/449.pdf)
+* collaborative filtering for ordinal scores (http://www.ijcai.org/Proceedings/13/Papers/449.pdf)
 * coclustering methods (recommendations)
 * stacking via CV pedictions
 * stochastic search - bumping (XOR decision tree example)
@@ -60,3 +65,9 @@
 * permutation importance (decision tree)
 * ranking item recommendations for a user from matrix factorization
 
+
+===
+
+### potential tuts:
+* different types of FMs
+* Spark AllReduce
