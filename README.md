@@ -11,6 +11,7 @@
 * normalized LL
 * LDA notes (http://obphio.us/pdfs/lda_tutorial.pdf) 
 * STL notes
+* zero shot learning (https://github.com/MLWave/extremely-simple-one-shot-learning)
 * poisson regression
 * kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
 * FTRL note (http://www.eecs.tufts.edu/~dsculley/papers/ad-click-prediction.pdf)

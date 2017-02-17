@@ -1,0 +1,145 @@
+---
+title: 'Statistical Methods for Discrete Response, Time Series, and Panel Data: Live Session 6'
+author: "Devesh Tiwari and Jeffrey Yau"
+date: "2/5/2017"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+#Main Topics Covered in Lecture 6:
+
+  - Introduction to time series analysis
+  - Basic terminology of time series analysis
+  - Steps to analyze time series data
+  - Common empirical time series patterns
+  - Examples of simple time series models
+  - Notion and measure of dependency
+  - Examining time series correlation - autocorrelation function (ACF)
+  - Notion of stationarity
+
+#Required Readings:
+
+**CM2009:** Paul S.P. Cowpertwait and Andrew V. Metcalfe. *Introductory Time Series with R*. Springer. 2009. 
+
+**SS2016:** Robert H. Shumway and David S. Stoffer. *Time Series Analysis and Applications.* EZ Edition with R Examples
+
+  - CM2009: Ch. 1, 2.1.1, 2.2.4, 2.2.5, 2.3, 4.2
+      - Skip Ch. 1.5.4, 1.5.5
+  - SS2016: Ch.1
+
+
+# Agenda for the Live Session
+
+  1. Introduction of the Lecture and the Time Series Analysis portion of the course (Estimated Time: 10 minutes
+
+  2. Introduction by the Professor (Estimated Time: 10 minutes)
+
+  3. Discussion (Estimated Time: 5-10 minutes)
+
+  4. Exericse 1 (Estimated Time: Total - 30 minutes (Breakout 15 minutes, Classwide disscussion: 15 minutes)
+  
+  5. Exericse 2 (Estimated Time: Total - 30 minutes (Breakout 15 minutes, Classwide disscussion: 15 minutes)
+
+  6. Exericse 3 (Estimated Time: Total - 15 minutes (Breakout 10 minutes, Classwide disscussion: 5 minutes)
+
+
+
+# 1. Introduction of the Lecture and the Time Series Analysis portion of the course
+  - *Estimated Time: Total 10 minutes*
+
+# 2. Introduction by the Professor: Why is time series different?
+  - *Estimated Time: Total 10 minutes*
+
+Suppose you were interested in examining the relationship between the Presidential Approval rate and how well the stock market is performing. You suspect that voters like their President more when the stock market is doing well. In order to test this hypothesis, you collect 20 years worth of data. To be more precise, you collect the weekly (or monthly) Presidential approval rate over a 20 years span along with the weekly (or monthly) value of the Dow Jones Industrial Average (DJIA), and now you wish to regress Presidential Approval on DJIA to see if there is indeed a positive relationship between the two.
+
+Before actually doing this analysis, consider the following complications of using time series data
+
+    1.	The very nature of time series data implies that the past can influence the future. One possibility is that the residuals in your simple regression are correlated. If that is the case, then your statistical tests are compromised.
+    
+    2.	It is also possible that each variable’s value is a function of its past values. In this case, current Presidential Approval is correlated with prior approval rates, just as the current value of the DJIA is also correlated with its prior values. Failure to account for these lagged values in a regression framework leads to estimates.
+
+So at a very basic level, when we are dealing with time-series data, it is important for analysts to understand and model the relationships of each variable against time itself. Univariate time-series analysis models the relationship of the current value of a variable against its prior values. These relationships can be simple and they can be very complex, but these modeling techniques can answer some very interesting questions and are the building blocks of more complicated techniques that you might be interested in. 
+
+
+# 3. Discussion: What types of questions can we ask about time-series data? No breakout session, gruop   -   - *Estimated Time: Classwide Dicussion: 5-10 minutes*
+
+Insert the function to *tidy up* the code when they are printed out
+```{r}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+```
+
+
+```{r}
+# Set working directory
+#wd <- "~/Documents/JStuff/Teach/w271/LiveSessions/week06" 
+#setwd(wd)
+```
+
+The following plot shows the weekly cardiovascular mortality rate in Los Angeles.
+```{r}
+rm(list = ls())
+library(astsa)
+
+plot(cmort, xlab= "Time in Weeks", ylab="Mortality. Units Unknown")
+title(main="Weekly cardiovascular mortality: 1970-1979") 
+```
+
+Take a look at this plot, and brainstorm what you find interesting and what questions you would like to answer about this plot.
+
+# 4. Exercise 1: Basic Concepts
+  - *Estimated Time: Total 30 minutes (Breakout 15 minutes, Classwide disscussion: 15 minutes)*
+  
+\textbf{What do we mean by the term "stochastic process" and what is the analalgous concept in generalized linear models?}
+
+\textbf{Suppose you were interested in modeling the cardiovascular mortality data for forecasting purposes. You have a series of models to choose from (we will talk about why this is the case in great length in later sessions). Based on your prior experiences in linear regression and discrete response models, what are the characteristics of a good model?}
+
+
+# 5. Exercise 2: Walking through an EDA
+  - *Estimated Time: Total 10 minutes (Classwide disscussion: 10 minutes)*
+
+Examine the EDA below. Answer the following questions:
+
+1. What features do you notice of the time-series plot? 
+
+2. Do you think that it is stationary in the mean? In the variance? 
+
+3. What pieces of information did you use from the EDA below to come to that conclusion?
+
+4. Do you find any evidence that there is a dependency structure in this time series data?
+
+5. What is the difference between strict and weak stationarity?
+
+6. What is the difference between an acf and pacf plot?
+
+
+```{r}
+hist(cmort, main = "Histogram of Cardiovascular Mortality Rate in LA",
+     xlab = "Cardiovascular mortality rate")
+
+plot(cmort, xlab= "Time in Weeks", ylab="Mortality. Units Unknown")
+title(main="Weekly cardiovascular mortality: 1970-1979") 
+
+lag.plot(cmort, lags = 9, layout = c(3,3),
+         diag = TRUE, diag.col = "red")
+title(main = "Scatterplot of cardiovascular mortality against lagged values")
+acf(cmort, main = "Autocorrelation of cardiovascular mortality in LA")
+
+pacf(cmort, main = "Partial autocorrelation of cardiovascular mortality in LA")
+```
+
+# 6. Exercise 3: Time-Series Data and You
+  - *Estimated Time: Total 15 minutes (Breakout 10 minutes, Classwide disscussion: 5 minutes)*
+  
+The async materials discussed 4 common empirical patterns of time-series data.
+
+  1. Trend and flucuations
+
+  2. Change in structure
+
+  3. Variation around a stable mean
+
+  4. Periodocity
+
+In your line of work or industry, brainstorm how you might encounter time-series data and which of the aforementioned types is the most common. Give some examples of the type of question people in your industry might ask and how they could use time-series analysis to answer them.
