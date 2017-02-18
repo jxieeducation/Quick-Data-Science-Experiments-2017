@@ -57,7 +57,11 @@ Before actually doing this analysis, consider the following complications of usi
 
     1.	The very nature of time series data implies that the past can influence the future. One possibility is that the residuals in your simple regression are correlated. If that is the case, then your statistical tests are compromised.
     
+    - lm --> compare models, predicted bounds by assuming homos...thingy, sd for coefficients
+    
     2.	It is also possible that each variable’s value is a function of its past values. In this case, current Presidential Approval is correlated with prior approval rates, just as the current value of the DJIA is also correlated with its prior values. Failure to account for these lagged values in a regression framework leads to estimates.
+    
+    - apple today vs apple a month ago
 
 So at a very basic level, when we are dealing with time-series data, it is important for analysts to understand and model the relationships of each variable against time itself. Univariate time-series analysis models the relationship of the current value of a variable against its prior values. These relationships can be simple and they can be very complex, but these modeling techniques can answer some very interesting questions and are the building blocks of more complicated techniques that you might be interested in. 
 
@@ -83,7 +87,15 @@ rm(list = ls())
 library(astsa)
 
 plot(cmort, xlab= "Time in Weeks", ylab="Mortality. Units Unknown")
-title(main="Weekly cardiovascular mortality: 1970-1979") 
+title(main="Weekly cardiovascular mortality: 1970-1979")
+
+acf(cmort)
+stl(cmort, s.window="periodic")
+cmort_de <- decompose(cmort, type="additive")
+plot(cmort_de$seasonal)
+plot(cmort_de$trend)
+plot(cmort_de$random)
+acf(cmort_de$random[!is.na(cmort_de$random)])
 ```
 
 Take a look at this plot, and brainstorm what you find interesting and what questions you would like to answer about this plot.
