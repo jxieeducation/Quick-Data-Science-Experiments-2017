@@ -8,6 +8,11 @@
 
 
 ### to do:
+* Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
+* PRIM bump hunting
+* temporal regression (decaying RSS)
+* MARS (pyEarth)
+* hierarchical mixture of experts (EM & interpretation)
 * normalized LL
 * LDA notes (http://obphio.us/pdfs/lda_tutorial.pdf) 
 * STL notes
@@ -22,7 +27,7 @@
 * coclustering methods (recommendations)
 * stacking via CV pedictions
 * stochastic search - bumping (XOR decision tree example)
-* decision tree missing values
+* decision tree missing values (surrogate splits, 9.2.4 ELSL)
 * isolation trees (http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf)
 * random forest variance formula (p*var + (1 - p)/beta *var
 * factor analysis
