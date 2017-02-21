@@ -3,11 +3,11 @@
 
 ### current:
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
-* robust regression
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 
 ### to do:
+* square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
 * PRIM bump hunting
 * temporal regression (decaying RSS)
