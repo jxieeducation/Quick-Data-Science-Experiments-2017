@@ -7,7 +7,9 @@
 
 
 ### to do:
+* radial basis function network (RBFN) (http://mccormickml.com/2013/08/15/radial-basis-function-network-rbfn-tutorial/)
 * Gauss-Newton method for non-linear least sqaures (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
+* sigmoid (W^T X) operates in the linear range if W^{norm} is very small demo
 * ICA 
 * square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
