@@ -7,6 +7,8 @@
 
 
 ### to do:
+* Gauss-Newton method for non-linear least sqaures (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
+* ICA 
 * square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
 * PRIM bump hunting
