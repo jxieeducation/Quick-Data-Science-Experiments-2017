@@ -2,11 +2,13 @@
 
 
 ### current:
+* dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 
 ### to do:
+* ARCH / GARCH tutorial (http://www.quantatrisk.com/2014/10/23/garch11-model-in-python/)
 * radial basis function network (RBFN) (http://mccormickml.com/2013/08/15/radial-basis-function-network-rbfn-tutorial/)
 * Gauss-Newton method for non-linear least sqaures (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
 * sigmoid (W^T X) operates in the linear range if W^{norm} is very small demo
@@ -75,9 +77,9 @@
 * permutation importance (decision tree)
 * ranking item recommendations for a user from matrix factorization
 
-
 ===
 
 ### potential tuts:
 * different types of FMs
 * Spark AllReduce
+* lessons from Quora ML
