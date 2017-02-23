@@ -2,14 +2,16 @@
 
 
 ### current:
-* dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 
 ### to do:
+* stochastic gradient boosting notes 
+* HOG (CV) (http://mccormickml.com/2013/05/09/hog-person-detector-tutorial/)
+* cohen kappa (http://wpe.info/vault/wood07/Wood07.pdf)
 * ARCH / GARCH tutorial (http://www.quantatrisk.com/2014/10/23/garch11-model-in-python/)
-* radial basis function network (RBFN) (http://mccormickml.com/2013/08/15/radial-basis-function-network-rbfn-tutorial/)
+* radial basis function network (RBFN) (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.109.312&rep=rep1&type=pdf)
 * Gauss-Newton method for non-linear least sqaures (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
 * sigmoid (W^T X) operates in the linear range if W^{norm} is very small demo
 * ICA 
@@ -63,6 +65,7 @@
 
 
 ### done:
+* dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * probability calibration
 * qr factorization
 * principal component regression
