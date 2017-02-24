@@ -33,7 +33,7 @@
 * C5.0 tree & rule interpretation
 * collaborative filtering for ordinal scores (http://www.ijcai.org/Proceedings/13/Papers/449.pdf)
 * coclustering methods (recommendations)
-* stacking via CV pedictions
+* stacking via CV pedictions (http://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html)
 * stochastic search - bumping (XOR decision tree example)
 * decision tree missing values (surrogate splits, 9.2.4 ELSL)
 * isolation trees (http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf)

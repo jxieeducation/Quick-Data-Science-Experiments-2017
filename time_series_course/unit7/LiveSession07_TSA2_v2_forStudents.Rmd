@@ -1,0 +1,197 @@
+---
+title: 'Statistical Methods for Discrete Response, Time Series, and Panel Data: Live Session 7'
+author: "Jeffrey Yau"
+date: "2/20/2017"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+#Main Topics Covered in Lecture 7:
+
+    - Classical Linear Regression Model (CLM) for time series data
+    - (Note) You will have to review CLM by yourself
+    - Linear time-trend regression
+    - Goodness of Fit Measures (for Time Series Models)
+    - Time-series smoothing techniques
+    - Exploratory time-series data analysis
+    - Autocorrelation function of different time series
+    - Setting up Autoregressive (*AR(p)*) models
+
+#Readings:
+
+**CM2009:** Paul S.P. Cowpertwait and Andrew V. Metcalfe. *Introductory Time Series with R*. Springer. 2009. 
+
+    - Ch. 5.1 – 5.3
+    - Ch. 3.4 Exponential Smoothing (optional, in the sense that I am not going to spend much time on this topic but not in the sense that it is not a useful practial technique.)
+
+**SS2016:** Robert H. Shumway and David S. Stoffer. *Time Series Analysis and Applications.* EZ Edition with R Examples
+
+    - SS2016: Ch.2
+
+**HA:** Rob J Hyndman and George Athanasopoulos. Forecasting: Principles and Practice.
+
+    - Ch.7 “Exponential Smoothing” (optional)
+
+# Agenda for the Live Session
+
+This lecture covers many topics on time series analysis, ranging from using classical linear regression to model time series data, time-trend regression models, exploratory data analysis for time series, smoothing techniques, autocorrelation function to autoregressive models.  One key focus in this course in general and this lecture in particular is to learn the requirements on the data needed a specific technique can be applied and if there is anything we can do to transform the data such that the technique can be applied. 
+
+  1. A brief overview of this week's material (*Estimated Time: Total 5 mins*)
+
+  2.  Breakout Session 1: Linear time trend regression (*Estimated Time: 15 mins Breakout session + 10 mins classwide discussion*)
+
+  3. Breakout Session 2: In sample fit (*Estimated Time: 10 mins Breakout session + 10 mins classwide discussion*)
+
+  4. Breakout Session 3: Smoothing (*Estimated Time: 25 mins Breakout session + 10 mins classwide discussion*)
+
+  5. Class-wide Discussion: about the Backshift operator (*if time permit*)
+
+
+## 1. Practice 1: Simple Exponential Smoothing  
+  
+  - Discussion the following questions:
+      a. Before diving into time series smoothing techniques, discuss the following question.
+      
+      Suppose your boss give you the monthly sales in two top-performing  departments of the company last 10 years. You look at them and find that they both have strong trends. Your boss ask you to (1) give him the mean of each of the series and (2) the correlation of the two series. Based on what you learn in the last two lectures, do you think the mean and the correlation are meaningful? If so, please explain. If not, why not?
+      
+      b. What is the main purpose of time series smoothing?
+      
+
+This method is suitable for forecasting data with no trend or seasonal pattern. 
+Start-up Codes:
+```{r}
+#YOUR R CODE HERE
+```  
+
+
+# Breakout Session 1 (15 mins + 10 mins discussion)
+
+  1. Load the file "bls_unemployment.csv" 
+      - This file contains the monthly unemployment rate in the United States from January 2007 to January 2017. *Note that these data are NOT seasonally adjusted.
+      
+  2. Convert it into a R time-series object. 
+  
+  3.  Examine the raw data structure after you load it into a data.frame as well as the data structure after you convert the df into a time series object.
+
+```{r}
+df <- read.csv("~/Downloads/Quick-Data-Science-Experiments-2017/time_series_course/unit7/bls_unemployment.csv")
+str(df)
+df$Year
+df$Period
+?ts
+dfts <- ts(df$Value, st=c(2007, 1), end=c(2017, 1), freq = 12)
+
+plot(dfts)
+
+?decompose
+decompose(dfts)
+```
+
+Suppose we want to approximate the unemployment rate between 2010 and 2017 using a linear time trend model. 
+
+For this exercise, feel free to modify this dataset but be sure that you explain what you did and why.
+
+  4. Create a linear time trend model by regressing the unemployment rate on time. Interpret the model results. Use this model to predict the unemployment rate in 2018 January (i.e. 12 months from the end of the sample). Do the result make sene? How about a prediction of the unemployment rate at 2020 December?
+
+  5. Examine the residuals of this model as you would if it were a regular linear model. In addition, generate ACF and PACF plots of the residuals. What do you notice? Based on this analysis, does your answer to question 1 change? If so why?
+
+
+```{r}
+time(dfts)
+dfts_windowed <- window(dfts, start=2007)
+head(time(dfts))
+(model <- lm(formula = dfts ~ time(dfts_windowed)))
+?predict
+dfts
+predict(model)
+
+# 7.64, 7.167239
+
+plot(resid(model))
+acf(resid(model))
+pacf(resid(model))
+
+# ARIMA() --> AR(1) / AR(2)
+```
+
+
+## Breakout Session 2 (10 mins + 10 mins discussion)
+Let's turn our attention to different measures of in-sample fit. 
+
+1. In-sample model performance measures: Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC).  
+
+  a. Describe in words what the AIC and BIC formulas mean. 
+  
+  b. What is the main difference between the two?
+
+  c. Should we always choose a model with the lowest AIC (or BIC, for that matter)? Explain.
+
+2. TAKE HOME: Return to the regression example above and estimate models with a linear time trend, quadratic, and cubic. For each, calculate its AIC and examine the residuals. Comment on your findings. If you  like, increase the order of the polynomials until the AIC is minimized. Specifically, what is the relationship between polynomial order, AIC/BIC, and your residuals?
+
+## Breakout Session 3 (25 mins + 15 mins discussion)
+Go back to the time-series plot of the unemployment rate.
+
+  1. Is this time series stationary? Explain your answer.
+
+  2. Apply the moving average smoothing function to the data. Begin by choosing whatever window size you wish. 
+
+  3. Plot the moving average series. What do you see? What notable features can you see here that you could not see clearly in the raw data?
+
+```{r}
+#YOUR R CODE HERE
+```
+
+  4. Apply the moving average smoothing function to the raw data again, this time choosing a different window size.
+  
+  5. Plot the raw data and two moving averages on the same plot. Based on what you see, what is the relationship between the size of the window and how well it fits the data? Which moving average series is more "complicated"?
+
+After we have detected a trend, it is useful to de-trend the data. We do this by taking every value of *unemp* and subtract our trended data from it. This is very similar to how we calculated the residuals from OLS regressions. The resulting residuals is called the *residual error series*. Return to your moving averages from above.
+
+(6)	Choose one of the moving average objects you created in part 1 and create an object that contains your residuals.
+
+(7)	Calculate the mean and sd of the error series, along with a histogram.
+
+(8)	Plot the residual time series just as you would if it were a regular time series object. Plot a moving average of the residual time series as well. What do you notice? Would you characterize your residuals as being white noise? What does that mean?
+
+(9)	Create correlograms for the residual time series and plot it next to a correlogram for the underlying notice. What do you notice?
+
+(10) Repeat this exercise with your other moving average object. What do you notice about the relationship between how well your moving average model fits the data and the nature of the residuals?
+
+Discussion Questions:
+
+1. What is the relationship between how wide your moving average "window" is and how well it fits the data? What does this tell you about the relationship between how complicated models are and how well they fit the data?
+
+2. What is the relationship between model complexity and the characteristics of the residual series?
+
+
+# Group discussion (time permitting)
+
+1. Describe in words what the backward shift operator is?
+
+2. Re-write the following auto-regressive model using the backshift operator
+
+$$ z_t = \alpha_0 + \sum_{p=1}^P \alpha_p*z_{t-p} + \omega_t$$
+
+
+\newpage
+# Take-home Exercises. Concepts Check:
+
+Review the following concepts:
+
+    1. Define a stochastic process
+    
+    2. Define a time series
+    
+    3. What are some of the most important characteristics we study in a time series so that we can "model" it?
+    
+    4. Discuss the mean and variance functions and how the similarities and differences from those we studied in classical linear model
+    
+    5. Define strict and weak statonarity
+    
+    6. How do we measure dependency in a time series?
+    
+
+
+
+
