@@ -7,9 +7,9 @@
 
 
 ### to do:
+* online covariance formula (http://rebcabin.github.io/blog/2013/01/22/covariance-matrices/)
 * stochastic gradient boosting notes 
 * HOG (CV) (http://mccormickml.com/2013/05/09/hog-person-detector-tutorial/)
-* cohen kappa (http://wpe.info/vault/wood07/Wood07.pdf)
 * ARCH / GARCH tutorial (http://www.quantatrisk.com/2014/10/23/garch11-model-in-python/)
 * radial basis function network (RBFN) (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.109.312&rep=rep1&type=pdf)
 * Gauss-Newton method for non-linear least sqaures (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
@@ -67,6 +67,7 @@
 ### done:
 * dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * probability calibration
+* * cohen kappa (https://onlinecourses.science.psu.edu/stat509/node/162)
 * qr factorization
 * principal component regression
 * partial least square
