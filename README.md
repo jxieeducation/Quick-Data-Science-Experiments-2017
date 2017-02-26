@@ -7,6 +7,10 @@
 
 
 ### to do:
+* bass curve (nls w/ 3.12 pg52 IntroTimeSeries Cowpertwait)
+* weight elimination (https://papers.nips.cc/paper/323-generalization-by-weight-elimination-with-application-to-forecasting.pdf)
+* hinton diagrams & for linear reg (http://tonysyu.github.io/mpltools/auto_examples/special/plot_hinton.html)
+* levelplots interpretation
 * online covariance formula (http://rebcabin.github.io/blog/2013/01/22/covariance-matrices/)
 * stochastic gradient boosting notes 
 * HOG (CV) (http://mccormickml.com/2013/05/09/hog-person-detector-tutorial/)
@@ -15,6 +19,7 @@
 * Gauss-Newton method for non-linear least sqaures (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
 * sigmoid (W^T X) operates in the linear range if W^{norm} is very small demo
 * ICA 
+* semisupervised learning survey (http://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf)
 * square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
 * PRIM bump hunting
