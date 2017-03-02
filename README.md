@@ -7,6 +7,8 @@
 
 
 ### to do:
+* huffman tree generator with frequency (w/ application for decision tree)
+* skipgram, neg sampling notes (https://arxiv.org/pdf/1310.4546.pdf)
 * dual form perceptron
 * kernel regression
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
