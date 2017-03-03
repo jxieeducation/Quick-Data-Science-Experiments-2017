@@ -7,13 +7,15 @@
 
 
 ### to do:
+* hyperparam tuning - automated machine learning (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
+* hyperband bandit param opt (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
+* lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)
 * huffman tree generator with frequency (w/ application for decision tree)
 * skipgram, neg sampling notes (https://arxiv.org/pdf/1310.4546.pdf)
 * dual form perceptron
 * kernel regression
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
 * no free lunch theorem (http://www.cc.gatech.edu/~isbell/reading/papers/nfl-optimization-explanation.pdf)
-* pandasql tut (https://github.com/yhat/pandasql)
 * bokeh & ggplot tut 
 * bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
@@ -101,6 +103,7 @@
 * partial least square
 * eigen decomposition tut
 * bias-variance example w207_lec_1
+* pandasql tut (https://github.com/yhat/pandasql)
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
 * perceptron implementation
