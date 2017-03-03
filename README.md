@@ -7,6 +7,7 @@
 
 
 ### to do:
+* portmanteau test (http://robjhyndman.com/hyndsight/ljung-box-test/)
 * hyperparam tuning - automated machine learning (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
 * hyperband bandit param opt (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
 * lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)

@@ -1,11 +1,17 @@
 ---
 title: 'Statistical Methods for Discrete Response, Time Series, and Panel Data: Live Session 8'
-author: "Jeffrey Yau"
+author: "Jeffrey Yau, Devesh Tiwari"
 date: "2/28/2017"
 output:
   pdf_document: default
   html_notebook: default
 ---
+
+```{r}
+# Insert the function to *tidy up* the code when they are printed out
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+```
 
 # Main Topics Covered in Lecture 8:
 
@@ -14,6 +20,7 @@ output:
         - Properties of the general AR(p) model
         - Simulation of AR Models
         - Estimation, model diagnostics, model identification, model selection, assumption testing, and statistical inference
+    
     - Moving Average (MA) Models
         - Lag (or backshift) operators
         - Mathematical formulation and derivation of key properties
@@ -46,7 +53,7 @@ Classical linear regression models, however, are insufficient for explaining all
 In this lecture, we will study in-depth autoregressive models and moving-average models, both of which are the essential building blocks for the more general class of mixed autoregressive moving average models. We will learn about identification of the order of dependency in AR and MA models using ACF and PACF,estimation, diagonsis of residuals (after the model is estimated), model assumption testing, model performance evaluation, and
 forecasting.
  
-We will also start to learn about and use extensively the *principle of parsimonious* in building time series models and will continue to develop this important principle in the next two lectures.
+We will also start to learn about and use extensively the *principleof parsimonious* in building time series models and will continue to develop this important principle in the next two lectures.
  
 It is very important to keep in mind that this class of models applies only to stationary processes. Therefore, we always need to check for stationarity before applying AR(p) models to the data.
 
@@ -126,7 +133,6 @@ When fitting the class of ARIMA model to a set of time series data, the followin
 1. Discussion the following concepts related to AR(p) models:
 
     a. State the stationary condition for an AR process
-
       
 Start-up Codes:
 ```{r}
@@ -134,8 +140,10 @@ Start-up Codes:
 rm(list = ls())
 
 # Set working directory
-#wd <- "" 
-#setwd(wd)
+wd <- "~/Documents/Projects/MIDS/Winter 2017/live sessions/week8/week8/" 
+setwd(wd)
+
+#install.packages("forecast")
 
 # Load required libraries
 library(astsa)    # Time series package by Shummway and Stoffer
@@ -145,22 +153,26 @@ library(dplyr)
 library(Hmisc)
 library(ggplot2)
 
-# Insert the function to *tidy up* the code when they are printed out
-library(knitr)
-opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+
 ```  
 
 2. Load into R the given data series, *series1.csv*, which is a monthly series starting in 2005 January. The series has been modified from its original series (for the practices in this live session). Examine the data structure. How many observations are there? How many series is included? Do the data files given have variables that you may not need?
 
 ```{r}
-df <- read.csv("series1.csv")
-dfts <- ts(df$x, start=c(2005, 1), freq=12)
-summary(dfts)
-summary(df)
+df <- read.csv("series1.csv", header = TRUE, sep=",")
 
-aggregate(dfts) / 12
-plot(dfts)
-# YOUR CODE TO BE HERE
+# Examine the data structure
+  str(df)
+  names(df)
+  cbind(head(df), tail(df))
+  View(df)
+
+# Convert it into a time serie object
+series1 <- ts(df$x, start=c(2005,1), frequency = 12)
+
+  str(series1)
+  head(cbind(time(series1),series1))
+
 ```
 
 # Practice 2: Exploratory Time Series Data Analysis (25 minutes)
@@ -175,13 +187,18 @@ In the breakout session, conduct EDA using series 1.
 
 
 ```{r}
-acf(dfts)
-pacf(dfts) # AR(3)
+par(mfrow=c(2,2))
 
-?portmanteau
-?portest
-library(portest)
-portest(dfts)
+ts.plot(series1,
+        main = "A Given Monthly Time Series")
+
+ggplot(df, aes(x=x)) +
+  geom_histogram(aes(fill = ..count..)) +
+  ggtitle("A Given Monthly Time Series") +
+  xlab("Series 1") + ylab("Frequency")
+  
+acf(series1, main="ACF of Series 1")
+pacf(series1, main="PACF of Series 1")
 ```
 
 
@@ -217,23 +234,37 @@ In your break-out session, estimate an AR model using the *arima()* function. Fo
 
 
 ```{r}
-# look at AIC =)
-(m1 <- arima(dfts, order=c(1,0,0)))
-(m2 <- arima(dfts, order=c(3,0,0)))
-arima(dfts, order=c(2,0,0))
-arima(dfts, order=c(1,0,0))
+# I started with AR(3) based on the patterns exhibited in acf and pacf
+ar.fit1 <- arima(series1, c(3,0,0)) 
+ar.fit1
+summary(ar.fit1)
+str(ar.fit1)
 
-plot(m1$residuals)
-acf(m1$residuals)
-qqnorm(m1$residuals)
+# Model Selection -  Which model is selected based on the AIC?
+auto.arima(series1)
 
-plot(m2$residuals)
-acf(m2$residuals)
-qqnorm(m2$residuals)
+# Model Evaluation (Residual Diagnostic)
 
-install.packages("wntestq")
-library(wntestq)
-wntestq
+summary(ar.fit1$resid)
+str(ar.fit1$resid)
+plot(ar.fit1$resid)
+
+par(mfrow=c(2,2))
+plot(rnorm(120), type="l", main="Gaussian White Noise")
+plot(ar.fit1$resid[-c(1:2)], type="l", main="Residuals: t-plot")
+hist(ar.fit1$resid)
+acf(ar.fit1$resid[-c(1:2)], main="ACF of the Residual Series")
+pacf(ar.fit1$resid[-c(1:2)], main="ACF of the Residual Series")
+
+# Test the autocorrelation on the residuals
+
+# See https://www.rdocumentation.org/packages/WeightedPortTest/versions/1.0/topics/Weighted.Box.test
+Box.test(residuals(ar.fit1), lag=24, type="Ljung")
+
+tail(cbind(time(series1),series1))
+
+# 12-step ahead forecast
+forecast.Arima(ar.fit1, h=12)
 ```
 
 # Take-home Exercises:
