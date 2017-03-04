@@ -7,12 +7,12 @@
 
 
 ### to do:
+* recursive autoencoders (http://www.socher.org/index.php/Main/Semi-SupervisedRecursiveAutoencodersForPredictingSentimentDistributions)
 * portmanteau test (http://robjhyndman.com/hyndsight/ljung-box-test/)
 * hyperparam tuning - automated machine learning (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
 * hyperband bandit param opt (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
 * lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)
-* huffman tree generator with frequency (w/ application for decision tree)
-* skipgram, neg sampling notes (https://arxiv.org/pdf/1310.4546.pdf)
+* huffman tree with frequency (https://www.siggraph.org/education/materials/HyperGraph/video/mpeg/mpegfaq/huffman_tutorial.html)
 * dual form perceptron
 * kernel regression
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
@@ -60,7 +60,6 @@
 * FTRL note (http://www.eecs.tufts.edu/~dsculley/papers/ad-click-prediction.pdf)
 * L-BFGS note
 * NMF (how it enforces Non-negativity)
-* C5.0 tree & rule interpretation
 * collaborative filtering for ordinal scores (http://www.ijcai.org/Proceedings/13/Papers/449.pdf)
 * coclustering methods (recommendations)
 * stacking via CV pedictions (http://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html)
@@ -99,11 +98,13 @@
 * probability calibration
 * cohen kappa (https://onlinecourses.science.psu.edu/stat509/node/162)
 * qr factorization
+* skipgram, neg sampling notes (https://arxiv.org/pdf/1310.4546.pdf)
 * principal component regression
 * kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
 * partial least square
 * eigen decomposition tut
 * bias-variance example w207_lec_1
+* generating rules from decision tree (https://www.mimuw.edu.pl/~son/datamining/DM/6-rules.pdf)
 * pandasql tut (https://github.com/yhat/pandasql)
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
@@ -119,3 +120,4 @@
 * different types of FMs
 * Spark AllReduce
 * lessons from Quora ML
+* notes like [this](http://demo.clab.cs.cmu.edu/cdyer/nce_notes.pdf)
