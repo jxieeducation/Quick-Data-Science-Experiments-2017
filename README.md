@@ -7,6 +7,7 @@
 
 
 ### to do:
+* discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * recursive autoencoders (http://www.socher.org/index.php/Main/Semi-SupervisedRecursiveAutoencodersForPredictingSentimentDistributions)
 * portmanteau test (http://robjhyndman.com/hyndsight/ljung-box-test/)
 * hyperparam tuning - automated machine learning (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
