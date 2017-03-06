@@ -7,6 +7,7 @@
 
 
 ### to do:
+* OAO vs OAA (https://hal.archives-ouvertes.fr/inria-00103955/document)
 * discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * recursive autoencoders (http://www.socher.org/index.php/Main/Semi-SupervisedRecursiveAutoencodersForPredictingSentimentDistributions)
 * portmanteau test (http://robjhyndman.com/hyndsight/ljung-box-test/)
