@@ -7,7 +7,7 @@
 
 
 ### to do:
-* OAO vs OAA (https://hal.archives-ouvertes.fr/inria-00103955/document)
+* bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
 * discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * recursive autoencoders (http://www.socher.org/index.php/Main/Semi-SupervisedRecursiveAutoencodersForPredictingSentimentDistributions)
 * portmanteau test (http://robjhyndman.com/hyndsight/ljung-box-test/)
@@ -110,6 +110,7 @@
 * pandasql tut (https://github.com/yhat/pandasql)
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
+* OAO vs OAA (https://hal.archives-ouvertes.fr/inria-00103955/document)
 * perceptron implementation
 * naive bayes spam filter
 * decision tree imple
