@@ -7,6 +7,11 @@
 
 
 ### to do:
+* hierarchical clustering dendrogram analysis
+* DBSCAN 
+* silhouette score review
+* spherical k-means (cosine dist) (https://www.jstatsoft.org/article/view/v050i10/v50i10.pdf)
+* credit card fraud readup
 * bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
 * discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * recursive autoencoders (http://www.socher.org/index.php/Main/Semi-SupervisedRecursiveAutoencodersForPredictingSentimentDistributions)
