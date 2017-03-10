@@ -119,9 +119,9 @@ opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
 library(forecast)
 library(astsa)
 
-path <- "~/Documents/Projects/MIDS/"
+path <- "~/Downloads/Quick-Data-Science-Experiments-2017/time_series_course/unit9/"
 setwd(path)
-df <- read.csv("Summer 2016/materials for ISVC/Lab 3/correlate-flight_prices.csv")
+df <- read.csv("correlate-flight_prices.csv")
 
 names(df)
 # We can actually analyze the relative seach activity for many phrases!

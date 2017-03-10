@@ -4,9 +4,10 @@
 ### current:
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
-
+* WTTE RNN churn modeling (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 
 ### to do:
+* survival analysis via weibull (http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf)
 * hierarchical clustering dendrogram analysis
 * DBSCAN 
 * silhouette score review
@@ -15,7 +16,6 @@
 * bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
 * discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * recursive autoencoders (http://www.socher.org/index.php/Main/Semi-SupervisedRecursiveAutoencodersForPredictingSentimentDistributions)
-* portmanteau test (http://robjhyndman.com/hyndsight/ljung-box-test/)
 * hyperparam tuning - automated machine learning (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
 * hyperband bandit param opt (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
 * lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)
@@ -35,7 +35,6 @@
 * prophet forecast library test (https://research.fb.com/prophet-forecasting-at-scale/)
 * surprise - bayesian weighting map (http://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf)
 * feature engineering notes (https://www.slideshare.net/HJvanVeen/feature-engineering-72376750)
-* scalable hierarchical clustering via Spark (http://users.eecs.northwestern.edu/~cji970/pub/cjinBigDataService2015.pdf)
 * quantile vs expectile regression (https://www.slideshare.net/charthur/quantile-and-expectile-regression)
 * bayesian neural networks 
 * MCMC for sampling ftom posterior ESLR, pg279
@@ -59,7 +58,6 @@
 * temporal regression (decaying RSS)
 * MARS (pyEarth)
 * hierarchical mixture of experts (EM & interpretation)
-* normalized LL
 * LDA notes (http://obphio.us/pdfs/lda_tutorial.pdf) 
 * STL notes
 * zero shot learning (https://github.com/MLWave/extremely-simple-one-shot-learning)
@@ -75,7 +73,6 @@
 * isolation trees (http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf)
 * random forest variance formula (p*var + (1 - p)/beta *var
 * factor analysis (http://web.stanford.edu/class/psych253/tutorials/FactorAnalysis.html)
-* churn prediction example (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 * adaboost vs SVM (https://ucb-mids.s3.amazonaws.com/prod/Machine+Learning/Readings/Week+4/ShortIntroToBoosting.pdf)
 * bayesian model averaging & BIC
 * kernel density classification & kernel smoothing with different local kernels
@@ -103,6 +100,7 @@
 ### done:
 * dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * probability calibration
+* Ljung-Box portmanteau test (http://stat.wharton.upenn.edu/~steele/Courses/956/Resource/TestingNormality/LjungBox.pdf)
 * cohen kappa (https://onlinecourses.science.psu.edu/stat509/node/162)
 * qr factorization
 * skipgram, neg sampling notes (https://arxiv.org/pdf/1310.4546.pdf)
@@ -110,6 +108,7 @@
 * kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
 * partial least square
 * eigen decomposition tut
+* scalable hierarchical clustering via Spark (http://users.eecs.northwestern.edu/~cji970/pub/cjinBigDataService2015.pdf)
 * bias-variance example w207_lec_1
 * generating rules from decision tree (https://www.mimuw.edu.pl/~son/datamining/DM/6-rules.pdf)
 * pandasql tut (https://github.com/yhat/pandasql)
