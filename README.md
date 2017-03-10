@@ -23,8 +23,7 @@
 * dual form perceptron
 * kernel regression
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
-* no free lunch theorem (http://www.cc.gatech.edu/~isbell/reading/papers/nfl-optimization-explanation.pdf)
-* bokeh & ggplot tut 
+* ggplot tut 
 * bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
 * euclidean distance weighted by gain ratio, KNN variant
