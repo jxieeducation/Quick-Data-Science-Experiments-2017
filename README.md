@@ -7,6 +7,8 @@
 * WTTE RNN churn modeling (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 
 ### to do:
+* locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
+* cs224 NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * ts backtesting (http://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 * survival analysis via weibull (http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf)
 * hierarchical clustering dendrogram analysis
