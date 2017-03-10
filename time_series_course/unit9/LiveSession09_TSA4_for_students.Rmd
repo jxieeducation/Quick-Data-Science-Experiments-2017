@@ -140,17 +140,22 @@ plot(fp)
 # Lets keep data between 2009 and 2014. Let's hold out 2015 as test data that you can use later.
 
 fp.training <- fp[time(fp) >= 2009 & time(fp) < 2015]
+
 fp.training <- ts(fp.training, frequency = 52, start = c(2009,1))
 
 fp.test <- fp[time(fp) >= 2015]
 fp.test <- ts(fp.test, frequency = 52, start = c(2015,1))
 plot(fp.training)
+
 ```
 
 As we can see, this time-series is clearly not stationary in the mean! It is also pretty apparent that the time-series exhibits a lot of seasonality! Remember, at this stage we want to determine the values for d and D!
 
 ```{r}
 # Non-seasonal component
+
+acf(fp)
+pacf(fp)
 
 acf(fp.training, lag.max = 104)
 pacf(fp.training, lag.max = 104)
@@ -159,6 +164,9 @@ fp.diff <- diff(fp.training, lag = 1)
 plot(fp.diff)
 acf(fp.diff, lag.max = 104)
 pacf(fp.diff, lag.max = 104)
+
+Box.test(fp, type="Ljung-Box")
+Box.test(fp.diff, type="Ljung-Box")
 ```
 1. Based on these plots, do you think that the raw series, *fp.training* needs to be differenced? Why or why not?
 
@@ -186,10 +194,24 @@ monthplot(fp.seasonal.difference) # Mean seems stable over each period now
 We have established that for our modeling purposes, d = 1 and D = 1. Now, we need to model the non-seasonal component of the raw series. In order to do that, we are going to use the Arima function in the forecast package.
 
 ```{r}
+for (q in 0:3){
+  for (d in 0:1){
+    for(p in 0:3){
+      mod <- arima(fp.training, order = c(p,d,q),
+               seasonal = list(order = c(0,0,0),52),
+               method = "ML")
+      print(round(c(p, d, q, mod$aic),2))
+    }
+  }
+}
+```
+
+
+```{r}
 # Let's model the non-seasonal component using a pure MA
 
 for (q in 0:5){
-  mod <- Arima(fp.training, order = c(0,1,q),
+  mod <- arima(fp.training, order = c(0,1,q),
                seasonal = list(order = c(0,1,0),52),
                method = "ML")
 
@@ -200,7 +222,7 @@ for (q in 0:5){
 # Let's look at some ARIMA models
 for (q in 0:3){
   for(p in 0:3){
-      mod <- Arima(fp.training, order = c(p,1,0),
+      mod <- arima(fp.training, order = c(p,1,0),
                seasonal = list(order = c(0,1,0),52),
                method = "ML")
 
@@ -211,7 +233,7 @@ for (q in 0:3){
 # The AIC's are all pretty similar (except for ARIMA(0,1,0))
 # Let's look at the residuals for the simplest models
 
-model.non.seas0 <- Arima(fp.training, order = c(1,1,0),
+model.non.seas0 <- arima(fp.training, order = c(1,1,0),
                          seasonal = list(order = c(0,1,0),52),
                          method = "ML")
 model.non.seas0
@@ -222,7 +244,7 @@ pacf(model.non.seas0$residuals, lag.max = 104)
 
 
 # Let's look at a more complicated model
-model.non.seas1 <- Arima(fp.training, order = c(3,1,1),
+model.non.seas1 <- arima(fp.training, order = c(3,1,1),
                          seasonal = list(order = c(0,1,0),52),
                          method = "ML")
 model.non.seas1
