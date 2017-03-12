@@ -8,6 +8,7 @@
 
 ### to do:
 * locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
+* take notes on elastic search image search (https://github.com/tuan3w/visual_search)
 * cs224 NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * ts backtesting (http://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 * survival analysis via weibull (http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf)
