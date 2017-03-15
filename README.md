@@ -7,6 +7,12 @@
 * WTTE RNN churn modeling (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 
 ### to do:
+* very sparse random projection (http://cseweb.ucsd.edu/~akmenon/VerySparseRPTalk.pdf)
+* pyMix mixture models (http://www.pymix.org/pymix/)
+* AIC and BIC for scree plot
+* random walk bayesian NN (http://twiecki.github.io/blog/2017/03/14/random-walk-deep-net/)
+* exercises from Scientific Programming w/ Python (http://scipython.com/book/)
+* EM for data imputation (http://users.stat.umn.edu/~sandy/courses/8053/handouts/Missing.Data.Multiple.Imputation.pdf)
 * vector quantization (image reconstruction)
 * locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
 * take notes on elastic search image search (https://github.com/tuan3w/visual_search)
