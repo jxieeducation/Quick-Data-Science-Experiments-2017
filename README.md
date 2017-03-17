@@ -7,6 +7,10 @@
 * WTTE RNN churn modeling (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 
 ### to do:
+* isomap geodeisc distance + mds
+* kernel PCA (projection on linear space)
+* multidimensional scaling tut (preserving interpoint dist)
+* PCA gradient descent solver on eigenfaces
 * very sparse random projection (http://cseweb.ucsd.edu/~akmenon/VerySparseRPTalk.pdf)
 * pyMix mixture models (http://www.pymix.org/pymix/)
 * AIC and BIC for scree plot
