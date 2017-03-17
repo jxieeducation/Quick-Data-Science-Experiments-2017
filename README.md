@@ -130,6 +130,7 @@
 * decision tree imple
 * permutation importance (decision tree)
 * ranking item recommendations for a user from matrix factorization
+* imputation in scikit-learn (http://scikit-learn.org/stable/auto_examples/missing_values.html#sphx-glr-auto-examples-missing-values-py)
 
 ===
 
