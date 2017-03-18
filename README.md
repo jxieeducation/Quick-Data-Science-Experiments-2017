@@ -131,6 +131,7 @@
 * perceptron implementation
 * naive bayes spam filter
 * decision tree imple
+* ch15 notes Hal Daume III unsupervised learning (KMeans + PCA)
 * permutation importance (decision tree)
 * ranking item recommendations for a user from matrix factorization
 * imputation in scikit-learn (http://scikit-learn.org/stable/auto_examples/missing_values.html#sphx-glr-auto-examples-missing-values-py)

@@ -119,7 +119,7 @@ opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
 library(forecast)
 library(astsa)
 
-path <- "~/Downloads/Quick-Data-Science-Experiments-2017/time_series_course/unit9/"
+path <- "~/Downloads/Quick-Data-Science-Experiments-2017/time_series/time_series_course/unit9/"
 setwd(path)
 df <- read.csv("correlate-flight_prices.csv")
 
