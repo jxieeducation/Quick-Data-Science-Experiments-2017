@@ -17,7 +17,6 @@
 * random walk bayesian NN (http://twiecki.github.io/blog/2017/03/14/random-walk-deep-net/)
 * exercises from Scientific Programming w/ Python (http://scipython.com/book/)
 * EM for data imputation (http://users.stat.umn.edu/~sandy/courses/8053/handouts/Missing.Data.Multiple.Imputation.pdf)
-* vector quantization (image reconstruction)
 * locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
 * take notes on elastic search image search (https://github.com/tuan3w/visual_search)
 * cs224 NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
@@ -57,24 +56,21 @@
 * weight elimination (https://papers.nips.cc/paper/323-generalization-by-weight-elimination-with-application-to-forecasting.pdf)
 * hinton diagrams & for linear reg (http://tonysyu.github.io/mpltools/auto_examples/special/plot_hinton.html)
 * levelplots interpretation
-* online covariance formula (http://rebcabin.github.io/blog/2013/01/22/covariance-matrices/)
 * stochastic gradient boosting notes 
 * HOG (CV) (http://mccormickml.com/2013/05/09/hog-person-detector-tutorial/)
 * ARCH / GARCH tutorial (http://www.quantatrisk.com/2014/10/23/garch11-model-in-python/)
 * radial basis function network (RBFN) (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.109.312&rep=rep1&type=pdf)
-* Gauss-Newton method for non-linear least sqaures (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
+* Gauss-Newton method for non-linear least squares (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
 * sigmoid (W^T X) operates in the linear range if W^{norm} is very small demo
 * ICA 
 * semisupervised learning survey (http://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf)
 * square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
 * PRIM bump hunting
-* temporal regression (decaying RSS)
 * MARS (pyEarth)
 * hierarchical mixture of experts (EM & interpretation)
 * LDA notes (http://obphio.us/pdfs/lda_tutorial.pdf) 
 * STL notes
-* zero shot learning (https://github.com/MLWave/extremely-simple-one-shot-learning)
 * poisson regression
 * FTRL note (http://www.eecs.tufts.edu/~dsculley/papers/ad-click-prediction.pdf)
 * L-BFGS note
@@ -112,8 +108,10 @@
 
 
 ### done:
+* online covariance formula (http://rebcabin.github.io/blog/2013/01/22/covariance-matrices/)
 * dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * probability calibration
+* temporal regression (decaying RSS)
 * Ljung-Box portmanteau test (http://stat.wharton.upenn.edu/~steele/Courses/956/Resource/TestingNormality/LjungBox.pdf)
 * cohen kappa (https://onlinecourses.science.psu.edu/stat509/node/162)
 * qr factorization
@@ -121,6 +119,7 @@
 * principal component regression
 * kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
 * partial least square
+* vector quantization (image reconstruction)
 * eigen decomposition tut
 * scalable hierarchical clustering via Spark (http://users.eecs.northwestern.edu/~cji970/pub/cjinBigDataService2015.pdf)
 * bias-variance example w207_lec_1
