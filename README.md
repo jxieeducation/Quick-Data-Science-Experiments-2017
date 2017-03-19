@@ -7,10 +7,11 @@
 * WTTE RNN churn modeling (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 
 ### to do:
+* LR vs LDA Efron paper (http://pegasus.cc.ucf.edu/~lni/sta6238/Efron1975Efficiency.pdf)
 * isomap geodeisc distance + mds
 * kernel PCA (projection on linear space)
 * multidimensional scaling tut (preserving interpoint dist)
-* PCA gradient descent solver on eigenfaces
+* PCA gradient descent solver
 * very sparse random projection (http://cseweb.ucsd.edu/~akmenon/VerySparseRPTalk.pdf)
 * pyMix mixture models (http://www.pymix.org/pymix/)
 * AIC and BIC for scree plot
@@ -108,6 +109,7 @@
 
 
 ### done:
+* eigenface (http://www.face-rec.org/algorithms/PCA/jcn.pdf)
 * online covariance formula (http://rebcabin.github.io/blog/2013/01/22/covariance-matrices/)
 * dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * probability calibration
