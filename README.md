@@ -1,12 +1,29 @@
 # Quick-Data-Science-Experiments-2017
 
-
-### current:
+### WIP:
+* discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 * WTTE RNN churn modeling (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 
+
+### long term:
+* scikit-learn autoexamples
+* gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
+* cs224 NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
+* exercises from Scientific Programming w/ Python (http://scipython.com/book/)
+* ggplot tut 
+* bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
+
+
+
 ### to do:
+* gensim summarization (https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/summarization_tutorial.ipynb)
+* simpson's paradox (http://corysimon.github.io/articles/simpsons-paradox/)
+* knn images from imagenet embeddings
+* levenshtein string clustering (http://stackoverflow.com/questions/21511801/text-clustering-with-levenshtein-distances)
+* Forecasting: principles and practice chapter 7 to 9 (https://www.otexts.org/fpp)
+* community detection via Girvan-Newman hierarhical clustering (https://github.com/riteshkasat/Community-Detection-Algorithm)
 * LR vs LDA Efron paper (http://pegasus.cc.ucf.edu/~lni/sta6238/Efron1975Efficiency.pdf)
 * isomap geodeisc distance + mds
 * kernel PCA (projection on linear space)
@@ -16,11 +33,9 @@
 * pyMix mixture models (http://www.pymix.org/pymix/)
 * AIC and BIC for scree plot
 * random walk bayesian NN (http://twiecki.github.io/blog/2017/03/14/random-walk-deep-net/)
-* exercises from Scientific Programming w/ Python (http://scipython.com/book/)
 * EM for data imputation (http://users.stat.umn.edu/~sandy/courses/8053/handouts/Missing.Data.Multiple.Imputation.pdf)
 * locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
 * take notes on elastic search image search (https://github.com/tuan3w/visual_search)
-* cs224 NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * ts backtesting (http://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 * survival analysis via weibull (http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf)
 * hierarchical clustering dendrogram analysis
@@ -28,8 +43,6 @@
 * silhouette score review
 * spherical k-means (cosine dist) (https://www.jstatsoft.org/article/view/v050i10/v50i10.pdf)
 * credit card fraud readup
-* bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
-* discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * recursive autoencoders (http://www.socher.org/index.php/Main/Semi-SupervisedRecursiveAutoencodersForPredictingSentimentDistributions)
 * hyperparam tuning - automated machine learning (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
 * hyperband bandit param opt (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
@@ -38,7 +51,6 @@
 * dual form perceptron
 * kernel regression
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
-* ggplot tut 
 * bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
 * euclidean distance weighted by gain ratio, KNN variant
