@@ -14,10 +14,12 @@
 * exercises from Scientific Programming w/ Python (http://scipython.com/book/)
 * ggplot tut 
 * bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
-
+* berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
 
 
 ### to do:
+* stitchfix algorithm tour (http://algorithms-tour.stitchfix.com/)
+* topological data analysis (http://outlace.com/Topological+Data+Analysis+Tutorial+-+Part+1/)
 * gensim summarization (https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/summarization_tutorial.ipynb)
 * simpson's paradox (http://corysimon.github.io/articles/simpsons-paradox/)
 * knn images from imagenet embeddings
@@ -121,6 +123,7 @@
 
 
 ### done:
+* Facing Imbalanced Data Recommendations for the Use of Performance Metrics (http://www.pitt.edu/~jeffcohn/skew/PID2829477.pdf)
 * eigenface (http://www.face-rec.org/algorithms/PCA/jcn.pdf)
 * online covariance formula (http://rebcabin.github.io/blog/2013/01/22/covariance-matrices/)
 * dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
