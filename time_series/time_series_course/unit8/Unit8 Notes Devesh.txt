@@ -1,0 +1,126 @@
+1. Backshift operator
+
+2. Deriving autocovariance for the MA process [next week]
+
+3.  Residuals T - plot
+
+4. When do we know if AR is better than MA?
+
+5. Why is MA expressed with a /mu
+
+
+
+**************
+
+X(t) ==>    x1, x2, x3, x4
+X(t-1)        NA, x1, x2, x3
+X(t-2)         NA, NA, x1, x2
+
+
+Current X(t) = a function of the past p values of X(t)
+
+AR(2):
+x(t) = a0 + a1*x(t-1) + b2*x(t-2) + w(t)
+
+B(x(t)) == x(t-1)
+B(B(x(t)) == x(t-2)
+
+B^2(x(t)) == x(t-2)
+
+AR(1):
+
+x(t) = a1*x(t-1)  + w(t)
+
+x(t) = a1*B(x(t)) + w(t)
+
+x(t) - a1*B(x(t)) = w(t)
+
+x(t)*[1 - a1*B] =  w(t)
+
+Solve the characteristic polynomial:
+
+Setting it equal to zero and solving for B
+
+
+
+Things I want to point out
+
+1. ACF and PACF are approximations
+
+2.  AIC v model order
+ --> Suppose to choose where AIC is the smallest
+
+--> AIC gradually declines in value
+
+---> Test simpler models and check their residuals.
+
+3. auto.arima
+
+4. Use loops.
+ID AIC
+
+Arima (x, order = c(p,d,q))
+
+d <- difference
+
+Loop over values of p and q
+
+
+
+
+
+
+Time series data:
+
+1. Longer term trend
+--> How the average of the time series changes over time.
+--> We can use regression and filters etc to estimate or remove the trend
+
+2. Random flucutations around that trend
+--> Residuals. If they are correlated, then we can't model the relationship between time and x(t) properly
+---> Even if they are dependent over time, we can still model this relationship.
+
+--> Current value is a function of its past.
+
+--> AR: Current is a function of p lags
+--> MA: Current value is a function of q lags of white noise (or the error term)
+
+ARMA
+
+1. Has to be stationary in the mean: There is no trend.
+
+2. We have to decide if we should use AR, MA, ARMA, we also decide how many lags to include of each.
+
+Moving Average:
+x(t) = \mu + Moving average formlation (linear function of lagged white noise)
+
+
+ 
+Model selection:
+1 In sample fit (don't use purely AIC)
+
+2. Residuals
+
+3. Out of sample 
+
+Strictly Stationary:
+- mean, variance do not change over time
+- there is no dependency structure
+
+Weakly Stationary:
+- mean and variance do not change over time
+
+- there is a dependency structure
+
+Observations in the time series are dependent or correlated with past values
+
+x(t) = a*B(x(t)) + w(t)
+
+x(t)(1 - a1*B) = w(t)
+
+If a1 < 1, B > 1.
+
+x(t) = w(t) + a*w(t-1) + a^2(w(t-2)....
+
+Infinte sum converages to a number only if a is less than 1. (property of geometric series)
+

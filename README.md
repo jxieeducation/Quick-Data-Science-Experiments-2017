@@ -1,10 +1,12 @@
 # Quick-Data-Science-Experiments-2017
 
 ### WIP:
+* kernel PCA (projection on linear space)
 * discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 * WTTE RNN churn modeling (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
+
 
 
 ### long term:
@@ -18,6 +20,9 @@
 
 
 ### to do:
+* pca principal component vis (w207 class 11 notebook)
+* topic coherence for LDA (http://qpleple.com/topic-coherence-to-evaluate-topic-models/)
+* indexing by latent semantic analysis (http://www.cs.bham.ac.uk/~pxt/IDA/lsa_ind.pdf)
 * stitchfix algorithm tour (http://algorithms-tour.stitchfix.com/)
 * topological data analysis (http://outlace.com/Topological+Data+Analysis+Tutorial+-+Part+1/)
 * gensim summarization (https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/summarization_tutorial.ipynb)
@@ -28,7 +33,6 @@
 * community detection via Girvan-Newman hierarhical clustering (https://github.com/riteshkasat/Community-Detection-Algorithm)
 * LR vs LDA Efron paper (http://pegasus.cc.ucf.edu/~lni/sta6238/Efron1975Efficiency.pdf)
 * isomap geodeisc distance + mds
-* kernel PCA (projection on linear space)
 * multidimensional scaling tut (preserving interpoint dist)
 * PCA gradient descent solver
 * very sparse random projection (http://cseweb.ucsd.edu/~akmenon/VerySparseRPTalk.pdf)

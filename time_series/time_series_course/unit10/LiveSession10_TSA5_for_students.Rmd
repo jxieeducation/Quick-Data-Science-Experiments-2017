@@ -165,8 +165,78 @@ Task 2: Create a VAR model, like you did above, and include a seasonal component
 
 ```{r}
 library(vars)
-VAR(mortality, p=1, type="both")
+(varm <- VAR(mortality, p=1, type="both"))
+
+plot(forecast(varm))
 ```
 
 # Take home
 Select your favorite VAR model and test it head to head with the SARIMA model from earlier. Which model do you prefer? Why do you think one model is better than the other?
+
+# Class 2
+
+For cmort
+1. Does temperature explain anything?
+
+```{r}
+
+
+varsele <- VARselect(mortality, type=c("both"), lag.max=25)
+aics <- varsele$criteria[1,]
+aics
+which(aics == min(aics))
+
+finalVar <- VAR(mortality, p = which(aics == min(aics)), type="both")
+
+plot(resid(finalVar))
+res <- ts(resid(finalVar)[,1])
+plot(res)
+Box.test(res, type="Ljung-Box", lag=18)
+
+
+summary(finalVar) # gives SE and p-val
+# also can look at the cov matrix of the residuals
+
+se(finalVar)
+
+
+
+mortality.test <- cbind(cmort.test, tempr.test)
+mortality.test
+
+cmort.forecast <- predict(finalVar, n.ahead = 50)
+plot(cmort.forecast)
+
+acf(resid(finalVar))
+pacf(resid(finalVar))
+
+```
+
+2. Produce a forecast from a VAR model?
+```{r}
+plot(forecast(finalVar))
+```
+
+3. VAR or Sarima is better?
+```{r}
+##### we can also add in the seasonal component
+
+VARselect(mortality, season=52, lag.max=50, type="both")
+
+```
+
+
+BS 1:
+- Estimate a VAR with no seasonality
+- Choose an order length.
+
+---> Min forecasting error
+
+var.model
+residuals(var.model)
+fitted(var.model)
+predict(var.model, n.ahead=x)
+
+
+
+
