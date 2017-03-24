@@ -20,10 +20,8 @@
 
 
 ### to do:
-* pca principal component vis (w207 class 11 notebook)
 * topic coherence for LDA (http://qpleple.com/topic-coherence-to-evaluate-topic-models/)
 * indexing by latent semantic analysis (http://www.cs.bham.ac.uk/~pxt/IDA/lsa_ind.pdf)
-* stitchfix algorithm tour (http://algorithms-tour.stitchfix.com/)
 * topological data analysis (http://outlace.com/Topological+Data+Analysis+Tutorial+-+Part+1/)
 * gensim summarization (https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/summarization_tutorial.ipynb)
 * simpson's paradox (http://corysimon.github.io/articles/simpsons-paradox/)
@@ -133,6 +131,7 @@
 * dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * probability calibration
 * temporal regression (decaying RSS)
+* pca principal component vis (w207 class 11 notebook)
 * Ljung-Box portmanteau test (http://stat.wharton.upenn.edu/~steele/Courses/956/Resource/TestingNormality/LjungBox.pdf)
 * cohen kappa (https://onlinecourses.science.psu.edu/stat509/node/162)
 * qr factorization
@@ -146,6 +145,7 @@
 * bias-variance example w207_lec_1
 * generating rules from decision tree (https://www.mimuw.edu.pl/~son/datamining/DM/6-rules.pdf)
 * pandasql tut (https://github.com/yhat/pandasql)
+* stitchfix algorithm tour (http://algorithms-tour.stitchfix.com/)
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
 * OAO vs OAA (https://hal.archives-ouvertes.fr/inria-00103955/document)
