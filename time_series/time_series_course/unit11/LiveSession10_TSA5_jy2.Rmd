@@ -1,0 +1,258 @@
+---
+title: 'W271 Live Session 10: VAR'
+author: "Jeffrey Yau and Devesh Tiwari"
+date: "3/10/2017"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+# Main topics covered in Week 10
+    - Regression with multiple trending time series
+    - Correlation of time series with trends
+    - Spurious correlation
+    - Unit-root non stationarity and Dickey-Fuller Test
+    - Cointegration
+    - Multivariate Time Series Models: Vector Autoregressive (VAR) model
+        - Estimation, model diagnostics, model identification, model selection, assumption testing, and statistical inference / forecasting
+    - Notion of cross-correlation
+
+
+# Readings
+**CM2009:** Paul S.P. Cowpertwait and Andrew V. Metcalfe. *Introductory Time Series with R*. Springer. 2009. 
+  
+  - Ch. 11
+
+**SS2016:** Robert H. Shumway and David S. Stoffer. *Time Series Analysis and Applications.* EZ Edition with R Examples:
+  
+  - None
+
+**HA:** Rob J Hyndman and George Athanasopoulos. Forecasting: Principles and Practice: 
+  
+  - Ch. 9.2
+
+
+# Agenda for this week's live session:
+
+  1. Review the steps to build a VAR model: Example 1 - a given series (series2.csv)
+  
+  2. Review the steps to buld a VAR model: Example 2 - cmort and tempr series
+
+  3. Other topics (if time permit)
+
+Some start-up codes:
+```{r}
+#sessionInfo()
+
+# Insert the function to *tidy up* the code when they are printed out
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+
+# Set Numeric Value Display
+# See reference from https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html
+options(digits=2) # Set the printed number of digits to 2. Note: It is a suggestion only. Default is 7. 
+#options("scipen" = 10)
+
+# Set memory limit
+memory.limit(50000000)
+
+# Clean up the workspace before we begin
+rm(list = ls())
+
+# Set working directory
+wd <- "~/Documents/JStuff/Teach/w271/LiveSessions/week10" 
+setwd(wd)
+
+# Load libraries
+library(car)
+library(dplyr)
+library(Hmisc)
+
+library(forecast)
+library(astsa)
+library(vars)
+```
+
+
+# 1. Build a VAR model using a given series
+
+  **Task: 1. load the series**
+  **      2. Conduct EDA using the series**
+  - *Estmated Time: Breakout session 10 minutes*
+  - *Estmated Time: Class discussion 10 minutes*
+
+Load the series and examine them.  Consider them as monthly series, spanning over a period of 11 years, starting in 2000. You will practice building a VAR model using these two series.
+
+```{r}
+df <- read.csv("series2.csv", header = TRUE, sep=",")
+  str(df)
+  #View(df[,-1])
+# Get rid of the first column
+df2 <- df[,-1]
+  str(df2)
+
+# Make it into a multivariate time series
+y.ts <- ts(df2, frequency = 12, start = c(2000,1))
+  str(y.ts)
+  head(y.ts)
+  tail(y.ts)
+```
+
+
+Conduct EDA on the series
+```{r}
+plot.ts(y.ts, 
+        main="Series y1, y2")
+
+# Scatterplot Matrix, which displays the contemporaneous correlation
+scatterplot.matrix(~y.ts[,1]+y.ts[,2]);
+  title("Contemporaneous Correlation of Series y1, y2, and y3")
+  
+# ACF and PACF of each of the individual series
+par(mfrow=c(2,2)) 
+  hist(y.ts[,1], main=""); title("y1")
+  plot.ts(y.ts[,1], main=""); title("y1")
+  acf(y.ts[,1], main=""); title("ACF of y1")  
+  pacf(y.ts[,1], main=""); title("PACF of y1")  
+
+par(mfrow=c(2,2)) 
+  hist(y.ts[,2], main=""); title("y2")
+  plot.ts(y.ts[,2], main=""); title("y2")
+  acf(y.ts[,2], main=""); title("ACF of y2")  
+  pacf(y.ts[,2], main=""); title("PACF of y2")  
+
+# Correlation and Cross-correlation between the two series
+cat("Correlation Matrix: ", cor(y.ts[,1],y.ts[,2]))  
+par(mfrow=c(1,1))
+ccf(y.ts[,1],y.ts[,2],main="CCF of the y1 and y2 Series") 
+acf
+```
+
+Note that it is no longer that case that we can use the individual ACF and PACF to deterimine the order of a VAR(p) models. We, however, still conduct the EDA because we need to know how to set upthe VAR model in R.  
+
+In what follow, we will estimate a series VAR model, using information criterion for the selection. In practice, one could also use out-of-sample forecast performance measurement. We will also conduct model diagnostic and forecasting. We will use the *VARselect()* function to select the optimal model (based on information criterion) (again, for now).
+
+
+  **Task: 1. Estimate a VAR model using the entire sample series and choose the optimal order using Schwartz Criterion**
+  **      2. Conduct model diagnostic **
+  **      3. Produce a 3-month forecast **
+  - *Estmated Time: Breakout session 15 minutes*
+  - *Estmated Time: Class discussion 15 minutes*
+
+
+
+```{r}
+# Please read the documentation "vars"
+# For now, we check out the arguments of the VAR() and VARselect() function
+
+args(VAR)
+args(VARselect)
+
+# Select a var model according to information criteria
+#roots(, modulus = TRUE)
+
+VARselect(y.ts, lag.max = 5, type = "trend")
+    p<-VARselect(y.ts, lag.max = 5, type = "trend")$selection
+    p
+    
+# Estimate the model (based on the order chosen above)
+var.mod1 <- VAR(y.ts, p=p[2], type="trend")
+  summary(var.mod1)
+
+#################################################################
+# Another way to build model
+# Split the series into training and test sets
+
+y.train <- y.ts[1:120,]
+y.test  <- y.ts[121:length(y.ts[,1]),]
+str(y.train)
+str(y.test)
+
+y.train<-ts(y.train); str(y.train)
+y.test<-ts(y.test); str(y.test)
+
+# Define the Root Mean Square Error (RMSE) function
+calculate_rmse <- function(fcast, test){ 
+  rmse <- sqrt(mean((fcast - test)^2))
+}
+
+# Select optimal order according to out-of-sample forecast error: An example
+for (order in 1:5){
+  var.mod2 <- VAR(y.train, p = order, type = c("const"))
+  var.forecast <- predict(var.mod2, n.ahead = 15)
+  var.forecast
+  var.forecast$fcst
+  y.test
+  test.error <- calculate_rmse(var.forecast$fcst$y1[,1], y.test[,1])
+  print(c(order, test.error))
+} 
+```
+Typically, after estimating a model, it is a good idea to interpret the estimated coefficients. However, for models with system of equations, such as VAR(p), there is no easy way to interpret the estimated coefficients.
+
+Let's proceed to model diagnostic
+
+The *roots()* function compute the eigenvalues of the companion matrix, and if the system is stable, the eigenvalues should all be less than 1.
+
+Note that the *var()* function consists of 3 types of arguments:
+    - the data matrix object y (or an object that can be coerced to a matrix)
+    - the integer lag-order p 
+    - the type of deterministic regressors to include into the VAR(p).
+
+
+```{r}  
+# Diagnostic testing
+  # arch(), normality(), serial(), stability()
+
+  acf(resid(var.mod1)[,1])  
+  acf(resid(var.mod1)[,2])
+
+# Normality
+ var.mod1.norm <- normality.test(var.mod1, multivariate.only = TRUE)
+ names(var.mod1.norm) 
+ var.mod1.norm
+ 
+# Serial Correlation
+  # Portmanteau Test
+  var.mod1.pt.asy <- serial.test(var.mod1, lags.pt = 16, type = "PT.asymptotic")
+  var.mod1.pt.asy 
+
+  # Breush-Godfrey LM-Statistics
+  serial.test(var.mod1, lags.pt = 16, type = "BG")
+  
+# Test ARCH effect: To test for heteroscedasticity
+# Use univariate and multivariate ARCH test
+ args(arch)
+ var.mod1.arch <- arch.test(var.mod1)
+ names(var.mod1.arch)
+ var.mod1.arch
+
+# Forecast for the next 3 months
+  var.mod1.f10 <- predict(var.mod1, n.ahead = 3, ci = 0.95)
+  class(var.mod1.f10)
+  var.mod1.f10  
+  plot(var.mod1.f10)
+```
+
+# Build a VAR Model using the cmort and tempr series 
+
+  ** Task: Repeat the steps above except that now you will train the model using the training set and select your model based on RMSE**
+  - *Estmated Time: Breakout session 20 minutes*
+  - *Estmated Time: Class discussion 15 minutes*
+
+Use the following code to generate your training and test series
+```{r}
+library(vars)
+cmort.train <- cmort[1:458]
+cmort.train <- ts(cmort.train, frequency = 52,
+                  start = c(1979, 1))
+cmort.test <- cmort[459:508]
+
+tempr.train <- tempr[1:458]
+tempr.train <- ts(tempr.train, frequency = 52,
+                  start = c(1979, 1))
+tempr.test <- tempr[459:508]
+
+mortality <- cbind(cmort.train, tempr.train)
+```
+
+

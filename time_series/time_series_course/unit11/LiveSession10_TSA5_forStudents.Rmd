@@ -1,0 +1,182 @@
+---
+title: 'W271 Live Session 10: VAR'
+author: "Jeffrey Yau and Devesh Tiwari"
+date: "3/10/2017"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+# Main topics covered in Week 10
+    - Regression with multiple trending time series
+    - Correlation of time series with trends
+    - Spurious correlation
+    - Unit-root non stationarity and Dickey-Fuller Test
+    - Cointegration
+    - Multivariate Time Series Models: Vector Autoregressive (VAR) model
+        - Estimation, model diagnostics, model identification, model selection, assumption testing, and statistical inference / forecasting
+    - Notion of cross-correlation
+
+
+# Readings
+**CM2009:** Paul S.P. Cowpertwait and Andrew V. Metcalfe. *Introductory Time Series with R*. Springer. 2009. 
+  
+  - Ch. 11
+
+**SS2016:** Robert H. Shumway and David S. Stoffer. *Time Series Analysis and Applications.* EZ Edition with R Examples:
+  
+  - None
+
+**HA:** Rob J Hyndman and George Athanasopoulos. Forecasting: Principles and Practice: 
+  
+  - Ch. 9.2
+
+
+# Agenda for this week's live session:
+
+  1. Review the steps to build a VAR model: Example 1 - a given series (series2.csv)
+  
+  2. Review the steps to buld a VAR model: Example 2 - cmort and tempr series
+
+  3. Other topics (if time permit)
+
+Some start-up codes:
+```{r}
+#sessionInfo()
+
+# Insert the function to *tidy up* the code when they are printed out
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+
+# Set Numeric Value Display
+# See reference from https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html
+options(digits=2) # Set the printed number of digits to 2. Note: It is a suggestion only. Default is 7. 
+#options("scipen" = 10)
+
+# Set memory limit
+memory.limit(50000000)
+
+# Clean up the workspace before we begin
+rm(list = ls())
+
+# Set working directory
+wd <- "~/Documents/JStuff/Teach/w271/LiveSessions/week10" 
+setwd(wd)
+
+# Load libraries
+library(car)
+library(dplyr)
+library(Hmisc)
+
+library(forecast)
+library(astsa)
+library(vars)
+```
+
+
+# 1. Build a VAR model using the given series
+
+  **Task: 1. load the series**
+  **      2. Conduct EDA using the series**
+  - *Estmated Time: Breakout session 10 minutes*
+  - *Estmated Time: Class discussion 10 minutes*
+
+Load the series and examine them.  Consider them as monthly series, spanning over a period of 11 years, starting in 2000. You will practice building a VAR model using these two series.
+
+```{r}
+df <- read.csv("~/Downloads/Quick-Data-Science-Experiments-2017/time_series/time_series_course/unit11/series2.csv")
+
+str(df)
+s1 <- ts(df$y1, frequency = 12)#, start=c(2000, 1))
+s2 <- ts(df$y2, frequency = 12)#, start=c(2000, 1))
+
+
+plot(s1)
+plot(s2)
+
+
+acf(s1, lag.max = 100)
+acf(s2, lag.max = 100)
+
+ccf(s1, s2)
+```
+
+
+Conduct EDA on the series
+```{r}
+# YOUR CODE TO BE HERE
+```
+
+  **Task: 1. Estimate a VAR model using the entire sample series and choose the optimal order using Schwartz Criterion**
+  **      2. Conduct model diagnostic **
+  **      3. Produce a 3-month forecast **
+  - *Estmated Time: Breakout session 15 minutes*
+  - *Estmated Time: Class discussion 15 minutes*
+
+```{r}
+#############
+?VAR
+
+#adf.test(cbind(s1, s2))
+
+m <- VAR(cbind(s1, s2), p=2, type="both")
+summary(m)
+
+?VARselect
+m_vs <- VARselect(cbind(s1, s2), lag.max = 20,type = "both")
+m_vs$criteria
+m_vs$selection
+
+serial.test(m, lags.pt = 12, type = "PT.asymptotic" )
+
+#############
+
+plot(m)
+
+summary(m)
+
+res1 <- ts(m$varresult$s1$residuals)
+res2 <- ts(m$varresult$s2$residuals)
+
+acf(res1)
+acf(res2)
+
+ccf(res1, res2)
+
+?po.test # null is that x is not cointegrated
+po.test(cbind(res1, res2))
+
+#############
+
+plot(predict(m, n.ahead = 3))
+
+#############
+
+# 
+
+```
+
+
+# 2. Build a VAR Model using the cmort and tempr series 
+
+  ** Task: Repeat the steps above except that now you will train the model using the training set and select your model based on RMSE**
+  - *Estmated Time: Breakout session 20 minutes*
+  - *Estmated Time: Class discussion 15 minutes*
+
+Use the following code to generate your training and test series
+```{r}
+library(vars)
+cmort.train <- cmort[1:458]
+cmort.train <- ts(cmort.train, frequency = 52,
+                  start = c(1979, 1))
+cmort.test <- cmort[459:508]
+
+tempr.train <- tempr[1:458]
+tempr.train <- ts(tempr.train, frequency = 52,
+                  start = c(1979, 1))
+tempr.test <- tempr[459:508]
+
+mortality <- cbind(cmort.train, tempr.train)
+```
+
+

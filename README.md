@@ -8,23 +8,28 @@
 * WTTE RNN churn modeling (https://ragulpr.github.io/2016/12/22/WTTE-RNN-Hackless-churn-modeling/)
 
 
-
 ### long term:
 * scikit-learn autoexamples
+* berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
 * gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
-* cs224 NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
+* cs224 stanford NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * exercises from Scientific Programming w/ Python (http://scipython.com/book/)
 * ggplot tut 
 * bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
+* linear alge interactive book (http://immersivemath.com/ila/index.html)
+* UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
+* numerical optimization book
 
 
 ### to do:
+* BoW + LSTM sentiment analysis (https://metamind.io/research/learning-when-to-skim-and-when-to-read)
+* fb visdom tool (https://github.com/facebookresearch/visdom)
+* quora question nlp tut (https://www.linkedin.com/pulse/duplicate-quora-question-abhishek-thakur)
 * topic coherence for LDA (http://qpleple.com/topic-coherence-to-evaluate-topic-models/)
 * indexing by latent semantic analysis (http://www.cs.bham.ac.uk/~pxt/IDA/lsa_ind.pdf)
 * topological data analysis (http://outlace.com/Topological+Data+Analysis+Tutorial+-+Part+1/)
 * gensim summarization (https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/summarization_tutorial.ipynb)
-* simpson's paradox (http://corysimon.github.io/articles/simpsons-paradox/)
 * knn images from imagenet embeddings
 * levenshtein string clustering (http://stackoverflow.com/questions/21511801/text-clustering-with-levenshtein-distances)
 * Forecasting: principles and practice chapter 7 to 9 (https://www.otexts.org/fpp)
@@ -43,7 +48,6 @@
 * ts backtesting (http://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 * survival analysis via weibull (http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf)
 * hierarchical clustering dendrogram analysis
-* DBSCAN 
 * silhouette score review
 * spherical k-means (cosine dist) (https://www.jstatsoft.org/article/view/v050i10/v50i10.pdf)
 * credit card fraud readup
@@ -53,7 +57,6 @@
 * lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)
 * huffman tree with frequency (https://www.siggraph.org/education/materials/HyperGraph/video/mpeg/mpegfaq/huffman_tutorial.html)
 * dual form perceptron
-* kernel regression
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
 * bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
@@ -102,7 +105,6 @@
 * factor analysis (http://web.stanford.edu/class/psych253/tutorials/FactorAnalysis.html)
 * adaboost vs SVM (https://ucb-mids.s3.amazonaws.com/prod/Machine+Learning/Readings/Week+4/ShortIntroToBoosting.pdf)
 * bayesian model averaging & BIC
-* kernel density classification & kernel smoothing with different local kernels
 * rbf regression & gmm classification
 * 1NN curse of dim test w/ b-v tradeoff (pg 24, 223)
 * LOESS & show that boundary fit is linear
@@ -139,9 +141,12 @@
 * principal component regression
 * kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
 * partial least square
+* DBSCAN 
 * vector quantization (image reconstruction)
+* simpson's paradox (http://corysimon.github.io/articles/simpsons-paradox/)
 * eigen decomposition tut
 * scalable hierarchical clustering via Spark (http://users.eecs.northwestern.edu/~cji970/pub/cjinBigDataService2015.pdf)
+* kernel regression
 * bias-variance example w207_lec_1
 * generating rules from decision tree (https://www.mimuw.edu.pl/~son/datamining/DM/6-rules.pdf)
 * pandasql tut (https://github.com/yhat/pandasql)
@@ -151,6 +156,7 @@
 * OAO vs OAA (https://hal.archives-ouvertes.fr/inria-00103955/document)
 * perceptron implementation
 * naive bayes spam filter
+* kernel density classification & kernel smoothing with different local kernels
 * decision tree imple
 * ch15 notes Hal Daume III unsupervised learning (KMeans + PCA)
 * permutation importance (decision tree)
