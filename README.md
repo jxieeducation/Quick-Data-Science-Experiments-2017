@@ -13,6 +13,7 @@
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
 * gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
 * cs224 stanford NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
+* cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
 * exercises from Scientific Programming w/ Python (http://scipython.com/book/)
 * ggplot tut 
 * bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
@@ -23,6 +24,9 @@
 
 
 ### to do:
+* networkX tut (http://snap.stanford.edu/class/cs224w-2011/nx_tutorial/nx_tutorial.pdf)
+* pagerank impl (https://github.com/ashkonf/PageRank)
+* graph centrality measures (degree, betweeness, closeness, eigenvector, katz, alpha)
 * BoW + LSTM sentiment analysis (https://metamind.io/research/learning-when-to-skim-and-when-to-read)
 * fb visdom tool (https://github.com/facebookresearch/visdom)
 * quora question nlp tut (https://www.linkedin.com/pulse/duplicate-quora-question-abhishek-thakur)
