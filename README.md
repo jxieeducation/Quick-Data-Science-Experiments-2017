@@ -24,6 +24,7 @@
 
 
 ### to do:
+* arimax python (http://robjhyndman.com/hyndsight/arimax/)
 * networkX tut (http://snap.stanford.edu/class/cs224w-2011/nx_tutorial/nx_tutorial.pdf)
 * pagerank impl (https://github.com/ashkonf/PageRank)
 * graph centrality measures (degree, betweeness, closeness, eigenvector, katz, alpha)
