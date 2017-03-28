@@ -10,6 +10,7 @@
 
 ### long term:
 * scikit-learn autoexamples
+* mlxtend examples (http://rasbt.github.io/mlxtend/USER_GUIDE_INDEX/)
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
 * gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
 * cs224 stanford NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
@@ -24,7 +25,11 @@
 
 
 ### to do:
-* arimax python (http://robjhyndman.com/hyndsight/arimax/)
+* bayesian technique parameter estimation (http://www4.ncsu.edu/~rsmith/MA797V_S12/MCMC.pdf)
+* active portfolio management notes (https://github.com/RJT1990/Active-Portfolio-Management-Notes)
+* kalman filter 
+* pyFlux presentation (https://github.com/RJT1990/PyData2016-SanFrancisco/blob/master/presentation_final.pdf)
+* bayes error rate (http://www.cs.cmu.edu/~epxing/Class/10701-10s/Lecture/lecture3.pdf) slide 5
 * networkX tut (http://snap.stanford.edu/class/cs224w-2011/nx_tutorial/nx_tutorial.pdf)
 * pagerank impl (https://github.com/ashkonf/PageRank)
 * graph centrality measures (degree, betweeness, closeness, eigenvector, katz, alpha)
@@ -36,7 +41,6 @@
 * topological data analysis (http://outlace.com/Topological+Data+Analysis+Tutorial+-+Part+1/)
 * gensim summarization (https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/summarization_tutorial.ipynb)
 * knn images from imagenet embeddings
-* levenshtein string clustering (http://stackoverflow.com/questions/21511801/text-clustering-with-levenshtein-distances)
 * Forecasting: principles and practice chapter 7 to 9 (https://www.otexts.org/fpp)
 * community detection via Girvan-Newman hierarhical clustering (https://github.com/riteshkasat/Community-Detection-Algorithm)
 * LR vs LDA Efron paper (http://pegasus.cc.ucf.edu/~lni/sta6238/Efron1975Efficiency.pdf)
@@ -50,7 +54,6 @@
 * EM for data imputation (http://users.stat.umn.edu/~sandy/courses/8053/handouts/Missing.Data.Multiple.Imputation.pdf)
 * locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
 * take notes on elastic search image search (https://github.com/tuan3w/visual_search)
-* ts backtesting (http://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 * survival analysis via weibull (http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf)
 * hierarchical clustering dendrogram analysis
 * silhouette score review
@@ -59,7 +62,6 @@
 * recursive autoencoders (http://www.socher.org/index.php/Main/Semi-SupervisedRecursiveAutoencodersForPredictingSentimentDistributions)
 * hyperparam tuning - automated machine learning (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
 * hyperband bandit param opt (https://people.eecs.berkeley.edu/~kjamieson/hyperband.html)
-* lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)
 * huffman tree with frequency (https://www.siggraph.org/education/materials/HyperGraph/video/mpeg/mpegfaq/huffman_tutorial.html)
 * dual form perceptron
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
@@ -67,7 +69,6 @@
 * precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
 * euclidean distance weighted by gain ratio, KNN variant
 * classification performance measures (https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf)
-* memory based learning (http://www.cs.cornell.edu/courses/cs578/2007fa/CS578_knn_lecture.pdf)
 * model assisted sampling (https://github.com/facebookincubator/ml_sampler/blob/master/ml_sampler.pdf)
 * bootstrap AB test CI (https://github.com/facebookincubator/bootstrapped)
 * prophet forecast library test (https://research.fb.com/prophet-forecasting-at-scale/)
@@ -79,7 +80,6 @@
 * automatic relevance determination
 * bass curve (nls w/ 3.12 pg52 IntroTimeSeries Cowpertwait)
 * weight elimination (https://papers.nips.cc/paper/323-generalization-by-weight-elimination-with-application-to-forecasting.pdf)
-* hinton diagrams & for linear reg (http://tonysyu.github.io/mpltools/auto_examples/special/plot_hinton.html)
 * levelplots interpretation
 * stochastic gradient boosting notes 
 * HOG (CV) (http://mccormickml.com/2013/05/09/hog-person-detector-tutorial/)
@@ -110,7 +110,6 @@
 * factor analysis (http://web.stanford.edu/class/psych253/tutorials/FactorAnalysis.html)
 * adaboost vs SVM (https://ucb-mids.s3.amazonaws.com/prod/Machine+Learning/Readings/Week+4/ShortIntroToBoosting.pdf)
 * bayesian model averaging & BIC
-* rbf regression & gmm classification
 * 1NN curse of dim test w/ b-v tradeoff (pg 24, 223)
 * LOESS & show that boundary fit is linear
 * splines in python, b-splines, thin plate spline
@@ -132,12 +131,15 @@
 
 
 ### done:
+* arimax python (http://robjhyndman.com/hyndsight/arimax/)
 * Facing Imbalanced Data Recommendations for the Use of Performance Metrics (http://www.pitt.edu/~jeffcohn/skew/PID2829477.pdf)
 * eigenface (http://www.face-rec.org/algorithms/PCA/jcn.pdf)
 * online covariance formula (http://rebcabin.github.io/blog/2013/01/22/covariance-matrices/)
 * dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
 * probability calibration
+* Quick Look at SVM blog (https://generalabstractnonsense.com/2017/03/A-quick-look-at-Support-Vector-Machines/)
 * temporal regression (decaying RSS)
+* lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)
 * pca principal component vis (w207 class 11 notebook)
 * Ljung-Box portmanteau test (http://stat.wharton.upenn.edu/~steele/Courses/956/Resource/TestingNormality/LjungBox.pdf)
 * cohen kappa (https://onlinecourses.science.psu.edu/stat509/node/162)
@@ -146,6 +148,7 @@
 * principal component regression
 * kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
 * partial least square
+* ts backtesting (http://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 * DBSCAN 
 * vector quantization (image reconstruction)
 * simpson's paradox (http://corysimon.github.io/articles/simpsons-paradox/)
@@ -155,6 +158,10 @@
 * bias-variance example w207_lec_1
 * generating rules from decision tree (https://www.mimuw.edu.pl/~son/datamining/DM/6-rules.pdf)
 * pandasql tut (https://github.com/yhat/pandasql)
+* memory based learning (http://www.cs.cornell.edu/courses/cs578/2007fa/CS578_knn_lecture.pdf)
+* gmm classification
+* hinton diagrams & for linear reg (http://tonysyu.github.io/mpltools/auto_examples/special/plot_hinton.html)
+* levenshtein string clustering (http://stackoverflow.com/questions/21511801/text-clustering-with-levenshtein-distances)
 * stitchfix algorithm tour (http://algorithms-tour.stitchfix.com/)
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
