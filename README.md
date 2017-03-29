@@ -22,14 +22,12 @@
 * linear alge interactive book (http://immersivemath.com/ila/index.html)
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
 * numerical optimization book
-
+* kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 
 ### to do:
+* MCMC and Applied Bayesian (http://www.stats.ox.ac.uk/~cholmes/Courses/BDA/bda_mcmc.pdf)
 * bayesian technique parameter estimation (http://www4.ncsu.edu/~rsmith/MA797V_S12/MCMC.pdf)
 * active portfolio management notes (https://github.com/RJT1990/Active-Portfolio-Management-Notes)
-* kalman filter 
-* pyFlux presentation (https://github.com/RJT1990/PyData2016-SanFrancisco/blob/master/presentation_final.pdf)
-* bayes error rate (http://www.cs.cmu.edu/~epxing/Class/10701-10s/Lecture/lecture3.pdf) slide 5
 * networkX tut (http://snap.stanford.edu/class/cs224w-2011/nx_tutorial/nx_tutorial.pdf)
 * pagerank impl (https://github.com/ashkonf/PageRank)
 * graph centrality measures (degree, betweeness, closeness, eigenvector, katz, alpha)
@@ -44,12 +42,11 @@
 * Forecasting: principles and practice chapter 7 to 9 (https://www.otexts.org/fpp)
 * community detection via Girvan-Newman hierarhical clustering (https://github.com/riteshkasat/Community-Detection-Algorithm)
 * LR vs LDA Efron paper (http://pegasus.cc.ucf.edu/~lni/sta6238/Efron1975Efficiency.pdf)
-* isomap geodeisc distance + mds
+* isomap geodeisc distance
 * multidimensional scaling tut (preserving interpoint dist)
 * PCA gradient descent solver
 * very sparse random projection (http://cseweb.ucsd.edu/~akmenon/VerySparseRPTalk.pdf)
 * pyMix mixture models (http://www.pymix.org/pymix/)
-* AIC and BIC for scree plot
 * random walk bayesian NN (http://twiecki.github.io/blog/2017/03/14/random-walk-deep-net/)
 * EM for data imputation (http://users.stat.umn.edu/~sandy/courses/8053/handouts/Missing.Data.Multiple.Imputation.pdf)
 * locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
@@ -65,7 +62,6 @@
 * huffman tree with frequency (https://www.siggraph.org/education/materials/HyperGraph/video/mpeg/mpegfaq/huffman_tutorial.html)
 * dual form perceptron
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
-* bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
 * euclidean distance weighted by gain ratio, KNN variant
 * classification performance measures (https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf)
@@ -80,7 +76,6 @@
 * automatic relevance determination
 * bass curve (nls w/ 3.12 pg52 IntroTimeSeries Cowpertwait)
 * weight elimination (https://papers.nips.cc/paper/323-generalization-by-weight-elimination-with-application-to-forecasting.pdf)
-* levelplots interpretation
 * stochastic gradient boosting notes 
 * HOG (CV) (http://mccormickml.com/2013/05/09/hog-person-detector-tutorial/)
 * ARCH / GARCH tutorial (http://www.quantatrisk.com/2014/10/23/garch11-model-in-python/)
@@ -158,6 +153,7 @@
 * bias-variance example w207_lec_1
 * generating rules from decision tree (https://www.mimuw.edu.pl/~son/datamining/DM/6-rules.pdf)
 * pandasql tut (https://github.com/yhat/pandasql)
+* AIC and BIC for scree plot
 * memory based learning (http://www.cs.cornell.edu/courses/cs578/2007fa/CS578_knn_lecture.pdf)
 * gmm classification
 * hinton diagrams & for linear reg (http://tonysyu.github.io/mpltools/auto_examples/special/plot_hinton.html)
@@ -165,10 +161,12 @@
 * stitchfix algorithm tour (http://algorithms-tour.stitchfix.com/)
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
+* pyFlux presentation (https://github.com/RJT1990/PyData2016-SanFrancisco/blob/master/presentation_final.pdf)
 * OAO vs OAA (https://hal.archives-ouvertes.fr/inria-00103955/document)
 * perceptron implementation
 * naive bayes spam filter
 * kernel density classification & kernel smoothing with different local kernels
+* bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * decision tree imple
 * ch15 notes Hal Daume III unsupervised learning (KMeans + PCA)
 * permutation importance (decision tree)
