@@ -25,6 +25,12 @@
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 
 ### to do:
+* deannoymization of netflix dataset (https://www.cs.utexas.edu/~shmat/shmat_oak08netflix.pdf)
+* boltzmann machines for collaborative filtering (http://www.machinelearning.org/proceedings/icml2007/papers/407.pdf)
+* user-based CF, item-based CF - weighted KNN based on correlation
+* collabrative filtering with temporal dynamics (http://courses.ischool.berkeley.edu/i290-dm/s11/SECURE/p89-koren.pdf)
+* netflix recommender system (https://news.ycombinator.com/item?id=10847922)
+* recommendations content LR approach 
 * text summarisation text rank (http://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf)
 * MCMC and Applied Bayesian (http://www.stats.ox.ac.uk/~cholmes/Courses/BDA/bda_mcmc.pdf)
 * bayesian technique parameter estimation (http://www4.ncsu.edu/~rsmith/MA797V_S12/MCMC.pdf)
