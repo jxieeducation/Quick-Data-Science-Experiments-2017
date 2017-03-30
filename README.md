@@ -25,6 +25,7 @@
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 
 ### to do:
+* text summarisation text rank (http://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf)
 * MCMC and Applied Bayesian (http://www.stats.ox.ac.uk/~cholmes/Courses/BDA/bda_mcmc.pdf)
 * bayesian technique parameter estimation (http://www4.ncsu.edu/~rsmith/MA797V_S12/MCMC.pdf)
 * active portfolio management notes (https://github.com/RJT1990/Active-Portfolio-Management-Notes)
@@ -63,7 +64,6 @@
 * dual form perceptron
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
 * precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
-* euclidean distance weighted by gain ratio, KNN variant
 * classification performance measures (https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf)
 * model assisted sampling (https://github.com/facebookincubator/ml_sampler/blob/master/ml_sampler.pdf)
 * bootstrap AB test CI (https://github.com/facebookincubator/bootstrapped)
@@ -87,7 +87,6 @@
 * square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
 * PRIM bump hunting
-* MARS (pyEarth)
 * hierarchical mixture of experts (EM & interpretation)
 * LDA notes (http://obphio.us/pdfs/lda_tutorial.pdf) 
 * STL notes
@@ -136,6 +135,7 @@
 * temporal regression (decaying RSS)
 * lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)
 * pca principal component vis (w207 class 11 notebook)
+* MARS (pyEarth)
 * Ljung-Box portmanteau test (http://stat.wharton.upenn.edu/~steele/Courses/956/Resource/TestingNormality/LjungBox.pdf)
 * cohen kappa (https://onlinecourses.science.psu.edu/stat509/node/162)
 * qr factorization
@@ -145,6 +145,7 @@
 * partial least square
 * ts backtesting (http://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 * DBSCAN 
+* euclidean distance weighted by gain ratio, KNN variant
 * vector quantization (image reconstruction)
 * simpson's paradox (http://corysimon.github.io/articles/simpsons-paradox/)
 * eigen decomposition tut
@@ -166,6 +167,7 @@
 * perceptron implementation
 * naive bayes spam filter
 * kernel density classification & kernel smoothing with different local kernels
+* affinity propagation clustering (http://www.igi.tugraz.at/lehre/MLA/WS07/MLA_AffinityPropagation.pdf)
 * bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * decision tree imple
 * ch15 notes Hal Daume III unsupervised learning (KMeans + PCA)
