@@ -25,7 +25,6 @@
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 
 ### to do:
-* deannoymization of netflix dataset (https://www.cs.utexas.edu/~shmat/shmat_oak08netflix.pdf)
 * boltzmann machines for collaborative filtering (http://www.machinelearning.org/proceedings/icml2007/papers/407.pdf)
 * user-based CF, item-based CF - weighted KNN based on correlation
 * collabrative filtering with temporal dynamics (http://courses.ischool.berkeley.edu/i290-dm/s11/SECURE/p89-koren.pdf)
@@ -157,6 +156,7 @@
 * eigen decomposition tut
 * scalable hierarchical clustering via Spark (http://users.eecs.northwestern.edu/~cji970/pub/cjinBigDataService2015.pdf)
 * kernel regression
+* deannoymization of netflix dataset (https://www.cs.utexas.edu/~shmat/shmat_oak08netflix.pdf)
 * bias-variance example w207_lec_1
 * generating rules from decision tree (https://www.mimuw.edu.pl/~son/datamining/DM/6-rules.pdf)
 * pandasql tut (https://github.com/yhat/pandasql)
