@@ -23,6 +23,7 @@
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
 * numerical optimization book
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
+* http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
 
 ### to do:
 * boltzmann machines for collaborative filtering (http://www.machinelearning.org/proceedings/icml2007/papers/407.pdf)
