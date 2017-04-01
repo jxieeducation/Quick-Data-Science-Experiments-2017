@@ -17,13 +17,14 @@
 * cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
 * exercises from Scientific Programming w/ Python (http://scipython.com/book/)
 * ggplot tut 
-* bokeh tut (http://nbviewer.jupyter.org/github/bokeh/bokeh-notebooks/blob/master/tutorial/00%20-%20intro.ipynb)
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
 * linear alge interactive book (http://immersivemath.com/ila/index.html)
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
 * numerical optimization book
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
-* http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
+* bayesian book (http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
+* Udacity notebooks (https://github.com/Ryosuke-Y)
+* Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
 * boltzmann machines for collaborative filtering (http://www.machinelearning.org/proceedings/icml2007/papers/407.pdf)
