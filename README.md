@@ -23,6 +23,7 @@
 * numerical optimization book
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 * bayesian book (http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
+* ensemble methods (https://www.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
 * Udacity notebooks (https://github.com/Ryosuke-Y)
 * Udacity courses (https://classroom.udacity.com/me)
 
