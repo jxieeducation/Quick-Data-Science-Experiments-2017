@@ -28,9 +28,14 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* different weighting w/ covariate shift
+* apriori algorithm (https://github.com/asaini/Apriori)
+* market basket analysis (https://github.com/amitkaps/machine-learning/blob/master/cf_mba/notebook/2.%20Market%20Basket%20Analysis.ipynb)
+* hinton diagrams on NMF embeddings
+* topic modeling w/ NMF
+* recommendations MF, item kNN on latent space
 * boltzmann machines for collaborative filtering (http://www.machinelearning.org/proceedings/icml2007/papers/407.pdf)
 * user-based CF, item-based CF - weighted KNN based on correlation
-* collabrative filtering with temporal dynamics (http://courses.ischool.berkeley.edu/i290-dm/s11/SECURE/p89-koren.pdf)
 * netflix recommender system (https://news.ycombinator.com/item?id=10847922)
 * recommendations content LR approach 
 * text summarisation text rank (http://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf)
@@ -38,7 +43,6 @@
 * bayesian technique parameter estimation (http://www4.ncsu.edu/~rsmith/MA797V_S12/MCMC.pdf)
 * active portfolio management notes (https://github.com/RJT1990/Active-Portfolio-Management-Notes)
 * networkX tut (http://snap.stanford.edu/class/cs224w-2011/nx_tutorial/nx_tutorial.pdf)
-* pagerank impl (https://github.com/ashkonf/PageRank)
 * graph centrality measures (degree, betweeness, closeness, eigenvector, katz, alpha)
 * BoW + LSTM sentiment analysis (https://metamind.io/research/learning-when-to-skim-and-when-to-read)
 * fb visdom tool (https://github.com/facebookresearch/visdom)
@@ -61,7 +65,6 @@
 * locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
 * take notes on elastic search image search (https://github.com/tuan3w/visual_search)
 * survival analysis via weibull (http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf)
-* hierarchical clustering dendrogram analysis
 * silhouette score review
 * spherical k-means (cosine dist) (https://www.jstatsoft.org/article/view/v050i10/v50i10.pdf)
 * credit card fraud readup
@@ -72,7 +75,6 @@
 * dual form perceptron
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
 * precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
-* classification performance measures (https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf)
 * model assisted sampling (https://github.com/facebookincubator/ml_sampler/blob/master/ml_sampler.pdf)
 * bootstrap AB test CI (https://github.com/facebookincubator/bootstrapped)
 * prophet forecast library test (https://research.fb.com/prophet-forecasting-at-scale/)
@@ -80,7 +82,7 @@
 * feature engineering notes (https://www.slideshare.net/HJvanVeen/feature-engineering-72376750)
 * quantile vs expectile regression (https://www.slideshare.net/charthur/quantile-and-expectile-regression)
 * bayesian neural networks 
-* MCMC for sampling ftom posterior ESLR, pg279
+* MCMC for sampling from posterior ESLR, pg279
 * automatic relevance determination
 * bass curve (nls w/ 3.12 pg52 IntroTimeSeries Cowpertwait)
 * weight elimination (https://papers.nips.cc/paper/323-generalization-by-weight-elimination-with-application-to-forecasting.pdf)
@@ -94,16 +96,14 @@
 * semisupervised learning survey (http://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf)
 * square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
-* PRIM bump hunting
 * hierarchical mixture of experts (EM & interpretation)
 * LDA notes (http://obphio.us/pdfs/lda_tutorial.pdf) 
-* STL notes
+* STL notes (http://www.wessa.net/download/stl.pdf)
 * poisson regression
 * FTRL note (http://www.eecs.tufts.edu/~dsculley/papers/ad-click-prediction.pdf)
 * L-BFGS note
-* NMF (how it enforces Non-negativity)
 * collaborative filtering for ordinal scores (http://www.ijcai.org/Proceedings/13/Papers/449.pdf)
-* coclustering methods (recommendations)
+* coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * stacking via CV pedictions (http://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html)
 * stochastic search - bumping (XOR decision tree example)
 * decision tree missing values (surrogate splits, 9.2.4 ELSL)
@@ -116,7 +116,6 @@
 * LOESS & show that boundary fit is linear
 * splines in python, b-splines, thin plate spline
 * do bfgs on linear and logistic regression
-* prob calibration with covariate shift
 * linear discriminant analysis (fisher and gaussian derivations)
 * quadratic discriminant analysis (https://www.youtube.com/watch?v=JWozRg_X-Vg)
 * reduced-rank regression (canonical correlation analysis)
@@ -149,10 +148,12 @@
 * qr factorization
 * skipgram, neg sampling notes (https://arxiv.org/pdf/1310.4546.pdf)
 * principal component regression
+* classification performance measures (https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf)
 * kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
 * partial least square
 * ts backtesting (http://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
 * DBSCAN 
+* collabrative filtering with temporal dynamics (http://courses.ischool.berkeley.edu/i290-dm/s11/SECURE/p89-koren.pdf)
 * euclidean distance weighted by gain ratio, KNN variant
 * vector quantization (image reconstruction)
 * simpson's paradox (http://corysimon.github.io/articles/simpsons-paradox/)
@@ -169,19 +170,23 @@
 * hinton diagrams & for linear reg (http://tonysyu.github.io/mpltools/auto_examples/special/plot_hinton.html)
 * levenshtein string clustering (http://stackoverflow.com/questions/21511801/text-clustering-with-levenshtein-distances)
 * stitchfix algorithm tour (http://algorithms-tour.stitchfix.com/)
+* PRIM bump hunting
 * logistic regression training on ratio and weights
 * logistic regression covariance of coefficients
 * pyFlux presentation (https://github.com/RJT1990/PyData2016-SanFrancisco/blob/master/presentation_final.pdf)
+* NMF (how it enforces Non-negativity)
 * OAO vs OAA (https://hal.archives-ouvertes.fr/inria-00103955/document)
 * perceptron implementation
 * naive bayes spam filter
 * kernel density classification & kernel smoothing with different local kernels
 * affinity propagation clustering (http://www.igi.tugraz.at/lehre/MLA/WS07/MLA_AffinityPropagation.pdf)
+* pagerank impl (https://github.com/ashkonf/PageRank)
 * bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * decision tree imple
 * ch15 notes Hal Daume III unsupervised learning (KMeans + PCA)
 * permutation importance (decision tree)
 * ranking item recommendations for a user from matrix factorization
+* hierarchical clustering dendrogram analysis
 * imputation in scikit-learn (http://scikit-learn.org/stable/auto_examples/missing_values.html#sphx-glr-auto-examples-missing-values-py)
 
 ===
