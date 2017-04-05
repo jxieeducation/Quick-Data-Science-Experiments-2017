@@ -31,6 +31,8 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* NMF heatmap tut (http://nmf.r-forge.r-project.org/vignettes/heatmaps.pdf)
+* metagenes and molecular pattern discovery using matrix factorization (http://www.pnas.org/content/101/12/4164.full.pdf)
 * coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * different weighting w/ covariate shift
 * hinton diagrams on NMF embeddings
