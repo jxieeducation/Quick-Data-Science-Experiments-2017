@@ -31,6 +31,7 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* one class collaborative filtering (http://www.rongpan.net/publications/pan-oneclasscf.pdf)
 * coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * different weighting w/ covariate shift
 * hinton diagrams on NMF embeddings
