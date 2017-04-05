@@ -12,6 +12,8 @@
 * scikit-learn autoexamples
 * mlxtend examples (http://rasbt.github.io/mlxtend/USER_GUIDE_INDEX/)
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
+* stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
+* convex optimization (http://www.stat.cmu.edu/~ryantibs/convexopt/)
 * gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
 * cs224 stanford NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
@@ -21,6 +23,7 @@
 * linear alge interactive book (http://immersivemath.com/ila/index.html)
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
 * numerical optimization book
+* graphical models (http://www.cs.cmu.edu/~epxing/Class/10708-17/lecture.html)
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 * bayesian book (http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
 * ensemble methods (https://www.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
@@ -28,12 +31,10 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * different weighting w/ covariate shift
-* apriori algorithm (https://github.com/asaini/Apriori)
-* market basket analysis (https://github.com/amitkaps/machine-learning/blob/master/cf_mba/notebook/2.%20Market%20Basket%20Analysis.ipynb)
 * hinton diagrams on NMF embeddings
 * topic modeling w/ NMF
-* recommendations MF, item kNN on latent space
 * boltzmann machines for collaborative filtering (http://www.machinelearning.org/proceedings/icml2007/papers/407.pdf)
 * user-based CF, item-based CF - weighted KNN based on correlation
 * netflix recommender system (https://news.ycombinator.com/item?id=10847922)
@@ -74,7 +75,6 @@
 * huffman tree with frequency (https://www.siggraph.org/education/materials/HyperGraph/video/mpeg/mpegfaq/huffman_tutorial.html)
 * dual form perceptron
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
-* precision recall break even point (http://www.nssl.noaa.gov/users/brooks/public_html/feda/papers/ProvostandFawcettKDD-97.pdf)
 * model assisted sampling (https://github.com/facebookincubator/ml_sampler/blob/master/ml_sampler.pdf)
 * bootstrap AB test CI (https://github.com/facebookincubator/bootstrapped)
 * prophet forecast library test (https://research.fb.com/prophet-forecasting-at-scale/)
@@ -103,7 +103,6 @@
 * FTRL note (http://www.eecs.tufts.edu/~dsculley/papers/ad-click-prediction.pdf)
 * L-BFGS note
 * collaborative filtering for ordinal scores (http://www.ijcai.org/Proceedings/13/Papers/449.pdf)
-* coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * stacking via CV pedictions (http://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html)
 * stochastic search - bumping (XOR decision tree example)
 * decision tree missing values (surrogate splits, 9.2.4 ELSL)
@@ -148,6 +147,8 @@
 * qr factorization
 * skipgram, neg sampling notes (https://arxiv.org/pdf/1310.4546.pdf)
 * principal component regression
+* apriori algorithm (https://github.com/asaini/Apriori)
+* market basket analysis (https://github.com/amitkaps/machine-learning/blob/master/cf_mba/notebook/2.%20Market%20Basket%20Analysis.ipynb)
 * classification performance measures (https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf)
 * kmeans w/ categorical data (http://edu.cs.uni-magdeburg.de/EC/lehre/sommersemester-2013/wissenschaftliches-schreiben-in-der-informatik/publikationen-fuer-studentische-vortraege/kMeansMixedCatNum.pdf)
 * partial least square
@@ -179,6 +180,7 @@
 * perceptron implementation
 * naive bayes spam filter
 * kernel density classification & kernel smoothing with different local kernels
+* recommendations MF, item kNN on latent space
 * affinity propagation clustering (http://www.igi.tugraz.at/lehre/MLA/WS07/MLA_AffinityPropagation.pdf)
 * pagerank impl (https://github.com/ashkonf/PageRank)
 * bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
