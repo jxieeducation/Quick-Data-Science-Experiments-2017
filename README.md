@@ -31,7 +31,11 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* empirical bayesian techniques demo (http://varianceexplained.org/r/simulation-bayes-baseball/)
+* graph based recommendation demo (https://medium.com/@Pinterest_Engineering/introducing-pixie-an-advanced-graph-based-recommendation-system-e7b4229b664b)
 * one class collaborative filtering (http://www.rongpan.net/publications/pan-oneclasscf.pdf)
+* NMF heatmap tut (http://nmf.r-forge.r-project.org/vignettes/heatmaps.pdf)
+* metagenes and molecular pattern discovery using matrix factorization (http://www.pnas.org/content/101/12/4164.full.pdf)
 * coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * different weighting w/ covariate shift
 * hinton diagrams on NMF embeddings
@@ -134,6 +138,7 @@
 ### done:
 * arimax python (http://robjhyndman.com/hyndsight/arimax/)
 * Facing Imbalanced Data Recommendations for the Use of Performance Metrics (http://www.pitt.edu/~jeffcohn/skew/PID2829477.pdf)
+* exploiting time for causal inference (https://dsaber.com/2017/04/02/time-keeps-on-slipping-exploiting-time-for-causal-inference-with-difference-in-differences-and-panel-methods/)
 * eigenface (http://www.face-rec.org/algorithms/PCA/jcn.pdf)
 * online covariance formula (http://rebcabin.github.io/blog/2013/01/22/covariance-matrices/)
 * dataset shift in classification (http://iwann.ugr.es/2011/pdf/InvitedTalk-FHerrera-IWANN11.pdf)
