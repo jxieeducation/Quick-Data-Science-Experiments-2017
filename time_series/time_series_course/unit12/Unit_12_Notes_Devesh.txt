@@ -1,0 +1,60 @@
+df
+- ID number
+- each person has observations
+- each year has a variable
+- "Wide dataset"
+
+df2
+- ID + time
+- each survey gets its own line
+- "Long dataset"
+
+reshape
+
+Tolerance = a + b*Male + c*age + error
+
+Tolerance = a + b*M + c*age + d*Male*age
+
+
+Time Invariant:
+- gender, exposure
+
+Time variant:
+- age, tolerance, time
+
+******
+First dataset: Wide
+converting to long (df2)
+
+Transformation: Mean of all values
+
+Long dataset:
+Regression, panel methods
+
+Suppose you did a t.test
+
+T.Test 1
+* Lost information about time
+
+T.Test 2
+* Still no temporal dimension
+* Observations are not independent!
+
+****************************
+
+y(it) = a + b*x(it) + (v_i + u_it)
+How do you get rid of v_1?
+
+1. Fixed effects estimator
+** Adding a dummy variable for each person
+
+2. FD estimator
+** Also elimanites v_i
+
+
+******* Suppose IV is exposure ****
+exposire is time-invariant
+
+
+
+

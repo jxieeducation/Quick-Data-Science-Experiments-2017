@@ -31,6 +31,7 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* figure out portfolio composition via optimization
 * empirical bayesian techniques demo (http://varianceexplained.org/r/simulation-bayes-baseball/)
 * graph based recommendation demo (https://medium.com/@Pinterest_Engineering/introducing-pixie-an-advanced-graph-based-recommendation-system-e7b4229b664b)
 * one class collaborative filtering (http://www.rongpan.net/publications/pan-oneclasscf.pdf)
@@ -52,7 +53,6 @@
 * graph centrality measures (degree, betweeness, closeness, eigenvector, katz, alpha)
 * BoW + LSTM sentiment analysis (https://metamind.io/research/learning-when-to-skim-and-when-to-read)
 * fb visdom tool (https://github.com/facebookresearch/visdom)
-* quora question nlp tut (https://www.linkedin.com/pulse/duplicate-quora-question-abhishek-thakur)
 * topic coherence for LDA (http://qpleple.com/topic-coherence-to-evaluate-topic-models/)
 * indexing by latent semantic analysis (http://www.cs.bham.ac.uk/~pxt/IDA/lsa_ind.pdf)
 * topological data analysis (http://outlace.com/Topological+Data+Analysis+Tutorial+-+Part+1/)
@@ -173,6 +173,7 @@
 * pandasql tut (https://github.com/yhat/pandasql)
 * AIC and BIC for scree plot
 * memory based learning (http://www.cs.cornell.edu/courses/cs578/2007fa/CS578_knn_lecture.pdf)
+* predicting good probabilities with supervised learning (http://www.datascienceassn.org/sites/default/files/Predicting%20good%20probabilities%20with%20supervised%20learning.pdf)
 * gmm classification
 * hinton diagrams & for linear reg (http://tonysyu.github.io/mpltools/auto_examples/special/plot_hinton.html)
 * levenshtein string clustering (http://stackoverflow.com/questions/21511801/text-clustering-with-levenshtein-distances)
@@ -184,6 +185,7 @@
 * NMF (how it enforces Non-negativity)
 * OAO vs OAA (https://hal.archives-ouvertes.fr/inria-00103955/document)
 * perceptron implementation
+* quora question nlp tut (https://www.linkedin.com/pulse/duplicate-quora-question-abhishek-thakur)
 * naive bayes spam filter
 * kernel density classification & kernel smoothing with different local kernels
 * recommendations MF, item kNN on latent space
