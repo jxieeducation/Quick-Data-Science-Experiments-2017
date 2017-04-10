@@ -12,6 +12,7 @@
 * scikit-learn autoexamples
 * mlxtend examples (http://rasbt.github.io/mlxtend/USER_GUIDE_INDEX/)
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
+* UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 * stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
 * convex optimization (http://www.stat.cmu.edu/~ryantibs/convexopt/)
 * gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
@@ -31,6 +32,10 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* q-learning stock market (http://hallvardnydal.github.io/new_posts/2015-07-21-deep_q/)
+* RL MDP simple tut
+* q-learning tut 
+* twitter sentiment vs stock markers (https://arxiv.org/pdf/1010.3003.pdf)
 * figure out portfolio composition via optimization
 * empirical bayesian techniques demo (http://varianceexplained.org/r/simulation-bayes-baseball/)
 * graph based recommendation demo (https://medium.com/@Pinterest_Engineering/introducing-pixie-an-advanced-graph-based-recommendation-system-e7b4229b664b)
@@ -134,6 +139,9 @@
 * breaking news prediction on twitter
 * multilingual spam filter
 
+
+### done (long term):
+* udacity ud501 ML for Trading
 
 ### done:
 * arimax python (http://robjhyndman.com/hyndsight/arimax/)
