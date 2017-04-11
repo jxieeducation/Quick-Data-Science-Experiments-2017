@@ -32,10 +32,10 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* fuzzy SOM NN (http://www.cs.armstrong.edu/wsc11/slides/162.pdf)
 * q-learning stock market (http://hallvardnydal.github.io/new_posts/2015-07-21-deep_q/)
 * RL MDP simple tut
 * q-learning tut 
-* twitter sentiment vs stock markers (https://arxiv.org/pdf/1010.3003.pdf)
 * figure out portfolio composition via optimization
 * empirical bayesian techniques demo (http://varianceexplained.org/r/simulation-bayes-baseball/)
 * graph based recommendation demo (https://medium.com/@Pinterest_Engineering/introducing-pixie-an-advanced-graph-based-recommendation-system-e7b4229b664b)
@@ -206,6 +206,8 @@
 * ranking item recommendations for a user from matrix factorization
 * hierarchical clustering dendrogram analysis
 * imputation in scikit-learn (http://scikit-learn.org/stable/auto_examples/missing_values.html#sphx-glr-auto-examples-missing-values-py)
+* twitter sentiment vs stock markers (https://arxiv.org/pdf/1010.3003.pdf)
+* granger causality time series (http://www-bcf.usc.edu/~liu32/cause.pdf)
 
 ===
 
