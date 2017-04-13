@@ -32,6 +32,9 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* SVD pseudo inverse proof (http://uspas.fnal.gov/materials/05UCB/6_SVD.pdf)
+* SVD UCSD tut (http://mplab.ucsd.edu/wordpress/tutorials/svd.pdf)
+* SVD computation (https://www.youtube.com/watch?v=cOUTpqlX-Xs)
 * fuzzy SOM NN (http://www.cs.armstrong.edu/wsc11/slides/162.pdf)
 * q-learning stock market (http://hallvardnydal.github.io/new_posts/2015-07-21-deep_q/)
 * RL MDP simple tut
