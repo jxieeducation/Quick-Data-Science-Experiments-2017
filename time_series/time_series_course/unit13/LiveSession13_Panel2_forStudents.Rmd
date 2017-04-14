@@ -1,0 +1,201 @@
+---
+title: 'W271 Live Session 12: Analysis of Panel Data 1'
+author: "Jeffrey Yau and Devesh Tiwari"
+date: "4/4/2017"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+# Main topics covered in Week 12 (Async Unit 11)
+    - Fixed Effect Model
+    - A Digression: differencing when there are more than 2 time periods
+    - Random effect model
+    - Fixed effect vs. random effect models
+
+# Readings
+**W2016:** Jeffrey Wooldridge. *Introductory Econometrics: A Modern Approach.* 6th edition. Cengage Learning 
+
+    - Ch. 14.1 - 14.2
+    - [package plm](https://cran.r-project.org/web/packages/plm/plm.pdf)
+    - [plm vignettes](https://cran.r-project.org/web/packages/plm/vignettes/plm.pdf)
+
+# Agenda for this week's live session:
+
+  1. Exploratory data analysis of panel (or longitudinal) data
+  
+  2. Fixed-effect models, Random-effect models, various diagnostic tests
+
+Some start-up codes:
+```{r}
+#sessionInfo()
+
+# Insert the function to *tidy up* the code when they are printed out
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+
+# Set Numeric Value Display
+# See reference from https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html
+options(digits=2) # Set the printed number of digits to 2. Note: It is a suggestion only. Default is 7. 
+#options("scipen" = 10)
+
+# Set memory limit
+memory.limit(50000000)
+
+# Clean up the workspace before we begin
+rm(list = ls())
+
+# Set working directory
+wd <- "~/Documents/JStuff/Teach/w271/LiveSessions/week13"
+setwd(wd)
+
+# Load libraries
+library(car)
+library(dplyr)
+library(Hmisc)
+library(ggplot2)
+library(lattice)
+library(plm)
+```
+
+
+# 1. Exploratory data analysis of panel data
+
+  - *Estmated Time: Breakout session 15 minutes*
+  - *Estmated Time: Class discussion 10 minutes*
+
+In this example, we use a modified panel dataset on 7 countries. The *yIndex* is a measure of the well-being of the population in a country, considering that as some health measure. A bigger number reflects a better health status. The *xIndex* variable is a (normalized) measure of the economic activities of the country; a bigger number indiciates "better" economic performance. *country* indicates, well, country, and *year* indicates the year in which the health and economic measurements were taken. The question of interest is "Does better economic activities, as measured by *xIndex*, improve the country's health status, as measured by *yIndex*?"
+
+**Tasks:** 
+    - Import the data as data.frame. 
+    - Examine the basic structure of each of the datasets. 
+    - Try to understand each of the variables
+    - Discuss about the dataset
+    - At what level is this dataset?
+    - Conduct a throughout EDA, including a growth curve analysis that was covered in the live session in week 12
+    
+```{r}
+# YOUR CODE HERE
+df <- read.csv("~/Downloads/Quick-Data-Science-Experiments-2017/time_series/time_series_course/unit13/data_wk13.csv")
+
+head(df)
+summary(df)
+
+sort(unique(df$year))
+sort(unique(df$country))
+sort(unique(df$yIndex))
+sort(unique(df$xIndex))
+
+hist(df$yIndex)
+
+#percentile(df$xIndex, 20)
+
+scatterplot(df$xIndex, df$yIndex)
+xyplot(yIndex ~ year | country, data=df, as.table=T)
+xyplot(xIndex ~ year | country, data=df, as.table=T)
+xyplot(yIndex ~ xIndex | country, data=df, as.table=T)
+
+ggplot(data=df[df$country=='C',], aes(x=year, y=yIndex)) +
+    geom_bar(stat="identity")
+
+
+library(foreign)
+library(gplots)
+
+coplot(yIndex ~ year|country, type="l", data=df)
+
+coplot(xIndex ~ year|country, type="b", data=df)
+
+plotmeans(xIndex ~ country, main="Heterogeineity of an Economic Index across countries", data=df)
+plotmeans(yIndex ~ country, main="Heterogeineity of a Health Index across countries", data=df)
+
+```
+
+
+# 2. OLS Regression Model
+
+  - *Estmated Time: Breakout session 10 minutes*
+  - *Estmated Time: Class discussion 5 minutes*
+
+**Tasks:** 
+  - Suppose you want to answer the question posted above using an OLS regression model.
+  - Is OLS regression model a reasonable approach? Why? Why not?
+  - Don't forget to interpret the result! So, according to your model, what's your answer to the question posted above?
+  - What do you have to assume to make this approach reasonable?
+  - Are these assumptions that you will have to make valid?
+  
+
+```{r}
+# yIndex is ordinal
+# omitted variable bias
+# SE is not significant --> not independent observations (serial correlation), data is across time
+m <- lm(yIndex ~ xIndex, data=df)
+plot(m)
+```
+
+# 3. Fixed-Effect Regression Model
+
+  - *Estmated Time: Breakout session 15 minutes*
+  - *Estmated Time: Class discussion 10 minutes*
+
+**Tasks:**
+  - Suppose you want to answer the question posted above using a Fixed-Effect regression model.
+  - First, write done a fixed-effect regression model with an unobserved effect.
+  - What assumptions are needed for the fixed-effect regression model?
+  - Explain what a fixed effect is?
+  - Think about why a fixed-effect framework would make sense for this question?
+  - Estimate a fixed-effect model.
+  - In your fixed-effect model, how many groups, time periods, and observations are there?
+  - Don't forget to interpret the result! So, according to your model, what's your answer to the question posted above?
+
+```{r}
+# y_it = X_it B + \alpha_i + u_it 
+# assumption: 1) X_it can be correlated within an obj 2) there is variation within X_it
+# fixed effect: fixed \alpha_i ?
+# why a fixed effect: can't measure \alpha_i, solves omitted var bias
+# y_it_demeaned = x_it_demeaned B + u_it_demeaned
+# 
+(fe_model <- plm(yIndex ~ xIndex, data=df, index=c("country", "year"), na.action=na.omit, model="within"))
+summary(fe_model)
+```
+
+# 4. Random-Effect Regression Model
+
+  - *Estmated Time: Breakout session 15 minutes*
+  - *Estmated Time: Class discussion 10 minutes*
+
+**Tasks:**
+  - Suppose you want to answer the question posted above using a Random-Effect regression model.
+  - First, write done a random-effect regression model with an unobserved effect.
+  - What assumptions are needed for the random-effect regression model?
+  - Explain what a random effect is?
+  - Think about why a random-effect framework would make sense for this question?
+  - Estimate a fixed-effect model.
+  - Don't forget to interpret the result! So, according to your model, what's your answer to the question posted above?
+
+
+```{r}
+# The random effects assumption (made in a random effects model) is that the individual specific effects are uncorrelated with the independent variables
+# y_it = \mu + U_i + w_it
+
+(re_model <- plm(yIndex ~ xIndex, data=df, index=c("country", "year"), na.action=na.omit, model="random"))
+summary(re_model)
+```
+
+# 5. Diagnostic Tests and Final Discussion
+
+  - *Estmated Time: Breakout session 10 minutes*
+  - *Estmated Time: Class discussion 5 minutes*
+
+**Tasks:**
+  - Conduct diagnostic tests to determine whether or not a fixed effects model or a random effects model is appropriate.
+  - Discuss situations (and assumptions) under which fixed effect is more appropriate and situations under
+
+  - Hausman test: null hypothesis is that the preferred model is random effects vs. the alternative the fixed effects. It tests whether the unique errors $u_i$ are correlated with the explanatory variables; the null hypothesis is they are not.
+    - Estimate a fixed effects model and a random effect model. Then perform the test. If the p-value is significant (e.g. $p \leq 0.05$), then use fixed effects; otherwise, use random effects.
+
+```{r}
+# YOUR CODE HERE
+```
+
+
