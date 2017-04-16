@@ -32,6 +32,8 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* causal inference in online systems (http://blog.amitsharma.in/2016/06/27/a-gentle-introduction-to-causal-inference/)
+* causal inference observational studies (http://www.cs.nyu.edu/~shalit/slides.pdf)
 * kernel fisher LDA (http://www.ics.uci.edu/~welling/classnotes/papers_class/Fisher-LDA.pdf)
 * discriminant adaptive nearest neighbors (http://www.cs.uvm.edu/~xwu/kdd/HT-KDD95.pdf)
 * transformation invariance in pattern recognition (http://yann.lecun.com/exdb/publis/pdf/simard-00.pdf)
