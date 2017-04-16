@@ -196,6 +196,8 @@ summary(re_model)
 
 ```{r}
 # YOUR CODE HERE
+?phtest
+phtest(fe_model, re_model)
 ```
 
 

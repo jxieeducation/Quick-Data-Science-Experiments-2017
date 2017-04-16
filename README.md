@@ -32,6 +32,10 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* kernel fisher LDA (http://www.ics.uci.edu/~welling/classnotes/papers_class/Fisher-LDA.pdf)
+* discriminant adaptive nearest neighbors (http://www.cs.uvm.edu/~xwu/kdd/HT-KDD95.pdf)
+* transformation invariance in pattern recognition (http://yann.lecun.com/exdb/publis/pdf/simard-00.pdf)
+* brier score for prob calibration (https://timvangelder.com/2015/05/18/brier-score-composition-a-mini-tutorial/)
 * SVD pseudo inverse proof (http://uspas.fnal.gov/materials/05UCB/6_SVD.pdf)
 * SVD UCSD tut (http://mplab.ucsd.edu/wordpress/tutorials/svd.pdf)
 * SVD computation (https://www.youtube.com/watch?v=cOUTpqlX-Xs)
@@ -146,6 +150,8 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* probability calibration via bayesian binning (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4410090/)
+* histogram binning for probability calibration (http://cseweb.ucsd.edu/~elkan/calibrated.pdf)
 * arimax python (http://robjhyndman.com/hyndsight/arimax/)
 * Facing Imbalanced Data Recommendations for the Use of Performance Metrics (http://www.pitt.edu/~jeffcohn/skew/PID2829477.pdf)
 * exploiting time for causal inference (https://dsaber.com/2017/04/02/time-keeps-on-slipping-exploiting-time-for-causal-inference-with-difference-in-differences-and-panel-methods/)
