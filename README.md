@@ -32,12 +32,12 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* asymmetric gaussian (http://www.iic.ecei.tohoku.ac.jp/~kato/papers/t.kato_spr2002a.pdf)
 * causal inference in online systems (http://blog.amitsharma.in/2016/06/27/a-gentle-introduction-to-causal-inference/)
 * causal inference observational studies (http://www.cs.nyu.edu/~shalit/slides.pdf)
 * kernel fisher LDA (http://www.ics.uci.edu/~welling/classnotes/papers_class/Fisher-LDA.pdf)
 * discriminant adaptive nearest neighbors (http://www.cs.uvm.edu/~xwu/kdd/HT-KDD95.pdf)
 * transformation invariance in pattern recognition (http://yann.lecun.com/exdb/publis/pdf/simard-00.pdf)
-* brier score for prob calibration (https://timvangelder.com/2015/05/18/brier-score-composition-a-mini-tutorial/)
 * SVD pseudo inverse proof (http://uspas.fnal.gov/materials/05UCB/6_SVD.pdf)
 * SVD UCSD tut (http://mplab.ucsd.edu/wordpress/tutorials/svd.pdf)
 * SVD computation (https://www.youtube.com/watch?v=cOUTpqlX-Xs)
@@ -152,6 +152,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* Using asymmetric distributions to improve text classifier probability estimates (https://pdfs.semanticscholar.org/0ad0/d7431ca1b49617e6e5199c0ab5fcec18564f.pdf)
 * probability calibration via bayesian binning (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4410090/)
 * histogram binning for probability calibration (http://cseweb.ucsd.edu/~elkan/calibrated.pdf)
 * arimax python (http://robjhyndman.com/hyndsight/arimax/)
@@ -163,6 +164,7 @@
 * probability calibration
 * Quick Look at SVM blog (https://generalabstractnonsense.com/2017/03/A-quick-look-at-Support-Vector-Machines/)
 * temporal regression (decaying RSS)
+* brier score for prob calibration (https://timvangelder.com/2015/05/18/brier-score-composition-a-mini-tutorial/)
 * lda w/ vw example (http://mlwave.com/tutorial-online-lda-with-vowpal-wabbit/)
 * pca principal component vis (w207 class 11 notebook)
 * MARS (pyEarth)
