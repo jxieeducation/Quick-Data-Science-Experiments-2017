@@ -32,6 +32,8 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* LSA tutorial (http://www.engr.uvic.ca/~seng474/svd.pdf)
+* lung cancer kaggle sol (https://eliasvansteenkiste.github.io/machine%20learning/lung-cancer-pred/)
 * asymmetric gaussian (http://www.iic.ecei.tohoku.ac.jp/~kato/papers/t.kato_spr2002a.pdf)
 * causal inference in online systems (http://blog.amitsharma.in/2016/06/27/a-gentle-introduction-to-causal-inference/)
 * causal inference observational studies (http://www.cs.nyu.edu/~shalit/slides.pdf)
@@ -51,7 +53,6 @@
 * one class collaborative filtering (http://www.rongpan.net/publications/pan-oneclasscf.pdf)
 * NMF heatmap tut (http://nmf.r-forge.r-project.org/vignettes/heatmaps.pdf)
 * metagenes and molecular pattern discovery using matrix factorization (http://www.pnas.org/content/101/12/4164.full.pdf)
-* coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * different weighting w/ covariate shift
 * hinton diagrams on NMF embeddings
 * topic modeling w/ NMF
@@ -152,6 +153,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * Using asymmetric distributions to improve text classifier probability estimates (https://pdfs.semanticscholar.org/0ad0/d7431ca1b49617e6e5199c0ab5fcec18564f.pdf)
 * probability calibration via bayesian binning (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4410090/)
 * histogram binning for probability calibration (http://cseweb.ucsd.edu/~elkan/calibrated.pdf)
