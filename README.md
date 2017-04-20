@@ -32,6 +32,11 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* predicting similarity matrix via MF or regression
+* semisupervised learning survey (http://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf)
+* density estimation via supervised learning (pg595 ESL)
+* association rule tut (http://mhahsler.github.io/arules/)
+* Silverman 1986 density estimation survey (https://ned.ipac.caltech.edu/level5/March02/Silverman/paper.pdf)
 * LSA tutorial (http://www.engr.uvic.ca/~seng474/svd.pdf)
 * lung cancer kaggle sol (https://eliasvansteenkiste.github.io/machine%20learning/lung-cancer-pred/)
 * asymmetric gaussian (http://www.iic.ecei.tohoku.ac.jp/~kato/papers/t.kato_spr2002a.pdf)
@@ -112,7 +117,6 @@
 * Gauss-Newton method for non-linear least squares (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
 * sigmoid (W^T X) operates in the linear range if W^{norm} is very small demo
 * ICA 
-* semisupervised learning survey (http://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf)
 * square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
 * hierarchical mixture of experts (EM & interpretation)
