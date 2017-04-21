@@ -1,0 +1,133 @@
+---
+title: 'W271 Live Session 14: Linear Mixed Effect Models - Application to Hierarchical Data'
+author: "Jeffrey Yau and Devesh Tiwari"
+date: "4/20/2017"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+# when to use mixed effect
+* hierarhical data
+* categorical level, account for heterogeneity
+* 
+* 
+
+
+# Main topics covered in Week 14 (Async Unit 13)
+  -Linear mixed-effect model
+      - The notion of fixed and random effects in the context of linear mixed effect model
+      - The independence assumption
+      - Modeling random intercepts, slopes, and both random intercepts and slopes
+      - Mathematical formulation, estimation, model diagnostics, model identification, model selection, assumption testing, and statistical inference / forecasting, backtesting
+
+# Readings:
+**BMBW** Douglas Bates, Martin Machler, Benjamin Bolker, and Steve Walker. *Fitting Linear Mixed Effect Models Using lme4*
+
+# Agenda:
+
+  Practice and discuss linear mixed effect model
+      a. Exploratory data analysis of hierarchical data
+      b. Build a Linear Mixed Effect Model
+
+*********************************
+
+Some start-up codes:
+```{r}
+#sessionInfo()
+
+# Insert the function to *tidy up* the code when they are printed out
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+
+# Set Numeric Value Display
+# See reference from https://stat.ethz.ch/R-manual/R-devel/library/base/html/options.html
+options(digits=2) # Set the printed number of digits to 2. Note: It is a suggestion only. Default is 7. 
+#options("scipen" = 10)
+
+# Set memory limit
+memory.limit(50000000)
+
+# Clean up the workspace before we begin
+rm(list = ls())
+
+# Set working directory
+#wd <- "~/Documents/Teach/w271/LiveSessions/week14"
+wd <- "~/Downloads/Quick-Data-Science-Experiments-2017/time_series/time_series_course/unit14/"
+setwd(wd)
+
+# Load libraries
+library(dplyr)
+library(Hmisc)
+library(ggplot2)
+#library(lattice)
+#library(plm)
+library(lme4)
+library(foreign)
+library(gplots)
+library(stargazer)
+```
+
+
+# 1. Exploratory data analysis of hierarchical data
+  - *Estmated Time: Breakout session 15 minutes*
+  - *Estmated Time: Class discussion 15 minutes*
+
+In this example, we use a dataset from an experiment to measure productivity on a manufacturing task according to the type of machine used and the operator. Our team is specifically interested in the productivity generated based on these machines. Unfortunately, as in real life, this is the only information we have.
+
+**Tasks:** 
+    - Import the data into R as a data.frame
+    - Examine the basic structure of each of the datasets
+    - Try to understand each of the variables
+    - Discuss about the dataset
+    - At what level is this dataset?
+    - Conduct a throughout EDA; use techniques we have covered since week 12
+
+```{r}
+df <- read.csv("data1_wk14.csv")
+
+str(df)
+head(df)
+
+hist(df$score)
+unique(df$Worker)
+
+boxplot(score ~ Machine, data=df)
+boxplot(score ~ Worker, data=df)
+boxplot(score ~ Machine + Worker, data=df)
+
+dotplot(reorder(Machine, score) ~ score, df, type = c("p", "a"), jitter.y = TRUE,
+        ylab = "Machine", xlab = "score",
+        main = "Distribution of score by Machine")
+dotplot(reorder(Worker, score) ~ score, df, type = c("p", "a"), jitter.y = TRUE,
+        ylab = "Worker", xlab = "score",
+        main = "Distribution of score by Worker")
+
+coplot(score ~ Machine | Worker, data = df, type = "b")
+xyplot(score ~ Machine | Worker, data = df)
+plotmeans(score ~ Worker, data = df)
+
+df %>% 
+  group_by(Worker) %>% 
+  summarise(mean(score), quantile(score,0.05), quantile(score,0.95))
+
+
+```
+
+# 2. Build a Linear Mixed Effect Model 
+  - *Estmated Time: Breakout session 25 minutes*
+  - *Estmated Time: Class discussion 25 minutes*
+
+Develop a linear mixed effect model to answer our team's interest (posted above). You will need to experiment with a series of linear mixed effect model. Make sure your group discuss the interpretation of your final model.
+
+
+```{r}
+lmm.null <- lmer(score ~ Machine + (1|Worker), data=df)
+coef(lmm.null)
+summary(lmm.null)
+
+lmm.full <- lmer(score ~ Machine + (1+Machine|Worker), data=df)
+coef(lmm.full)
+summary(lmm.full)
+
+anova(lmm.null, lmm.full)
+```

@@ -32,6 +32,7 @@
 * Udacity courses (https://classroom.udacity.com/me)
 
 ### to do:
+* mixed effect for panel data (https://arxiv.org/pdf/1406.5823.pdf)
 * predicting similarity matrix via MF or regression
 * semisupervised learning survey (http://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf)
 * density estimation via supervised learning (pg595 ESL)
@@ -157,6 +158,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* softmax gating network (https://people.cs.pitt.edu/~milos/courses/cs2750-Spring04/lectures/class22.pdf)
 * coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * Using asymmetric distributions to improve text classifier probability estimates (https://pdfs.semanticscholar.org/0ad0/d7431ca1b49617e6e5199c0ab5fcec18564f.pdf)
 * probability calibration via bayesian binning (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4410090/)
