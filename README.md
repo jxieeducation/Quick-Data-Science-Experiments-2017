@@ -31,7 +31,13 @@
 * Udacity notebooks (https://github.com/Ryosuke-Y)
 * Udacity courses (https://classroom.udacity.com/me)
 
+
 ### to do:
+* bayesian model averaging notes
+* bayesian model averaging for regression (https://github.com/timsf/bma)
+* deterministic properties of hierarhical clustering
+* kmedoids for strings (spelling correction)
+* kMeans T = within + between
 * mixed effect for panel data (https://arxiv.org/pdf/1406.5823.pdf)
 * predicting similarity matrix via MF or regression
 * semisupervised learning survey (http://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf)
@@ -131,10 +137,8 @@
 * stochastic search - bumping (XOR decision tree example)
 * decision tree missing values (surrogate splits, 9.2.4 ELSL)
 * isolation trees (http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf)
-* random forest variance formula (p*var + (1 - p)/beta *var
 * factor analysis (http://web.stanford.edu/class/psych253/tutorials/FactorAnalysis.html)
 * adaboost vs SVM (https://ucb-mids.s3.amazonaws.com/prod/Machine+Learning/Readings/Week+4/ShortIntroToBoosting.pdf)
-* bayesian model averaging & BIC
 * 1NN curse of dim test w/ b-v tradeoff (pg 24, 223)
 * LOESS & show that boundary fit is linear
 * splines in python, b-splines, thin plate spline
@@ -148,7 +152,6 @@
 * svd to pca
 * gaussian processes test
 * asymptotic normality of MLE (var 2nd deriv)
-* large scale L1 feature selection with Vowpal Wabbit
 * gaussian processes for hyperparam optimization
 * breaking news prediction on twitter
 * multilingual spam filter
@@ -158,6 +161,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* random forest variance formula (p*var + (1 - p)/beta *var)
 * softmax gating network (https://people.cs.pitt.edu/~milos/courses/cs2750-Spring04/lectures/class22.pdf)
 * coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
 * Using asymmetric distributions to improve text classifier probability estimates (https://pdfs.semanticscholar.org/0ad0/d7431ca1b49617e6e5199c0ab5fcec18564f.pdf)
