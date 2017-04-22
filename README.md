@@ -33,6 +33,7 @@
 
 
 ### to do:
+* FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
 * bayesian model averaging notes
 * bayesian model averaging for regression (https://github.com/timsf/bma)
 * deterministic properties of hierarhical clustering
@@ -149,7 +150,6 @@
 * compressed sensing (http://web.yonsei.ac.kr/nipi/lectureNote/Compressed%20Sensing%20by%20Romberg%20and%20Wakin.pdf)
 * steepest descent (https://www.rose-hulman.edu/~bryan/lottamath/steepest.pdf)
 * conjugate gradient (http://sep.stanford.edu/data/media/public/oldreports/sep44/44_14.pdf)
-* svd to pca
 * gaussian processes test
 * asymptotic normality of MLE (var 2nd deriv)
 * gaussian processes for hyperparam optimization
@@ -161,6 +161,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* svd to pca
 * random forest variance formula (p*var + (1 - p)/beta *var)
 * softmax gating network (https://people.cs.pitt.edu/~milos/courses/cs2750-Spring04/lectures/class22.pdf)
 * coclustering methods for recommendations (http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.6458&rep=rep1&type=pdf)
