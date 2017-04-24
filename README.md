@@ -33,6 +33,7 @@
 
 
 ### to do:
+* MNIST PCA first 2 PC vis ESL pg537
 * FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
 * bayesian model averaging notes
 * bayesian model averaging for regression (https://github.com/timsf/bma)
@@ -161,6 +162,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* svd matrix inversion
 * svd to pca
 * random forest variance formula (p*var + (1 - p)/beta *var)
 * softmax gating network (https://people.cs.pitt.edu/~milos/courses/cs2750-Spring04/lectures/class22.pdf)
