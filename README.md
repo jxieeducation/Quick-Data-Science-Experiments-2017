@@ -34,6 +34,7 @@
 
 ### to do:
 * MNIST PCA first 2 PC vis ESL pg537
+* spectural clustering
 * FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
 * bayesian model averaging notes
 * bayesian model averaging for regression (https://github.com/timsf/bma)
