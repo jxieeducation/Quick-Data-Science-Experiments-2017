@@ -23,7 +23,6 @@
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
 * linear alge interactive book (http://immersivemath.com/ila/index.html)
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
-* numerical optimization book
 * graphical models (http://www.cs.cmu.edu/~epxing/Class/10708-17/lecture.html)
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 * bayesian book (http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
@@ -33,6 +32,7 @@
 
 
 ### to do:
+* Beta distribution
 * MNIST PCA first 2 PC vis ESL pg537
 * spectural clustering
 * FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
