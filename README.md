@@ -32,6 +32,9 @@
 
 
 ### to do:
+* diagonosing ML models (https://www.youtube.com/watch?v=0TSvo2hOKo0)
+* panel data R intro (https://www.princeton.edu/~otorres/Panel101R.pdf)
+* Simple but tough-to-beat baseline for sentence embedding (https://openreview.net/pdf?id=SyK00v5xx)
 * Beta distribution
 * MNIST PCA first 2 PC vis ESL pg537
 * spectural clustering
