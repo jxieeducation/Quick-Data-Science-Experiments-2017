@@ -32,10 +32,13 @@
 
 
 ### to do:
+* gensim LSI
+* VAE notes (http://kvfrans.com/variational-autoencoders-explained/)
+* faster RCNN (https://arxiv.org/pdf/1506.01497.pdf)
+* pinnability pinterest recommendations (https://medium.com/@Pinterest_Engineering/pinnability-machine-learning-in-the-home-feed-64be2074bf60)
+* music generation / tensorfow tut (https://github.com/brannondorsey/midi-rnn)
+* deepwalk (https://arxiv.org/pdf/1403.6652.pdf)
 * diagonosing ML models (https://www.youtube.com/watch?v=0TSvo2hOKo0)
-* panel data R intro (https://www.princeton.edu/~otorres/Panel101R.pdf)
-* Simple but tough-to-beat baseline for sentence embedding (https://openreview.net/pdf?id=SyK00v5xx)
-* Beta distribution
 * MNIST PCA first 2 PC vis ESL pg537
 * spectural clustering
 * FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
@@ -50,7 +53,6 @@
 * density estimation via supervised learning (pg595 ESL)
 * association rule tut (http://mhahsler.github.io/arules/)
 * Silverman 1986 density estimation survey (https://ned.ipac.caltech.edu/level5/March02/Silverman/paper.pdf)
-* LSA tutorial (http://www.engr.uvic.ca/~seng474/svd.pdf)
 * lung cancer kaggle sol (https://eliasvansteenkiste.github.io/machine%20learning/lung-cancer-pred/)
 * asymmetric gaussian (http://www.iic.ecei.tohoku.ac.jp/~kato/papers/t.kato_spr2002a.pdf)
 * causal inference in online systems (http://blog.amitsharma.in/2016/06/27/a-gentle-introduction-to-causal-inference/)
@@ -63,11 +65,10 @@
 * SVD computation (https://www.youtube.com/watch?v=cOUTpqlX-Xs)
 * fuzzy SOM NN (http://www.cs.armstrong.edu/wsc11/slides/162.pdf)
 * q-learning stock market (http://hallvardnydal.github.io/new_posts/2015-07-21-deep_q/)
-* RL MDP simple tut
+* RL MDP simple tut (http://hunch.net/~jl/projects/RL/RLTheoryTutorial.pdf)
 * q-learning tut 
 * figure out portfolio composition via optimization
 * empirical bayesian techniques demo (http://varianceexplained.org/r/simulation-bayes-baseball/)
-* graph based recommendation demo (https://medium.com/@Pinterest_Engineering/introducing-pixie-an-advanced-graph-based-recommendation-system-e7b4229b664b)
 * one class collaborative filtering (http://www.rongpan.net/publications/pan-oneclasscf.pdf)
 * NMF heatmap tut (http://nmf.r-forge.r-project.org/vignettes/heatmaps.pdf)
 * metagenes and molecular pattern discovery using matrix factorization (http://www.pnas.org/content/101/12/4164.full.pdf)
@@ -81,7 +82,6 @@
 * MCMC and Applied Bayesian (http://www.stats.ox.ac.uk/~cholmes/Courses/BDA/bda_mcmc.pdf)
 * bayesian technique parameter estimation (http://www4.ncsu.edu/~rsmith/MA797V_S12/MCMC.pdf)
 * active portfolio management notes (https://github.com/RJT1990/Active-Portfolio-Management-Notes)
-* networkX tut (http://snap.stanford.edu/class/cs224w-2011/nx_tutorial/nx_tutorial.pdf)
 * graph centrality measures (degree, betweeness, closeness, eigenvector, katz, alpha)
 * BoW + LSTM sentiment analysis (https://metamind.io/research/learning-when-to-skim-and-when-to-read)
 * fb visdom tool (https://github.com/facebookresearch/visdom)
@@ -101,7 +101,6 @@
 * random walk bayesian NN (http://twiecki.github.io/blog/2017/03/14/random-walk-deep-net/)
 * EM for data imputation (http://users.stat.umn.edu/~sandy/courses/8053/handouts/Missing.Data.Multiple.Imputation.pdf)
 * locally optimized product quantization knn (http://image.ntua.gr/iva/files/lopq.pdf)
-* take notes on elastic search image search (https://github.com/tuan3w/visual_search)
 * survival analysis via weibull (http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf)
 * silhouette score review
 * spherical k-means (cosine dist) (https://www.jstatsoft.org/article/view/v050i10/v50i10.pdf)
@@ -113,7 +112,6 @@
 * dual form perceptron
 * classifier comparison pitfalls (http://www.cs.bilkent.edu.tr/~guvenir/courses/CS553/On%20Comparing%20Classifiers%20Pitfalls%20to%20Avoid%20and%20a%20recommended%20approach.pdf)
 * model assisted sampling (https://github.com/facebookincubator/ml_sampler/blob/master/ml_sampler.pdf)
-* bootstrap AB test CI (https://github.com/facebookincubator/bootstrapped)
 * prophet forecast library test (https://research.fb.com/prophet-forecasting-at-scale/)
 * surprise - bayesian weighting map (http://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf)
 * feature engineering notes (https://www.slideshare.net/HJvanVeen/feature-engineering-72376750)
@@ -166,6 +164,14 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* take notes on elastic search image search (https://github.com/tuan3w/visual_search)
+* graph based recommendation demo (https://medium.com/@Pinterest_Engineering/introducing-pixie-an-advanced-graph-based-recommendation-system-e7b4229b664b)
+* bootstrap AB test CI (https://github.com/facebookincubator/bootstrapped)
+* beta distribution
+* networkX tut (http://snap.stanford.edu/class/cs224w-2011/nx_tutorial/nx_tutorial.pdf)
+* LSA tutorial (http://www.engr.uvic.ca/~seng474/svd.pdf)
+* panel data R intro (https://www.princeton.edu/~otorres/Panel101R.pdf)
+* Simple but tough-to-beat baseline for sentence embedding (https://openreview.net/pdf?id=SyK00v5xx)
 * svd matrix inversion
 * svd to pca
 * random forest variance formula (p*var + (1 - p)/beta *var)
