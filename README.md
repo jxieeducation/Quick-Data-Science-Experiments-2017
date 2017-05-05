@@ -32,6 +32,7 @@
 
 
 ### to do:
+* chisquare feature selection math
 * multilingual embeddings (https://github.com/Babylonpartners/fastText_multilingual)
 * contextual bandit langford tut (http://hunch.net/~exploration_learning/main.pdf)
 * gensim LSI
