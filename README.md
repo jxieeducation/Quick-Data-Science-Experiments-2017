@@ -32,6 +32,7 @@
 
 
 ### to do:
+* machine learning techniques for BCI (http://doc.ml.tu-berlin.de/bbci/publications/MueKraDorCurBla04.pdf)
 * chisquare feature selection math
 * multilingual embeddings (https://github.com/Babylonpartners/fastText_multilingual)
 * contextual bandit langford tut (http://hunch.net/~exploration_learning/main.pdf)
