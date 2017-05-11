@@ -32,6 +32,7 @@
 
 
 ### to do:
+* LDA on graphs (https://arxiv.org/abs/1410.4510)
 * machine learning techniques for BCI (http://doc.ml.tu-berlin.de/bbci/publications/MueKraDorCurBla04.pdf)
 * chisquare feature selection math
 * multilingual embeddings (https://github.com/Babylonpartners/fastText_multilingual)
