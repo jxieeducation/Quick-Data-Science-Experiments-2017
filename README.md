@@ -32,7 +32,6 @@
 ### to do:
 * LDA on graphs (https://arxiv.org/abs/1410.4510)
 * machine learning techniques for BCI (http://doc.ml.tu-berlin.de/bbci/publications/MueKraDorCurBla04.pdf)
-* chisquare feature selection math
 * multilingual embeddings (https://github.com/Babylonpartners/fastText_multilingual)
 * contextual bandit langford tut (http://hunch.net/~exploration_learning/main.pdf)
 * gensim LSI
@@ -166,6 +165,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* chisquare feature selection math
 * VAE notes (http://kvfrans.com/variational-autoencoders-explained/)
 * take notes on elastic search image search (https://github.com/tuan3w/visual_search)
 * graph based recommendation demo (https://medium.com/@Pinterest_Engineering/introducing-pixie-an-advanced-graph-based-recommendation-system-e7b4229b664b)
