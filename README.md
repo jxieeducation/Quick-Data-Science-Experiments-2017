@@ -9,7 +9,6 @@
 
 
 ### long term:
-* scikit-learn autoexamples
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
 * UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 * stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
