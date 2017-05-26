@@ -34,7 +34,6 @@
 * machine learning techniques for BCI (http://doc.ml.tu-berlin.de/bbci/publications/MueKraDorCurBla04.pdf)
 * multilingual embeddings (https://github.com/Babylonpartners/fastText_multilingual)
 * contextual bandit langford tut (http://hunch.net/~exploration_learning/main.pdf)
-* gensim LSI
 * faster RCNN (https://arxiv.org/pdf/1506.01497.pdf)
 * pinnability pinterest recommendations (https://medium.com/@Pinterest_Engineering/pinnability-machine-learning-in-the-home-feed-64be2074bf60)
 * music generation / tensorfow tut (https://github.com/brannondorsey/midi-rnn)
@@ -165,6 +164,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* gensim LSIs
 * chisquare feature selection math
 * VAE notes (http://kvfrans.com/variational-autoencoders-explained/)
 * take notes on elastic search image search (https://github.com/tuan3w/visual_search)
