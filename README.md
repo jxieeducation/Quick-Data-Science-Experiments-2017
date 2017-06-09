@@ -30,6 +30,7 @@
 
 
 ### to do:
+* DL on small data (http://beamandrew.github.io/deeplearning/2017/06/04/deep_learning_works.html)
 * LDA on graphs (https://arxiv.org/abs/1410.4510)
 * machine learning techniques for BCI (http://doc.ml.tu-berlin.de/bbci/publications/MueKraDorCurBla04.pdf)
 * multilingual embeddings (https://github.com/Babylonpartners/fastText_multilingual)
