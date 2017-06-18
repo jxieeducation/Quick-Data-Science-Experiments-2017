@@ -30,6 +30,7 @@
 
 
 ### to do:
+* convex optimization for machine learning (https://people.eecs.berkeley.edu/~jordan/courses/294-fall09/lectures/optimization/slides.pdf)
 * pivot tables in excel
 * LDA on graphs (https://arxiv.org/abs/1410.4510)
 * machine learning techniques for BCI (http://doc.ml.tu-berlin.de/bbci/publications/MueKraDorCurBla04.pdf)
@@ -165,6 +166,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* newton raphson (http://www.sosmath.com/calculus/diff/der07/der07.html)
 * gensim LSIs
 * chisquare feature selection math
 * VAE notes (http://kvfrans.com/variational-autoencoders-explained/)
