@@ -30,6 +30,7 @@
 
 
 ### to do:
+* tensor multiplication (https://docs.scipy.org/doc/numpy/reference/generated/numpy.tensordot.html)
 * convex optimization for machine learning (https://people.eecs.berkeley.edu/~jordan/courses/294-fall09/lectures/optimization/slides.pdf)
 * pivot tables in excel
 * LDA on graphs (https://arxiv.org/abs/1410.4510)
@@ -43,7 +44,6 @@
 * diagonosing ML models (https://www.youtube.com/watch?v=0TSvo2hOKo0)
 * MNIST PCA first 2 PC vis ESL pg537
 * spectural clustering
-* FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
 * bayesian model averaging notes
 * bayesian model averaging for regression (https://github.com/timsf/bma)
 * deterministic properties of hierarhical clustering
@@ -250,6 +250,7 @@
 * hierarchical clustering dendrogram analysis
 * imputation in scikit-learn (http://scikit-learn.org/stable/auto_examples/missing_values.html#sphx-glr-auto-examples-missing-values-py)
 * twitter sentiment vs stock markers (https://arxiv.org/pdf/1010.3003.pdf)
+* FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
 * granger causality time series (http://www-bcf.usc.edu/~liu32/cause.pdf)
 
 ===
