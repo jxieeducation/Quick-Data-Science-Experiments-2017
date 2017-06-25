@@ -30,6 +30,7 @@
 
 
 ### to do:
+* regression and causality (http://www.soderbom.net/metrix2/lec3.pdf)
 * tensor multiplication (https://docs.scipy.org/doc/numpy/reference/generated/numpy.tensordot.html)
 * convex optimization for machine learning (https://people.eecs.berkeley.edu/~jordan/courses/294-fall09/lectures/optimization/slides.pdf)
 * pivot tables in excel
