@@ -30,6 +30,9 @@
 
 
 ### to do:
+* exact logistic regression (http://www.cytel.com/hs-fs/hub/1670/file-2416929309-pdf/Pdf/Logistic-Regression---MEHTA-PATEL-Exact-Logistic-Regression-Theory-and-Examples-STATISTICS-IN-MEDICINE-1995.pdf)
+* ensemble imbalanced class learning (https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/tsmcb09.pdf)
+* label propagation graph semisupervised learning tutorial (http://graph-ssl.wdfiles.com/local--files/blog%3A_start/graph_ssl_acl12_tutorial_slides_final.pdf)
 * regression and causality (http://www.soderbom.net/metrix2/lec3.pdf)
 * tensor multiplication (https://docs.scipy.org/doc/numpy/reference/generated/numpy.tensordot.html)
 * convex optimization for machine learning (https://people.eecs.berkeley.edu/~jordan/courses/294-fall09/lectures/optimization/slides.pdf)
