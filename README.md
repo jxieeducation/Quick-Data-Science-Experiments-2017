@@ -246,6 +246,7 @@
 * recommendations MF, item kNN on latent space
 * affinity propagation clustering (http://www.igi.tugraz.at/lehre/MLA/WS07/MLA_AffinityPropagation.pdf)
 * pagerank impl (https://github.com/ashkonf/PageRank)
+* pagerank math
 * bayes optimal error rate (http://stats.stackexchange.com/questions/4949/calculating-the-error-of-bayes-classifier-analytically)
 * decision tree imple
 * ch15 notes Hal Daume III unsupervised learning (KMeans + PCA)
