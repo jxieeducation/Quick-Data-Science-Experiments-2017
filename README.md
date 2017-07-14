@@ -30,6 +30,7 @@
 
 
 ### to do:
+* linear program python lib
 * gaussian processes regression (http://www.gaussianprocess.org/gpml/chapters/RW2.pdf)
 * exact logistic regression (http://www.cytel.com/hs-fs/hub/1670/file-2416929309-pdf/Pdf/Logistic-Regression---MEHTA-PATEL-Exact-Logistic-Regression-Theory-and-Examples-STATISTICS-IN-MEDICINE-1995.pdf)
 * ensemble imbalanced class learning (https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/tsmcb09.pdf)
