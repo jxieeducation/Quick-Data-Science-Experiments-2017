@@ -30,6 +30,10 @@
 
 
 ### to do:
+* time series similarity measures (https://arxiv.org/pdf/1401.3973.pdf)
+* clustering time series (http://www1.cs.columbia.edu/~jopa/Papers/PaparrizosSIGMOD2015.pdf)
+* notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
+* try catboost (https://catboost.yandex/)
 * linear program python lib
 * gaussian processes regression (http://www.gaussianprocess.org/gpml/chapters/RW2.pdf)
 * exact logistic regression (http://www.cytel.com/hs-fs/hub/1670/file-2416929309-pdf/Pdf/Logistic-Regression---MEHTA-PATEL-Exact-Logistic-Regression-Theory-and-Examples-STATISTICS-IN-MEDICINE-1995.pdf)
@@ -171,6 +175,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* kalman filter algorithm guide (http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf)
 * multiclass / label algorithms (http://scikit-learn.org/stable/modules/multiclass.html)
 * regression and causality (http://www.soderbom.net/metrix2/lec3.pdf)
 * newton raphson (http://www.sosmath.com/calculus/diff/der07/der07.html)
