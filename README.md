@@ -10,13 +10,13 @@
 
 ### long term:
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
+* fourier transform ee261
 * UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 * stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
 * convex optimization (http://www.stat.cmu.edu/~ryantibs/convexopt/)
 * gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
 * cs224 stanford NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
-* exercises from Scientific Programming w/ Python (http://scipython.com/book/)
 * ggplot tut 
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
 * linear alge interactive book (http://immersivemath.com/ila/index.html)
@@ -30,6 +30,10 @@
 
 
 ### to do:
+* image search via multiple color palettes (https://github.com/sergeyk/rayleigh)
+* fourier transformation of TS data
+* time series classification (http://didawikinf.di.unipi.it/lib/exe/fetch.php/dm/time_series_comparison_2012.pdf)
+* Revisiting Unreasonable Effectiveness of Data in Deep Learning Era (https://arxiv.org/pdf/1707.02968.pdf)
 * time series similarity measures (https://arxiv.org/pdf/1401.3973.pdf)
 * clustering time series (http://www1.cs.columbia.edu/~jopa/Papers/PaparrizosSIGMOD2015.pdf)
 * notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
