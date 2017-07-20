@@ -30,11 +30,11 @@
 
 
 ### to do:
+* svm w/ RBF look at the alpha weights on the kernel
 * image search via multiple color palettes (https://github.com/sergeyk/rayleigh)
 * fourier transformation of TS data
 * time series classification (http://didawikinf.di.unipi.it/lib/exe/fetch.php/dm/time_series_comparison_2012.pdf)
 * Revisiting Unreasonable Effectiveness of Data in Deep Learning Era (https://arxiv.org/pdf/1707.02968.pdf)
-* time series similarity measures (https://arxiv.org/pdf/1401.3973.pdf)
 * clustering time series (http://www1.cs.columbia.edu/~jopa/Papers/PaparrizosSIGMOD2015.pdf)
 * notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
 * try catboost (https://catboost.yandex/)
@@ -178,6 +178,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* time series similarity measures (https://arxiv.org/pdf/1401.3973.pdf)
 * linear program python lib (http://benalexkeen.com/linear-programming-with-python-and-pulp/)
 * kalman filter algorithm guide (http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf)
 * multiclass / label algorithms (http://scikit-learn.org/stable/modules/multiclass.html)
