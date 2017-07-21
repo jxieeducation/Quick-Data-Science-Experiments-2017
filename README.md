@@ -34,7 +34,6 @@
 * image search via multiple color palettes (https://github.com/sergeyk/rayleigh)
 * fourier transformation of TS data
 * time series classification (http://didawikinf.di.unipi.it/lib/exe/fetch.php/dm/time_series_comparison_2012.pdf)
-* Revisiting Unreasonable Effectiveness of Data in Deep Learning Era (https://arxiv.org/pdf/1707.02968.pdf)
 * clustering time series (http://www1.cs.columbia.edu/~jopa/Papers/PaparrizosSIGMOD2015.pdf)
 * notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
 * try catboost (https://catboost.yandex/)
@@ -49,7 +48,6 @@
 * machine learning techniques for BCI (http://doc.ml.tu-berlin.de/bbci/publications/MueKraDorCurBla04.pdf)
 * multilingual embeddings (https://github.com/Babylonpartners/fastText_multilingual)
 * contextual bandit langford tut (http://hunch.net/~exploration_learning/main.pdf)
-* faster RCNN (https://arxiv.org/pdf/1506.01497.pdf)
 * pinnability pinterest recommendations (https://medium.com/@Pinterest_Engineering/pinnability-machine-learning-in-the-home-feed-64be2074bf60)
 * music generation / tensorfow tut (https://github.com/brannondorsey/midi-rnn)
 * deepwalk (https://arxiv.org/pdf/1403.6652.pdf)
@@ -178,6 +176,8 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* faster RCNN (https://arxiv.org/pdf/1506.01497.pdf)
+* Revisiting Unreasonable Effectiveness of Data in Deep Learning Era (https://arxiv.org/pdf/1707.02968.pdf)
 * time series similarity measures (https://arxiv.org/pdf/1401.3973.pdf)
 * linear program python lib (http://benalexkeen.com/linear-programming-with-python-and-pulp/)
 * kalman filter algorithm guide (http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf)
