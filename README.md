@@ -30,6 +30,7 @@
 
 
 ### to do:
+* Assessing Retail Employee Risk Through Unsupervised Learning Techniques (https://arxiv.org/pdf/1707.04639.pdf)
 * svm w/ RBF look at the alpha weights on the kernel
 * image search via multiple color palettes (https://github.com/sergeyk/rayleigh)
 * fourier transformation of TS data
