@@ -30,6 +30,12 @@
 
 
 ### to do:
+* svm dual coordinal descent (http://www.stat.ucdavis.edu/~chohsieh/teaching/ECS289G_Fall2015/lecture6.pdf)
+* Stochastic Gradient Descent for the Primal L1-SVM Optimization Revisited (http://www.ecmlpkdd2013.org/wp-content/uploads/2013/07/255.pdf)
+* primal soft margin svm - gradient descent impl (w261 11.8, constrained to unconstrained optimization, http://nbviewer.jupyter.org/urls/dl.dropbox.com/s/dm2l73iznde7y4f/SVM-Notebook-Linear-Kernel-2015-06-19.ipynb)
+* distributed perceptron (http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36266.pdf)
+* perceptron review (http://www.cs.cornell.edu/courses/cs678/2003sp/slides/perceptron_4up.pdf)
+* boosting with logloss (http://web.mit.edu/marcoct/www/papers/boosting_log_loss.pdf)
 * Assessing Retail Employee Risk Through Unsupervised Learning Techniques (https://arxiv.org/pdf/1707.04639.pdf)
 * svm w/ RBF look at the alpha weights on the kernel
 * image search via multiple color palettes (https://github.com/sergeyk/rayleigh)
