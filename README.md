@@ -183,6 +183,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* visual proof that NN can compute any function (http://neuralnetworksanddeeplearning.com/chap4.html) 
 * faster RCNN (https://arxiv.org/pdf/1506.01497.pdf)
 * Revisiting Unreasonable Effectiveness of Data in Deep Learning Era (https://arxiv.org/pdf/1707.02968.pdf)
 * time series similarity measures (https://arxiv.org/pdf/1401.3973.pdf)
