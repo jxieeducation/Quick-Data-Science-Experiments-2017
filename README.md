@@ -30,6 +30,9 @@
 
 
 ### to do:
+* contextualized word vectors (https://einstein.ai/research/learned-in-translation-contextualized-word-vectors)
+* Attention is all you need(https://arxiv.org/pdf/1706.03762.pdf)
+* PLANET decision tree on hadoop (http://www.vldb.org/pvldb/2/vldb09-537.pdf)
 * svm dual coordinal descent (http://www.stat.ucdavis.edu/~chohsieh/teaching/ECS289G_Fall2015/lecture6.pdf)
 * Stochastic Gradient Descent for the Primal L1-SVM Optimization Revisited (http://www.ecmlpkdd2013.org/wp-content/uploads/2013/07/255.pdf)
 * primal soft margin svm - gradient descent impl (w261 11.8, constrained to unconstrained optimization, http://nbviewer.jupyter.org/urls/dl.dropbox.com/s/dm2l73iznde7y4f/SVM-Notebook-Linear-Kernel-2015-06-19.ipynb)
