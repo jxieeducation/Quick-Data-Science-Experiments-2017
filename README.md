@@ -17,7 +17,6 @@
 * gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
 * cs224 stanford NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
-* ggplot tut 
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
 * linear alge interactive book (http://immersivemath.com/ila/index.html)
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
