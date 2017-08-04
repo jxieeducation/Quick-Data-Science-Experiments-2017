@@ -26,9 +26,16 @@
 * ensemble methods (https://www.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
 * Udacity notebooks (https://github.com/Ryosuke-Y)
 * Udacity courses (https://classroom.udacity.com/me)
+* deep learning Montreal summer school (https://mila.umontreal.ca/en/cours/deep-learning-summer-school-2017/slides/)
 
 
 ### to do:
+* dl - generative models 
+* dl - rl in industry (https://drive.google.com/file/d/0BzUSSMdMszk6bEprTUpCaHRrQ28/view)
+* dl - cnn review (https://drive.google.com/file/d/0B6NHiPcsmak1UHBYc0NxNkdGaE0/view)
+* dl - automatic differentiation (https://drive.google.com/file/d/0B6NHiPcsmak1ckYxR2hmRGdzdFk/view)
+* better communicating table values (https://www.displayr.com/the-magic-trick-that-highlights-significant-results-on-any-table/?utm_source=reddit&utm_medium=machine%20learning&utm_campaign=Trick%20that%20Highlights%20Results%20on%20Table)
+* prodigy - active learning kit (https://explosion.ai/blog/prodigy-annotation-tool-active-learning)
 * contextualized word vectors (https://einstein.ai/research/learned-in-translation-contextualized-word-vectors)
 * Attention is all you need(https://arxiv.org/pdf/1706.03762.pdf)
 * PLANET decision tree on hadoop (http://www.vldb.org/pvldb/2/vldb09-537.pdf)
