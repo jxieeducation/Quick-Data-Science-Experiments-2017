@@ -30,6 +30,8 @@
 
 
 ### to do:
+* label propagation with applications in NLP (https://www.slideshare.net/dav009/label-propagation-semisupervised-learning-with-applications-to-nlp)
+* supervised random walk in social networks (http://cs.stanford.edu/people/jure/pubs/linkpred-wsdm11.pdf)
 * loss functions (https://davidrosenberg.github.io/ml2015/docs/3a.loss-functions.pdf)
 * minibatch metropolis-hastings (http://bair.berkeley.edu/blog/2017/08/02/minibatch-metropolis-hastings/)
 * dl - generative models 
@@ -58,7 +60,6 @@
 * exact logistic regression (http://www.cytel.com/hs-fs/hub/1670/file-2416929309-pdf/Pdf/Logistic-Regression---MEHTA-PATEL-Exact-Logistic-Regression-Theory-and-Examples-STATISTICS-IN-MEDICINE-1995.pdf)
 * ensemble imbalanced class learning (https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/tsmcb09.pdf)
 * label propagation graph semisupervised learning tutorial (http://graph-ssl.wdfiles.com/local--files/blog%3A_start/graph_ssl_acl12_tutorial_slides_final.pdf)
-* tensor multiplication (https://docs.scipy.org/doc/numpy/reference/generated/numpy.tensordot.html)
 * convex optimization for machine learning (https://people.eecs.berkeley.edu/~jordan/courses/294-fall09/lectures/optimization/slides.pdf)
 * pivot tables in excel
 * LDA on graphs (https://arxiv.org/abs/1410.4510)
@@ -196,6 +197,7 @@
 * gradient boosting review (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/slides/gradient_boosting.pdf)
 * PLANET decision tree on hadoop (http://www.vldb.org/pvldb/2/vldb09-537.pdf)
 * visual proof that NN can compute any function (http://neuralnetworksanddeeplearning.com/chap4.html) 
+* tensor multiplication (https://docs.scipy.org/doc/numpy/reference/generated/numpy.tensordot.html)
 * faster RCNN (https://arxiv.org/pdf/1506.01497.pdf)
 * Revisiting Unreasonable Effectiveness of Data in Deep Learning Era (https://arxiv.org/pdf/1707.02968.pdf)
 * time series similarity measures (https://arxiv.org/pdf/1401.3973.pdf)
