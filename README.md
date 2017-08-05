@@ -30,6 +30,8 @@
 
 
 ### to do:
+* loss functions (https://davidrosenberg.github.io/ml2015/docs/3a.loss-functions.pdf)
+* minibatch metropolis-hastings (http://bair.berkeley.edu/blog/2017/08/02/minibatch-metropolis-hastings/)
 * dl - generative models 
 * dl - rl in industry (https://drive.google.com/file/d/0BzUSSMdMszk6bEprTUpCaHRrQ28/view)
 * dl - cnn review (https://drive.google.com/file/d/0B6NHiPcsmak1UHBYc0NxNkdGaE0/view)
@@ -38,7 +40,6 @@
 * prodigy - active learning kit (https://explosion.ai/blog/prodigy-annotation-tool-active-learning)
 * contextualized word vectors (https://einstein.ai/research/learned-in-translation-contextualized-word-vectors)
 * Attention is all you need(https://arxiv.org/pdf/1706.03762.pdf)
-* PLANET decision tree on hadoop (http://www.vldb.org/pvldb/2/vldb09-537.pdf)
 * svm dual coordinal descent (http://www.stat.ucdavis.edu/~chohsieh/teaching/ECS289G_Fall2015/lecture6.pdf)
 * Stochastic Gradient Descent for the Primal L1-SVM Optimization Revisited (http://www.ecmlpkdd2013.org/wp-content/uploads/2013/07/255.pdf)
 * primal soft margin svm - gradient descent impl (w261 11.8, constrained to unconstrained optimization, http://nbviewer.jupyter.org/urls/dl.dropbox.com/s/dm2l73iznde7y4f/SVM-Notebook-Linear-Kernel-2015-06-19.ipynb)
@@ -156,7 +157,6 @@
 * Gauss-Newton method for non-linear least squares (http://www.seas.ucla.edu/~vandenbe/103/lectures/nlls.pdf)
 * sigmoid (W^T X) operates in the linear range if W^{norm} is very small demo
 * ICA 
-* square vs huberized squared error loss
 * Missing At Random (MAR test) (http://stats.stackexchange.com/questions/11991/are-misses-in-my-data-distributed-completely-at-random)
 * hierarchical mixture of experts (EM & interpretation)
 * LDA notes (http://obphio.us/pdfs/lda_tutorial.pdf) 
@@ -192,6 +192,9 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* square vs huberized squared error loss
+* gradient boosting review (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/slides/gradient_boosting.pdf)
+* PLANET decision tree on hadoop (http://www.vldb.org/pvldb/2/vldb09-537.pdf)
 * visual proof that NN can compute any function (http://neuralnetworksanddeeplearning.com/chap4.html) 
 * faster RCNN (https://arxiv.org/pdf/1506.01497.pdf)
 * Revisiting Unreasonable Effectiveness of Data in Deep Learning Era (https://arxiv.org/pdf/1707.02968.pdf)
