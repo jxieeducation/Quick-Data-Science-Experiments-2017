@@ -30,6 +30,12 @@
 
 
 ### to do:
+* subgradient methods (https://www.cs.cmu.edu/~ggordon/10725-F12/slides/06-sg-method.pdf)
+* do-rank (https://www.dropbox.com/s/sxg2s2cfh7aezi6/Do-Rank-DCG-Based-Machine-Leanring.pdf?dl=0)
+* no R^2 for non-linear models (http://blog.minitab.com/blog/adventures-in-statistics-2/why-is-there-no-r-squared-for-nonlinear-regression)
+* theoretical properties of feature hashing (http://www.machinelearning.org/archive/icml2009/papers/407.pdf)
+* coordinate descent (https://engineering.jhu.edu/ams/wp-content/uploads/sites/44/2014/08/StephenWrightSlides112014.pdf)
+* ranking with decision trees (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/materials/Schamoni_boosteddecisiontrees.pdf)
 * label propagation with applications in NLP (https://www.slideshare.net/dav009/label-propagation-semisupervised-learning-with-applications-to-nlp)
 * supervised random walk in social networks (http://cs.stanford.edu/people/jure/pubs/linkpred-wsdm11.pdf)
 * loss functions (https://davidrosenberg.github.io/ml2015/docs/3a.loss-functions.pdf)
