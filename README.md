@@ -29,6 +29,8 @@
 
 
 ### to do:
+* online learning adaptive learning rate (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/lecture_6.pdf)
+* Learning to Generate Reviews and Discovering Sentiment (https://arxiv.org/pdf/1704.01444.pdf)
 * pivot tables in excel (https://www.gcflearnfree.org/excel2016/intro-to-pivottables/1/)
 * multinomial logistic regression (http://data.princeton.edu/wws509/notes/c6.pdf)
 * bayesian vs MLE (http://www.cs.mcgill.ca/~dprecup/courses/ML/Lectures/ml-lecture03.pdf)
