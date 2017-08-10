@@ -29,6 +29,10 @@
 
 
 ### to do:
+* pivot tables in excel (https://www.gcflearnfree.org/excel2016/intro-to-pivottables/1/)
+* multinomial logistic regression (http://data.princeton.edu/wws509/notes/c6.pdf)
+* bayesian vs MLE (http://www.cs.mcgill.ca/~dprecup/courses/ML/Lectures/ml-lecture03.pdf)
+* bayesian interpretation of regularization (http://www.mit.edu/~9.520/spring09/Classes/class15-bayes.pdf)
 * subgradient methods (https://www.cs.cmu.edu/~ggordon/10725-F12/slides/06-sg-method.pdf)
 * do-rank (https://www.dropbox.com/s/sxg2s2cfh7aezi6/Do-Rank-DCG-Based-Machine-Leanring.pdf?dl=0)
 * no R^2 for non-linear models (http://blog.minitab.com/blog/adventures-in-statistics-2/why-is-there-no-r-squared-for-nonlinear-regression)
@@ -66,7 +70,6 @@
 * ensemble imbalanced class learning (https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/tsmcb09.pdf)
 * label propagation graph semisupervised learning tutorial (http://graph-ssl.wdfiles.com/local--files/blog%3A_start/graph_ssl_acl12_tutorial_slides_final.pdf)
 * convex optimization for machine learning (https://people.eecs.berkeley.edu/~jordan/courses/294-fall09/lectures/optimization/slides.pdf)
-* pivot tables in excel
 * LDA on graphs (https://arxiv.org/abs/1410.4510)
 * machine learning techniques for BCI (http://doc.ml.tu-berlin.de/bbci/publications/MueKraDorCurBla04.pdf)
 * multilingual embeddings (https://github.com/Babylonpartners/fastText_multilingual)
