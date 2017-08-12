@@ -8,21 +8,23 @@
 
 
 ### long term:
+* bayesian ML McGill (http://www.cs.mcgill.ca/~dprecup/courses/ML/Lectures/)
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
-* fourier transform ee261
+* berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
+* ensemble methods (http://www2.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
+* online learning (https://courses.cs.washington.edu/courses/cse599s/14sp/scribes.html)
 * UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 * stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
-* convex optimization (http://www.stat.cmu.edu/~ryantibs/convexopt/)
-* gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
 * cs224 stanford NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
-* berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
-* linear alge interactive book (http://immersivemath.com/ila/index.html)
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
 * graphical models (http://www.cs.cmu.edu/~epxing/Class/10708-17/lecture.html)
+* fourier transform ee261
+* convex optimization (http://www.stat.cmu.edu/~ryantibs/convexopt/)
+* gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
+* linear alge interactive book (http://immersivemath.com/ila/index.html)
 * kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 * bayesian book (http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
-* ensemble methods (https://www.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
 * Udacity notebooks (https://github.com/Ryosuke-Y)
 * Udacity courses (https://classroom.udacity.com/me)
 * deep learning Montreal summer school (https://mila.umontreal.ca/en/cours/deep-learning-summer-school-2017/slides/)
