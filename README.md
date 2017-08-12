@@ -31,6 +31,7 @@
 
 
 ### to do:
+* learning to rank using gradient descent (http://icml.cc/2015/wp-content/uploads/2015/06/icml_ranking.pdf)
 * online learning adaptive learning rate (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/lecture_6.pdf)
 * Learning to Generate Reviews and Discovering Sentiment (https://arxiv.org/pdf/1704.01444.pdf)
 * pivot tables in excel (https://www.gcflearnfree.org/excel2016/intro-to-pivottables/1/)
@@ -42,7 +43,6 @@
 * no R^2 for non-linear models (http://blog.minitab.com/blog/adventures-in-statistics-2/why-is-there-no-r-squared-for-nonlinear-regression)
 * theoretical properties of feature hashing (http://www.machinelearning.org/archive/icml2009/papers/407.pdf)
 * coordinate descent (https://engineering.jhu.edu/ams/wp-content/uploads/sites/44/2014/08/StephenWrightSlides112014.pdf)
-* ranking with decision trees (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/materials/Schamoni_boosteddecisiontrees.pdf)
 * label propagation with applications in NLP (https://www.slideshare.net/dav009/label-propagation-semisupervised-learning-with-applications-to-nlp)
 * supervised random walk in social networks (http://cs.stanford.edu/people/jure/pubs/linkpred-wsdm11.pdf)
 * loss functions (https://davidrosenberg.github.io/ml2015/docs/3a.loss-functions.pdf)
@@ -205,6 +205,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* ranking with decision trees (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/materials/Schamoni_boosteddecisiontrees.pdf)
 * square vs huberized squared error loss
 * gradient boosting review (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/slides/gradient_boosting.pdf)
 * PLANET decision tree on hadoop (http://www.vldb.org/pvldb/2/vldb09-537.pdf)
