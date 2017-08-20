@@ -31,6 +31,9 @@
 
 
 ### to do:
+* euler's relations between exponential, sine and cosine (http://www.mathcentre.ac.uk/resources/Engineering%20maths%20first%20aid%20kit/latexsource%20and%20diagrams/7_7.pdf)
+* dft decomposition
+* periodogram - identifying strong frequencies (simulation w/ simple TS)
 * periodicity detection (http://www.l3s.de/~anand/tir14/lectures/ws14-tir-foundations-2.pdf)
 * deep learning anomaly detection (https://docs.google.com/presentation/d/1HNeSZ0P2WQq0yx9xQXNRb9nkIkcykNUhJvMDwlpJbz4/edit#slide=id.p)
 * active learning example (https://github.com/flowersteam/naminggamesal)
