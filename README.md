@@ -31,6 +31,7 @@
 
 
 ### to do:
+* constructing 3d models CNN (https://arxiv.org/pdf/1704.00710.pdf)
 * ICML field report (https://gmarti.gitlab.io/ml/2017/08/11/ICML-2017-field-reports.html)
 * euler's relations between exponential, sine and cosine (http://www.mathcentre.ac.uk/resources/Engineering%20maths%20first%20aid%20kit/latexsource%20and%20diagrams/7_7.pdf)
 * dft decomposition
@@ -60,7 +61,6 @@
 * better communicating table values (https://www.displayr.com/the-magic-trick-that-highlights-significant-results-on-any-table/?utm_source=reddit&utm_medium=machine%20learning&utm_campaign=Trick%20that%20Highlights%20Results%20on%20Table)
 * prodigy - active learning kit (https://explosion.ai/blog/prodigy-annotation-tool-active-learning)
 * contextualized word vectors (https://einstein.ai/research/learned-in-translation-contextualized-word-vectors)
-* Attention is all you need(https://arxiv.org/pdf/1706.03762.pdf)
 * svm dual coordinal descent (http://www.stat.ucdavis.edu/~chohsieh/teaching/ECS289G_Fall2015/lecture6.pdf)
 * Stochastic Gradient Descent for the Primal L1-SVM Optimization Revisited (http://www.ecmlpkdd2013.org/wp-content/uploads/2013/07/255.pdf)
 * primal soft margin svm - gradient descent impl (w261 11.8, constrained to unconstrained optimization, http://nbviewer.jupyter.org/urls/dl.dropbox.com/s/dm2l73iznde7y4f/SVM-Notebook-Linear-Kernel-2015-06-19.ipynb)
@@ -210,6 +210,8 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* Attention is all you need (https://arxiv.org/pdf/1706.03762.pdf)
+* autoregressive async temporal CNN for time series
 * ranking with decision trees (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/materials/Schamoni_boosteddecisiontrees.pdf)
 * square vs huberized squared error loss
 * gradient boosting review (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/slides/gradient_boosting.pdf)
