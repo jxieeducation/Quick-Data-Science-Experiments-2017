@@ -91,7 +91,6 @@
 * spectural clustering
 * bayesian model averaging notes
 * bayesian model averaging for regression (https://github.com/timsf/bma)
-* deterministic properties of hierarhical clustering
 * kmedoids for strings (spelling correction)
 * kMeans T = within + between
 * mixed effect for panel data (https://arxiv.org/pdf/1406.5823.pdf)
