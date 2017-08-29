@@ -50,7 +50,6 @@
 * no R^2 for non-linear models (http://blog.minitab.com/blog/adventures-in-statistics-2/why-is-there-no-r-squared-for-nonlinear-regression)
 * theoretical properties of feature hashing (http://www.machinelearning.org/archive/icml2009/papers/407.pdf)
 * coordinate descent (https://engineering.jhu.edu/ams/wp-content/uploads/sites/44/2014/08/StephenWrightSlides112014.pdf)
-* label propagation with applications in NLP (https://www.slideshare.net/dav009/label-propagation-semisupervised-learning-with-applications-to-nlp)
 * supervised random walk in social networks (http://cs.stanford.edu/people/jure/pubs/linkpred-wsdm11.pdf)
 * loss functions (https://davidrosenberg.github.io/ml2015/docs/3a.loss-functions.pdf)
 * minibatch metropolis-hastings (http://bair.berkeley.edu/blog/2017/08/02/minibatch-metropolis-hastings/)
@@ -209,6 +208,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* label propagation with applications in NLP (https://www.slideshare.net/dav009/label-propagation-semisupervised-learning-with-applications-to-nlp)
 * Attention is all you need (https://arxiv.org/pdf/1706.03762.pdf)
 * autoregressive async temporal CNN for time series
 * ranking with decision trees (http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/materials/Schamoni_boosteddecisiontrees.pdf)
