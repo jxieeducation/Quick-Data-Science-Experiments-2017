@@ -31,6 +31,7 @@
 
 
 ### to do:
+* robust continuous clustering (http://www.pnas.org/content/early/2017/08/28/1700770114.full.pdf)
 * constructing 3d models CNN (https://arxiv.org/pdf/1704.00710.pdf)
 * ICML field report (https://gmarti.gitlab.io/ml/2017/08/11/ICML-2017-field-reports.html)
 * euler's relations between exponential, sine and cosine (http://www.mathcentre.ac.uk/resources/Engineering%20maths%20first%20aid%20kit/latexsource%20and%20diagrams/7_7.pdf)
