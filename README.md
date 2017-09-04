@@ -212,6 +212,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* conv net for sentence classification imp
 * conv net for sentence classification (https://arxiv.org/pdf/1408.5882.pdf)
 * label propagation with applications in NLP (https://www.slideshare.net/dav009/label-propagation-semisupervised-learning-with-applications-to-nlp)
 * Attention is all you need (https://arxiv.org/pdf/1706.03762.pdf)
