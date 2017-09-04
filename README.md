@@ -1,21 +1,22 @@
 # Quick-Data-Science-Experiments-2017
 
-### WIP:
+### WIP items:
 * kernel PCA (projection on linear space)
 * discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
-
-### long term:
+### WIP courses: 
 * bayesian ML McGill (http://www.cs.mcgill.ca/~dprecup/courses/ML/Lectures/)
+* cs224 stanford NLP notes (http://web.stanford.edu/class/cs224n/syllabus.html)
+
+### courses:
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
 * ensemble methods (http://www2.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
 * online learning (https://courses.cs.washington.edu/courses/cse599s/14sp/scribes.html)
 * UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 * stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
-* cs224 stanford NLP notes (https://github.com/stanfordnlp/cs224n-winter17-notes)
 * cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
 * graphical models (http://www.cs.cmu.edu/~epxing/Class/10708-17/lecture.html)
@@ -31,6 +32,8 @@
 
 
 ### to do:
+* beginner's review of GAN architectures (https://sigmoidal.io/beginners-review-of-gan-architectures/)
+* recent trends in deep learning and nlp (https://arxiv.org/pdf/1708.02709.pdf)
 * robust continuous clustering (http://www.pnas.org/content/early/2017/08/28/1700770114.full.pdf)
 * constructing 3d models CNN (https://arxiv.org/pdf/1704.00710.pdf)
 * ICML field report (https://gmarti.gitlab.io/ml/2017/08/11/ICML-2017-field-reports.html)
@@ -209,6 +212,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* conv net for sentence classification (https://arxiv.org/pdf/1408.5882.pdf)
 * label propagation with applications in NLP (https://www.slideshare.net/dav009/label-propagation-semisupervised-learning-with-applications-to-nlp)
 * Attention is all you need (https://arxiv.org/pdf/1706.03762.pdf)
 * autoregressive async temporal CNN for time series
