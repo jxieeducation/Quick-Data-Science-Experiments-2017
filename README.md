@@ -33,6 +33,7 @@
 
 
 ### to do:
+* Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm (https://arxiv.org/pdf/1708.00524.pdf)
 * beginner's review of GAN architectures (https://sigmoidal.io/beginners-review-of-gan-architectures/)
 * recent trends in deep learning and nlp (https://arxiv.org/pdf/1708.02709.pdf)
 * robust continuous clustering (http://www.pnas.org/content/early/2017/08/28/1700770114.full.pdf)
@@ -213,6 +214,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* A convolutonal neural netwrok for modeling sentences (http://www.aclweb.org/anthology/P14-1062)
 * conv net for sentence classification imp
 * conv net for sentence classification (https://arxiv.org/pdf/1408.5882.pdf)
 * label propagation with applications in NLP (https://www.slideshare.net/dav009/label-propagation-semisupervised-learning-with-applications-to-nlp)
