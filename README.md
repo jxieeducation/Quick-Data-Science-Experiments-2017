@@ -9,6 +9,7 @@
 ### WIP courses: 
 * bayesian ML McGill (http://www.cs.mcgill.ca/~dprecup/courses/ML/Lectures/)
 * cs224 stanford NLP notes (http://web.stanford.edu/class/cs224n/syllabus.html)
+* cs10si tensorflow tut (http://web.stanford.edu/class/cs20si/syllabus.html)
 
 ### courses:
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
