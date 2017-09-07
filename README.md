@@ -214,6 +214,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* Vanishing Gradient Example (http://web.stanford.edu/class/cs224n/lectures/vanishing_grad_example.html)
 * A convolutonal neural netwrok for modeling sentences (http://www.aclweb.org/anthology/P14-1062)
 * conv net for sentence classification imp
 * conv net for sentence classification (https://arxiv.org/pdf/1408.5882.pdf)
