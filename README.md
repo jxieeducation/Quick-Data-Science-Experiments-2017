@@ -33,6 +33,11 @@
 
 
 ### to do:
+* multilingual language processing from bytes (https://arxiv.org/pdf/1512.00103.pdf)
+* neural machine translation in linear time (https://arxiv.org/pdf/1610.10099.pdf)
+* axiomatic attribution for deep networks (https://arxiv.org/pdf/1703.01365.pdf)
+* wavenet (https://deepmind.com/blog/wavenet-generative-model-raw-audio/)
+* Using Posters to Recommend Anime and Mangas in a Cold-Start Scenario (https://arxiv.org/pdf/1709.01584.pdf)
 * Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm (https://arxiv.org/pdf/1708.00524.pdf)
 * beginner's review of GAN architectures (https://sigmoidal.io/beginners-review-of-gan-architectures/)
 * recent trends in deep learning and nlp (https://arxiv.org/pdf/1708.02709.pdf)
@@ -214,6 +219,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* effective approaches to attention-based neural machine translation (https://nlp.stanford.edu/pubs/emnlp15_attn.pdf)
 * Vanishing Gradient Example (http://web.stanford.edu/class/cs224n/lectures/vanishing_grad_example.html)
 * A convolutonal neural netwrok for modeling sentences (http://www.aclweb.org/anthology/P14-1062)
 * conv net for sentence classification imp
