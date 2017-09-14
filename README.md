@@ -33,6 +33,11 @@
 
 
 ### to do:
+* semi-supervised sequence learning (https://arxiv.org/pdf/1511.01432.pdf)
+* Recurrent Neural Networks for Noise Reduction in Robust ASR (http://www1.icsi.berkeley.edu/~vinyals/Files/rnn_denoise_2012.pdf)
+* 
+* GAN for captcha (http://rickyhan.com/jekyll/update/2017/09/04/simgan-captcha.html)
+* content based image retrieval via conv denoising autoencoder (https://blog.sicara.com/keras-tutorial-content-based-image-retrieval-convolutional-denoising-autoencoder-dc91450cc511)
 * tensorboard tut (http://ischlag.github.io/2016/06/04/how-to-use-tensorboard/)
 * GAN original paper (https://arxiv.org/pdf/1406.2661v1.pdf)
 * R-CNN original paper (https://arxiv.org/pdf/1311.2524v5.pdf)
@@ -335,6 +340,7 @@
 * twitter sentiment vs stock markers (https://arxiv.org/pdf/1010.3003.pdf)
 * FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
 * granger causality time series (http://www-bcf.usc.edu/~liu32/cause.pdf)
+* Surprising Usefulness of Autoencoders (http://rickyhan.com/jekyll/update/2017/09/14/autoencoders.html)
 
 ===
 
