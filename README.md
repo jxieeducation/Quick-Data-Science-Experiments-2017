@@ -33,9 +33,9 @@
 
 
 ### to do:
+* tensorboard tut (http://ischlag.github.io/2016/06/04/how-to-use-tensorboard/)
 * GAN original paper (https://arxiv.org/pdf/1406.2661v1.pdf)
 * R-CNN original paper (https://arxiv.org/pdf/1311.2524v5.pdf)
-* BLEU score (http://www.aclweb.org/anthology/P02-1040.pdf)
 * VAE code generation (https://www.youtube.com/watch?v=czalwzb5FHY)
 * benchmark for fake news dataset (https://arxiv.org/pdf/1705.00648.pdf)
 * tensorflow examples (https://github.com/aymericdamien/TensorFlow-Examples/tree/master/notebooks)
@@ -225,6 +225,7 @@
 * udacity ud501 ML for Trading
 
 ### done:
+* BLEU score (http://www.aclweb.org/anthology/P02-1040.pdf)
 * multilingual language processing from bytes (https://arxiv.org/pdf/1512.00103.pdf)
 * effective approaches to attention-based neural machine translation (https://nlp.stanford.edu/pubs/emnlp15_attn.pdf)
 * Vanishing Gradient Example (http://web.stanford.edu/class/cs224n/lectures/vanishing_grad_example.html)
