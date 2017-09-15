@@ -11,31 +11,10 @@
 * cs224 stanford NLP notes (http://web.stanford.edu/class/cs224n/syllabus.html)
 * cs10si tensorflow tut (http://web.stanford.edu/class/cs20si/syllabus.html)
 
-### courses:
-* berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
-* berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
-* ensemble methods (http://www2.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
-* online learning (https://courses.cs.washington.edu/courses/cse599s/14sp/scribes.html)
-* UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
-* stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
-* cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
-* UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
-* graphical models (http://www.cs.cmu.edu/~epxing/Class/10708-17/lecture.html)
-* fourier transform ee261
-* convex optimization (http://www.stat.cmu.edu/~ryantibs/convexopt/)
-* gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
-* linear alge interactive book (http://immersivemath.com/ila/index.html)
-* kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
-* bayesian book (http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
-* Udacity notebooks (https://github.com/Ryosuke-Y)
-* Udacity courses (https://classroom.udacity.com/me)
-* deep learning Montreal summer school (https://mila.umontreal.ca/en/cours/deep-learning-summer-school-2017/slides/)
-
 
 ### to do:
 * semi-supervised sequence learning (https://arxiv.org/pdf/1511.01432.pdf)
 * Recurrent Neural Networks for Noise Reduction in Robust ASR (http://www1.icsi.berkeley.edu/~vinyals/Files/rnn_denoise_2012.pdf)
-* 
 * GAN for captcha (http://rickyhan.com/jekyll/update/2017/09/04/simgan-captcha.html)
 * content based image retrieval via conv denoising autoencoder (https://blog.sicara.com/keras-tutorial-content-based-image-retrieval-convolutional-denoising-autoencoder-dc91450cc511)
 * tensorboard tut (http://ischlag.github.io/2016/06/04/how-to-use-tensorboard/)
@@ -226,10 +205,29 @@
 * multilingual spam filter
 
 
-### done (long term):
-* udacity ud501 ML for Trading
+### courses:
+* berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
+* berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
+* ensemble methods (http://www2.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
+* online learning (https://courses.cs.washington.edu/courses/cse599s/14sp/scribes.html)
+* UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
+* stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
+* cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
+* UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
+* graphical models (http://www.cs.cmu.edu/~epxing/Class/10708-17/lecture.html)
+* fourier transform ee261
+* convex optimization (http://www.stat.cmu.edu/~ryantibs/convexopt/)
+* gensim notebooks (https://github.com/RaRe-Technologies/gensim/tree/develop/docs/notebooks)
+* linear alge interactive book (http://immersivemath.com/ila/index.html)
+* kalman filter book (https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
+* bayesian book (http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
+* Udacity notebooks (https://github.com/Ryosuke-Y)
+* Udacity courses (https://classroom.udacity.com/me)
+* deep learning Montreal summer school (https://mila.umontreal.ca/en/cours/deep-learning-summer-school-2017/slides/)
+
 
 ### done:
+* one billion word benchmark (https://arxiv.org/pdf/1312.3005.pdf)
 * BLEU score (http://www.aclweb.org/anthology/P02-1040.pdf)
 * multilingual language processing from bytes (https://arxiv.org/pdf/1512.00103.pdf)
 * effective approaches to attention-based neural machine translation (https://nlp.stanford.edu/pubs/emnlp15_attn.pdf)
@@ -341,6 +339,10 @@
 * FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
 * granger causality time series (http://www-bcf.usc.edu/~liu32/cause.pdf)
 * Surprising Usefulness of Autoencoders (http://rickyhan.com/jekyll/update/2017/09/14/autoencoders.html)
+
+
+### done (long term):
+* udacity ud501 ML for Trading
 
 ===
 
