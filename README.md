@@ -13,6 +13,7 @@
 
 
 ### to do:
+* text summarization seq2seq (https://github.com/Currie32/Text-Summarization-with-Amazon-Reviews/blob/master/summarize_reviews.ipynb)
 * semi-supervised sequence learning (https://arxiv.org/pdf/1511.01432.pdf)
 * Recurrent Neural Networks for Noise Reduction in Robust ASR (http://www1.icsi.berkeley.edu/~vinyals/Files/rnn_denoise_2012.pdf)
 * GAN for captcha (http://rickyhan.com/jekyll/update/2017/09/04/simgan-captcha.html)
