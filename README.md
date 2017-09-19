@@ -50,17 +50,14 @@
 * subgradient methods (https://www.cs.cmu.edu/~ggordon/10725-F12/slides/06-sg-method.pdf)
 * do-rank (https://www.dropbox.com/s/sxg2s2cfh7aezi6/Do-Rank-DCG-Based-Machine-Leanring.pdf?dl=0)
 * no R^2 for non-linear models (http://blog.minitab.com/blog/adventures-in-statistics-2/why-is-there-no-r-squared-for-nonlinear-regression)
-* theoretical properties of feature hashing (http://www.machinelearning.org/archive/icml2009/papers/407.pdf)
 * coordinate descent (https://engineering.jhu.edu/ams/wp-content/uploads/sites/44/2014/08/StephenWrightSlides112014.pdf)
 * supervised random walk in social networks (http://cs.stanford.edu/people/jure/pubs/linkpred-wsdm11.pdf)
 * loss functions (https://davidrosenberg.github.io/ml2015/docs/3a.loss-functions.pdf)
 * minibatch metropolis-hastings (http://bair.berkeley.edu/blog/2017/08/02/minibatch-metropolis-hastings/)
-* dl - generative models 
 * dl - rl in industry (https://drive.google.com/file/d/0BzUSSMdMszk6bEprTUpCaHRrQ28/view)
 * dl - cnn review (https://drive.google.com/file/d/0B6NHiPcsmak1UHBYc0NxNkdGaE0/view)
 * dl - automatic differentiation (https://drive.google.com/file/d/0B6NHiPcsmak1ckYxR2hmRGdzdFk/view)
 * better communicating table values (https://www.displayr.com/the-magic-trick-that-highlights-significant-results-on-any-table/?utm_source=reddit&utm_medium=machine%20learning&utm_campaign=Trick%20that%20Highlights%20Results%20on%20Table)
-* prodigy - active learning kit (https://explosion.ai/blog/prodigy-annotation-tool-active-learning)
 * contextualized word vectors (https://einstein.ai/research/learned-in-translation-contextualized-word-vectors)
 * svm dual coordinal descent (http://www.stat.ucdavis.edu/~chohsieh/teaching/ECS289G_Fall2015/lecture6.pdf)
 * Stochastic Gradient Descent for the Primal L1-SVM Optimization Revisited (http://www.ecmlpkdd2013.org/wp-content/uploads/2013/07/255.pdf)
@@ -74,7 +71,6 @@
 * fourier transformation of TS data
 * time series classification (http://didawikinf.di.unipi.it/lib/exe/fetch.php/dm/time_series_comparison_2012.pdf)
 * clustering time series (http://www1.cs.columbia.edu/~jopa/Papers/PaparrizosSIGMOD2015.pdf)
-* notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
 * gaussian processes regression (http://www.gaussianprocess.org/gpml/chapters/RW2.pdf)
 * exact logistic regression (http://www.cytel.com/hs-fs/hub/1670/file-2416929309-pdf/Pdf/Logistic-Regression---MEHTA-PATEL-Exact-Logistic-Regression-Theory-and-Examples-STATISTICS-IN-MEDICINE-1995.pdf)
 * ensemble imbalanced class learning (https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/tsmcb09.pdf)
@@ -228,6 +224,8 @@
 
 
 ### done:
+* notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
+* prodigy - active learning kit (https://explosion.ai/blog/prodigy-annotation-tool-active-learning)
 * one billion word benchmark (https://arxiv.org/pdf/1312.3005.pdf)
 * BLEU score (http://www.aclweb.org/anthology/P02-1040.pdf)
 * multilingual language processing from bytes (https://arxiv.org/pdf/1512.00103.pdf)
