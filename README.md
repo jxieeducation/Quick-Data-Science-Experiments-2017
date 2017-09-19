@@ -224,6 +224,7 @@
 
 
 ### done:
+* quantile regression example (http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html)
 * notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
 * prodigy - active learning kit (https://explosion.ai/blog/prodigy-annotation-tool-active-learning)
 * one billion word benchmark (https://arxiv.org/pdf/1312.3005.pdf)
