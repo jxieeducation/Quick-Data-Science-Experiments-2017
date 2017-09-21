@@ -13,6 +13,7 @@
 
 
 ### to do:
+* tryout keras-rl (https://github.com/matthiasplappert/keras-rl)
 * text summarization seq2seq (https://github.com/Currie32/Text-Summarization-with-Amazon-Reviews/blob/master/summarize_reviews.ipynb)
 * semi-supervised sequence learning (https://arxiv.org/pdf/1511.01432.pdf)
 * Recurrent Neural Networks for Noise Reduction in Robust ASR (http://www1.icsi.berkeley.edu/~vinyals/Files/rnn_denoise_2012.pdf)
@@ -23,7 +24,6 @@
 * R-CNN original paper (https://arxiv.org/pdf/1311.2524v5.pdf)
 * VAE code generation (https://www.youtube.com/watch?v=czalwzb5FHY)
 * benchmark for fake news dataset (https://arxiv.org/pdf/1705.00648.pdf)
-* tensorflow examples (https://github.com/aymericdamien/TensorFlow-Examples/tree/master/notebooks)
 * Face detection and bounding box aggregation (https://arxiv.org/pdf/1705.02402.pdf)
 * neural machine translation in linear time (https://arxiv.org/pdf/1610.10099.pdf)
 * axiomatic attribution for deep networks (https://arxiv.org/pdf/1703.01365.pdf)
@@ -224,6 +224,7 @@
 
 
 ### done:
+* tensorflow examples (https://github.com/aymericdamien/TensorFlow-Examples/tree/master/notebooks)
 * quantile regression example (http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html)
 * notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
 * prodigy - active learning kit (https://explosion.ai/blog/prodigy-annotation-tool-active-learning)
