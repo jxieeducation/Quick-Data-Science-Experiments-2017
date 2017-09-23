@@ -13,6 +13,12 @@
 
 
 ### to do:
+* neural style (https://arxiv.org/pdf/1508.06576.pdf)
+* neural style tensorflow (https://github.com/anishathalye/neural-style)
+* serving wide and deep net with tensorflow serving (https://github.com/MtDersvan/tf_playground/blob/master/wide_and_deep_tutorial/wide_and_deep_basic_serving.md)
+* wide and deep learning for recommender systems (https://arxiv.org/pdf/1606.07792.pdf)
+* tensorflow deep and wide network (https://github.com/ichuang/tflearn_wide_and_deep)
+* non-parametric reg (https://nbviewer.jupyter.org/gist/fonnesbeck/2352771)
 * tryout keras-rl (https://github.com/matthiasplappert/keras-rl)
 * text summarization seq2seq (https://github.com/Currie32/Text-Summarization-with-Amazon-Reviews/blob/master/summarize_reviews.ipynb)
 * semi-supervised sequence learning (https://arxiv.org/pdf/1511.01432.pdf)
@@ -224,6 +230,7 @@
 
 
 ### done:
+* tensorflow java (http://fdahms.com/2017/03/05/tensorflow-serving-jvm-client/)
 * tensorflow examples (https://github.com/aymericdamien/TensorFlow-Examples/tree/master/notebooks)
 * quantile regression example (http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html)
 * notes on loss functions (https://tech.yandex.com/catboost/doc/dg/concepts/loss-functions-docpage/)
