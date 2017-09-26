@@ -13,8 +13,9 @@
 
 
 ### to do:
+* cs20i tensorflow seq2seq (http://web.stanford.edu/class/cs20si/lectures/slides_13.pdf)
+* conv net facial detection (http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/)
 * neural style (https://arxiv.org/pdf/1508.06576.pdf)
-* neural style tensorflow (https://github.com/anishathalye/neural-style)
 * serving wide and deep net with tensorflow serving (https://github.com/MtDersvan/tf_playground/blob/master/wide_and_deep_tutorial/wide_and_deep_basic_serving.md)
 * wide and deep learning for recommender systems (https://arxiv.org/pdf/1606.07792.pdf)
 * tensorflow deep and wide network (https://github.com/ichuang/tflearn_wide_and_deep)
@@ -347,6 +348,7 @@
 * FTRL math (https://courses.cs.washington.edu/courses/cse599s/12sp/scribes/Lecture8.pdf)
 * granger causality time series (http://www-bcf.usc.edu/~liu32/cause.pdf)
 * Surprising Usefulness of Autoencoders (http://rickyhan.com/jekyll/update/2017/09/14/autoencoders.html)
+* neural style tensorflow (https://github.com/anishathalye/neural-style)
 
 
 ### done (long term):
