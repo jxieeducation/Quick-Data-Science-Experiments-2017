@@ -7,12 +7,15 @@
 * ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 ### WIP courses: 
+* UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
+	* DennyBritz (https://github.com/dennybritz/reinforcement-learning)
 * bayesian ML McGill (http://www.cs.mcgill.ca/~dprecup/courses/ML/Lectures/)
 * cs224 stanford NLP notes (http://web.stanford.edu/class/cs224n/syllabus.html)
 * cs10si tensorflow tut (http://web.stanford.edu/class/cs20si/syllabus.html)
 
 
 ### to do:
+* deconv network (http://www.matthewzeiler.com/wp-content/uploads/2017/07/cvpr2010.pdf)
 * cs20i tensorflow seq2seq (http://web.stanford.edu/class/cs20si/lectures/slides_13.pdf)
 * conv net facial detection (http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/)
 * neural style (https://arxiv.org/pdf/1508.06576.pdf)
@@ -214,7 +217,6 @@
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
 * ensemble methods (http://www2.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
 * online learning (https://courses.cs.washington.edu/courses/cse599s/14sp/scribes.html)
-* UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 * stat learning theory (http://www.stat.cmu.edu/~ryantibs/statml/)
 * cs224 stanford social network analysis (http://snap.stanford.edu/class/cs224w-2015/handouts.html)
 * UofT cs441 notes (http://www.dgp.toronto.edu/~hertzman/411notes.pdf)
@@ -230,7 +232,17 @@
 * deep learning Montreal summer school (https://mila.umontreal.ca/en/cours/deep-learning-summer-school-2017/slides/)
 
 
+
+
+
+
+
+
+
+
+
 ### done:
+* flappy bird RL (https://yanpanlau.github.io/2016/07/10/FlappyBird-Keras.html)
 * tensorflow java (http://fdahms.com/2017/03/05/tensorflow-serving-jvm-client/)
 * tensorflow examples (https://github.com/aymericdamien/TensorFlow-Examples/tree/master/notebooks)
 * quantile regression example (http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html)
