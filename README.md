@@ -15,8 +15,11 @@
 
 
 ### to do:
+* pixelCNN (https://arxiv.org/pdf/1706.00531.pdf)
+* tensorflow char-rnn trump tweets (https://www.kaggle.com/benhamner/clinton-trump-tweets/data) (https://github.com/crazydonkey200/tensorflow-char-rnn)
+* simple dqn / arcade games (https://github.com/tambetm/simple_dqn)
+* generating sentences by prototype (https://arxiv.org/pdf/1709.08878.pdf)
 * deconv network (http://www.matthewzeiler.com/wp-content/uploads/2017/07/cvpr2010.pdf)
-* cs20i tensorflow seq2seq (http://web.stanford.edu/class/cs20si/lectures/slides_13.pdf)
 * conv net facial detection (http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/)
 * neural style (https://arxiv.org/pdf/1508.06576.pdf)
 * serving wide and deep net with tensorflow serving (https://github.com/MtDersvan/tf_playground/blob/master/wide_and_deep_tutorial/wide_and_deep_basic_serving.md)
@@ -30,7 +33,6 @@
 * GAN for captcha (http://rickyhan.com/jekyll/update/2017/09/04/simgan-captcha.html)
 * content based image retrieval via conv denoising autoencoder (https://blog.sicara.com/keras-tutorial-content-based-image-retrieval-convolutional-denoising-autoencoder-dc91450cc511)
 * tensorboard tut (http://ischlag.github.io/2016/06/04/how-to-use-tensorboard/)
-* GAN original paper (https://arxiv.org/pdf/1406.2661v1.pdf)
 * R-CNN original paper (https://arxiv.org/pdf/1311.2524v5.pdf)
 * VAE code generation (https://www.youtube.com/watch?v=czalwzb5FHY)
 * benchmark for fake news dataset (https://arxiv.org/pdf/1705.00648.pdf)
@@ -238,10 +240,9 @@
 
 
 
-
-
-
 ### done:
+* GAN original paper (https://arxiv.org/pdf/1406.2661v1.pdf)
+* cs20i tensorflow seq2seq (http://web.stanford.edu/class/cs20si/lectures/slides_13.pdf)
 * flappy bird RL (https://yanpanlau.github.io/2016/07/10/FlappyBird-Keras.html)
 * tensorflow java (http://fdahms.com/2017/03/05/tensorflow-serving-jvm-client/)
 * tensorflow examples (https://github.com/aymericdamien/TensorFlow-Examples/tree/master/notebooks)
