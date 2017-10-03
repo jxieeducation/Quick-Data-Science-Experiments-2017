@@ -4,7 +4,6 @@
 * kernel PCA (projection on linear space)
 * discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
-* ranking example (https://github.com/Microsoft/LightGBM/tree/master/examples/lambdarank)
 
 ### WIP courses: 
 * UCL RL David Silver (http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
