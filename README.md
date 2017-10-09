@@ -237,6 +237,10 @@
 
 
 ### done:
+* DCGAN (https://arxiv.org/pdf/1511.06434.pdf)
+* Generative Adversarial Text to Image Synthesis (https://arxiv.org/pdf/1605.05396.pdf)
+* Evaluation of Output Embeddings for Fine-Grained Image Classification (https://arxiv.org/pdf/1409.8403.pdf)
+* Learning Deep Representations of Fine-Grained Visual Descriptions (https://arxiv.org/pdf/1605.05395.pdf)
 * SimGAN for captcha (http://rickyhan.com/jekyll/update/2017/09/04/simgan-captcha.html)
 * GAN original paper (https://arxiv.org/pdf/1406.2661v1.pdf)
 * cs20i tensorflow seq2seq (http://web.stanford.edu/class/cs20si/lectures/slides_13.pdf)
