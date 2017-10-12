@@ -14,6 +14,10 @@
 
 
 ### to do:
+* lattice regression (https://papers.nips.cc/paper/3694-lattice-regression.pdf)
+* Bayesian Nonparametrics dirichlet (https://blog.statsbot.co/bayesian-nonparametrics-9f2ce7074b97)
+* Image completion w/ GAN (http://bamos.github.io/2016/08/09/deep-completion/)
+* Elements of fashion style (http://ranjithakumar.net/resources/vaccaro-uist2016-fashion.pdf)
 * pixelCNN (https://arxiv.org/pdf/1706.00531.pdf)
 * tensorflow char-rnn trump tweets (https://www.kaggle.com/benhamner/clinton-trump-tweets/data) (https://github.com/crazydonkey200/tensorflow-char-rnn)
 * simple dqn / arcade games (https://github.com/tambetm/simple_dqn)
@@ -213,6 +217,7 @@
 
 
 ### courses:
+* Deep RL Camp (https://sites.google.com/view/deep-rl-bootcamp/lectures)
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
 * ensemble methods (http://www2.islab.ntua.gr/attachments/article/86/Ensemble%20methods%20-%20Zhou.pdf)
@@ -237,6 +242,7 @@
 
 
 ### done:
+* Online Linear Langford (http://hunch.net/~mltf/online_linear.pdf)
 * DCGAN (https://arxiv.org/pdf/1511.06434.pdf)
 * Generative Adversarial Text to Image Synthesis (https://arxiv.org/pdf/1605.05396.pdf)
 * Evaluation of Output Embeddings for Fine-Grained Image Classification (https://arxiv.org/pdf/1409.8403.pdf)
