@@ -14,10 +14,10 @@
 
 
 ### to do:
+* polylingual topic model (http://www.ccs.neu.edu/home/dasmith/pltm.pdf)
+* identifying fake instagram (https://srfdata.github.io/2017-10-instagram-influencers/)
 * lattice regression (https://papers.nips.cc/paper/3694-lattice-regression.pdf)
 * Bayesian Nonparametrics dirichlet (https://blog.statsbot.co/bayesian-nonparametrics-9f2ce7074b97)
-* Image completion w/ GAN (http://bamos.github.io/2016/08/09/deep-completion/)
-* Elements of fashion style (http://ranjithakumar.net/resources/vaccaro-uist2016-fashion.pdf)
 * pixelCNN (https://arxiv.org/pdf/1706.00531.pdf)
 * tensorflow char-rnn trump tweets (https://www.kaggle.com/benhamner/clinton-trump-tweets/data) (https://github.com/crazydonkey200/tensorflow-char-rnn)
 * simple dqn / arcade games (https://github.com/tambetm/simple_dqn)
@@ -33,7 +33,6 @@
 * text summarization seq2seq (https://github.com/Currie32/Text-Summarization-with-Amazon-Reviews/blob/master/summarize_reviews.ipynb)
 * semi-supervised sequence learning (https://arxiv.org/pdf/1511.01432.pdf)
 * Recurrent Neural Networks for Noise Reduction in Robust ASR (http://www1.icsi.berkeley.edu/~vinyals/Files/rnn_denoise_2012.pdf)
-* content based image retrieval via conv denoising autoencoder (https://blog.sicara.com/keras-tutorial-content-based-image-retrieval-convolutional-denoising-autoencoder-dc91450cc511)
 * tensorboard tut (http://ischlag.github.io/2016/06/04/how-to-use-tensorboard/)
 * R-CNN original paper (https://arxiv.org/pdf/1311.2524v5.pdf)
 * VAE code generation (https://www.youtube.com/watch?v=czalwzb5FHY)
@@ -240,8 +239,10 @@
 
 
 
-
 ### done:
+* Elements of fashion style (http://ranjithakumar.net/resources/vaccaro-uist2016-fashion.pdf)
+* Image completion w/ GAN (http://bamos.github.io/2016/08/09/deep-completion/)
+* content based image retrieval via conv denoising autoencoder (https://blog.sicara.com/keras-tutorial-content-based-image-retrieval-convolutional-denoising-autoencoder-dc91450cc511)
 * Online Linear Langford (http://hunch.net/~mltf/online_linear.pdf)
 * DCGAN (https://arxiv.org/pdf/1511.06434.pdf)
 * Generative Adversarial Text to Image Synthesis (https://arxiv.org/pdf/1605.05396.pdf)
