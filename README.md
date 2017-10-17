@@ -240,6 +240,7 @@
 
 
 ### done:
+* Attention in NN (http://akosiorek.github.io/ml/2017/10/14/visual-attention.html)
 * Elements of fashion style (http://ranjithakumar.net/resources/vaccaro-uist2016-fashion.pdf)
 * Image completion w/ GAN (http://bamos.github.io/2016/08/09/deep-completion/)
 * content based image retrieval via conv denoising autoencoder (https://blog.sicara.com/keras-tutorial-content-based-image-retrieval-convolutional-denoising-autoencoder-dc91450cc511)
