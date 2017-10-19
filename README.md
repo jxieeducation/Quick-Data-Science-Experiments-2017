@@ -14,6 +14,8 @@
 
 
 ### to do:
+* impl neural vqa tensorflow (https://github.com/paarthneekhara/neural-vqa-tensorflow)
+* impl bytenet tensorflow (https://github.com/paarthneekhara/byteNet-tensorflow)
 * polylingual topic model (http://www.ccs.neu.edu/home/dasmith/pltm.pdf)
 * identifying fake instagram (https://srfdata.github.io/2017-10-instagram-influencers/)
 * lattice regression (https://papers.nips.cc/paper/3694-lattice-regression.pdf)
@@ -21,7 +23,6 @@
 * pixelCNN (https://arxiv.org/pdf/1706.00531.pdf)
 * tensorflow char-rnn trump tweets (https://www.kaggle.com/benhamner/clinton-trump-tweets/data) (https://github.com/crazydonkey200/tensorflow-char-rnn)
 * simple dqn / arcade games (https://github.com/tambetm/simple_dqn)
-* generating sentences by prototype (https://arxiv.org/pdf/1709.08878.pdf)
 * deconv network (http://www.matthewzeiler.com/wp-content/uploads/2017/07/cvpr2010.pdf)
 * conv net facial detection (http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/)
 * neural style (https://arxiv.org/pdf/1508.06576.pdf)
@@ -240,6 +241,7 @@
 
 
 ### done:
+* generating sentences by prototype (https://arxiv.org/pdf/1709.08878.pdf)
 * Attention in NN (http://akosiorek.github.io/ml/2017/10/14/visual-attention.html)
 * Elements of fashion style (http://ranjithakumar.net/resources/vaccaro-uist2016-fashion.pdf)
 * Image completion w/ GAN (http://bamos.github.io/2016/08/09/deep-completion/)
