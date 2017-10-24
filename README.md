@@ -14,7 +14,6 @@
 
 
 ### to do:
-* RL series (https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)
 * Object detection overview (https://www.saagie.com/fr/blog/object-detection-part1)
 * starcraft II RL tut (http://chris-chris.ai/2017/08/30/pysc2-tutorial1/)
 * impl neural vqa tensorflow (https://github.com/paarthneekhara/neural-vqa-tensorflow)
@@ -24,7 +23,6 @@
 * lattice regression (https://papers.nips.cc/paper/3694-lattice-regression.pdf)
 * Bayesian Nonparametrics dirichlet (https://blog.statsbot.co/bayesian-nonparametrics-9f2ce7074b97)
 * pixelCNN (https://arxiv.org/pdf/1706.00531.pdf)
-* tensorflow char-rnn trump tweets (https://www.kaggle.com/benhamner/clinton-trump-tweets/data) (https://github.com/crazydonkey200/tensorflow-char-rnn)
 * simple dqn / arcade games (https://github.com/tambetm/simple_dqn)
 * deconv network (http://www.matthewzeiler.com/wp-content/uploads/2017/07/cvpr2010.pdf)
 * conv net facial detection (http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/)
@@ -244,6 +242,8 @@
 
 
 ### done:
+* tensorflow char-rnn trump tweets (https://www.kaggle.com/benhamner/clinton-trump-tweets/data) (https://github.com/crazydonkey200/tensorflow-char-rnn)
+* RL series (https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)
 * generating sentences by prototype (https://arxiv.org/pdf/1709.08878.pdf)
 * Attention in NN (http://akosiorek.github.io/ml/2017/10/14/visual-attention.html)
 * Elements of fashion style (http://ranjithakumar.net/resources/vaccaro-uist2016-fashion.pdf)
