@@ -17,7 +17,6 @@
 * Object detection overview (https://www.saagie.com/fr/blog/object-detection-part1)
 * starcraft II RL tut (http://chris-chris.ai/2017/08/30/pysc2-tutorial1/)
 * impl neural vqa tensorflow (https://github.com/paarthneekhara/neural-vqa-tensorflow)
-* impl bytenet tensorflow (https://github.com/paarthneekhara/byteNet-tensorflow)
 * polylingual topic model (http://www.ccs.neu.edu/home/dasmith/pltm.pdf)
 * identifying fake instagram (https://srfdata.github.io/2017-10-instagram-influencers/)
 * lattice regression (https://papers.nips.cc/paper/3694-lattice-regression.pdf)
@@ -242,6 +241,7 @@
 
 
 ### done:
+* impl bytenet tensorflow (https://github.com/paarthneekhara/byteNet-tensorflow)
 * tensorflow char-rnn trump tweets (https://www.kaggle.com/benhamner/clinton-trump-tweets/data) (https://github.com/crazydonkey200/tensorflow-char-rnn)
 * RL series (https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)
 * generating sentences by prototype (https://arxiv.org/pdf/1709.08878.pdf)
