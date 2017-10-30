@@ -14,6 +14,8 @@
 
 
 ### to do:
+* 3d GAN (https://github.com/robbiebarrat/Sculpture-GAN)
+* altcoin prediction (https://github.com/SkyHenryk/altcoin_max_price_prediction)
 * Object detection overview (https://www.saagie.com/fr/blog/object-detection-part1)
 * starcraft II RL tut (http://chris-chris.ai/2017/08/30/pysc2-tutorial1/)
 * impl neural vqa tensorflow (https://github.com/paarthneekhara/neural-vqa-tensorflow)
