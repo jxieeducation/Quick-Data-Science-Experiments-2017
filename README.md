@@ -14,6 +14,7 @@
 
 
 ### to do:
+* try pomegranete (markov stuff)
 * 3d GAN (https://github.com/robbiebarrat/Sculpture-GAN)
 * altcoin prediction (https://github.com/SkyHenryk/altcoin_max_price_prediction)
 * Object detection overview (https://www.saagie.com/fr/blog/object-detection-part1)
