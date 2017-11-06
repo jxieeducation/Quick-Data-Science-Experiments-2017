@@ -14,7 +14,9 @@
 
 
 ### to do:
-* try pomegranete (markov stuff)
+* chatbot tensorflow (https://github.com/DongjunLee/conversation-tensorflow)
+* semi supervised learning with EM (https://github.com/jmschrei/pomegranate/blob/master/tutorials/Tutorial_8_Semisupervised_Learning.ipynb)
+* try pomegranete (https://github.com/jmschrei/pomegranate/tree/master/tutorials)
 * 3d GAN (https://github.com/robbiebarrat/Sculpture-GAN)
 * altcoin prediction (https://github.com/SkyHenryk/altcoin_max_price_prediction)
 * Object detection overview (https://www.saagie.com/fr/blog/object-detection-part1)
