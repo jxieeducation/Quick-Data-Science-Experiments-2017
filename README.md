@@ -14,9 +14,8 @@
 
 
 ### to do:
+* impl of Learning Deep Features for Discriminative Localization (https://github.com/jazzsaxmafia/Weakly_detector)
 * chatbot tensorflow (https://github.com/DongjunLee/conversation-tensorflow)
-* semi supervised learning with EM (https://github.com/jmschrei/pomegranate/blob/master/tutorials/Tutorial_8_Semisupervised_Learning.ipynb)
-* try pomegranete (https://github.com/jmschrei/pomegranate/tree/master/tutorials)
 * 3d GAN (https://github.com/robbiebarrat/Sculpture-GAN)
 * altcoin prediction (https://github.com/SkyHenryk/altcoin_max_price_prediction)
 * Object detection overview (https://www.saagie.com/fr/blog/object-detection-part1)
@@ -244,8 +243,11 @@
 
 
 
-
 ### done:
+* Learning Deep Features for Discriminative Localization (https://arxiv.org/pdf/1512.04150.pdf)
+* loss functions for predicted click-through rates in auctions for online advertising (http://vita.mcafee.cc/PDF/loss.pdf)
+* semi supervised learning with EM (https://github.com/jmschrei/pomegranate/blob/master/tutorials/Tutorial_8_Semisupervised_Learning.ipynb)
+* try pomegranete (https://github.com/jmschrei/pomegranate/tree/master/tutorials)
 * impl bytenet tensorflow (https://github.com/paarthneekhara/byteNet-tensorflow)
 * tensorflow char-rnn trump tweets (https://www.kaggle.com/benhamner/clinton-trump-tweets/data) (https://github.com/crazydonkey200/tensorflow-char-rnn)
 * RL series (https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)
