@@ -1,7 +1,6 @@
 # Quick-Data-Science-Experiments-2017
 
 ### WIP items:
-* kernel PCA (projection on linear space)
 * discriminative vs generative classifiers (http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 * solve logistic regression via iterated reweighed least square (http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/)
 
