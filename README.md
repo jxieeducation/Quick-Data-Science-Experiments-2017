@@ -14,6 +14,11 @@
 
 
 ### to do:
+* TopicRNN (https://arxiv.org/abs/1611.01702)
+* Cycle Consistent Adversarial Domain Adaption (https://arxiv.org/pdf/1711.03213v1.pdf)
+* Lifeline - Survival analysis lib (https://lifelines.readthedocs.io/en/latest/)
+* Modern OCR pipeline (https://blogs.dropbox.com/tech/2017/04/creating-a-modern-ocr-pipeline-using-computer-vision-and-deep-learning/)
+* Actor Critic Lunar Landing (https://github.com/FitMachineLearning/FitML)
 * impl of Learning Deep Features for Discriminative Localization (https://github.com/jazzsaxmafia/Weakly_detector)
 * chatbot tensorflow (https://github.com/DongjunLee/conversation-tensorflow)
 * 3d GAN (https://github.com/robbiebarrat/Sculpture-GAN)
@@ -176,7 +181,6 @@
 * prophet forecast library test (https://research.fb.com/prophet-forecasting-at-scale/)
 * surprise - bayesian weighting map (http://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf)
 * feature engineering notes (https://www.slideshare.net/HJvanVeen/feature-engineering-72376750)
-* quantile vs expectile regression (https://www.slideshare.net/charthur/quantile-and-expectile-regression)
 * bayesian neural networks 
 * MCMC for sampling from posterior ESLR, pg279
 * automatic relevance determination
@@ -244,6 +248,7 @@
 
 
 ### done:
+* quantile vs expectile regression (https://www.slideshare.net/charthur/quantile-and-expectile-regression)
 * Learning Deep Features for Discriminative Localization (https://arxiv.org/pdf/1512.04150.pdf)
 * loss functions for predicted click-through rates in auctions for online advertising (http://vita.mcafee.cc/PDF/loss.pdf)
 * semi supervised learning with EM (https://github.com/jmschrei/pomegranate/blob/master/tutorials/Tutorial_8_Semisupervised_Learning.ipynb)
