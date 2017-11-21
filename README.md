@@ -13,6 +13,9 @@
 
 
 ### to do:
+* reinforcement learning cs231n (http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture14.pdf)
+* multiple time series forecasting (http://mariofilho.com/how-to-predict-multiple-time-series-with-scikit-learn-with-sales-forecasting-example/)
+* easy finance notebooks (https://github.com/yhilpisch/dx)
 * TopicRNN (https://arxiv.org/abs/1611.01702)
 * Cycle Consistent Adversarial Domain Adaption (https://arxiv.org/pdf/1711.03213v1.pdf)
 * Lifeline - Survival analysis lib (https://lifelines.readthedocs.io/en/latest/)
