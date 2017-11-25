@@ -13,6 +13,8 @@
 
 
 ### to do:
+* dual-path convolutonal image-text embedding (https://arxiv.org/pdf/1711.05535.pdf)
+* deep matching autoencoders (https://arxiv.org/pdf/1711.06047.pdf)
 * time contrastive learning (https://arxiv.org/pdf/1704.06888.pdf)
 * reinforcement learning cs231n (http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture14.pdf)
 * easy finance notebooks (https://github.com/yhilpisch/dx)
