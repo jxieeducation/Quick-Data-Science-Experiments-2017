@@ -252,6 +252,7 @@
 
 
 ### done:
+* unpaired image-to-image translation using cycle-consistent adversarial network (https://arxiv.org/pdf/1703.10593.pdf)
 * multiple time series forecasting (http://mariofilho.com/how-to-predict-multiple-time-series-with-scikit-learn-with-sales-forecasting-example/)
 * quantile vs expectile regression (https://www.slideshare.net/charthur/quantile-and-expectile-regression)
 * Learning Deep Features for Discriminative Localization (https://arxiv.org/pdf/1512.04150.pdf)
