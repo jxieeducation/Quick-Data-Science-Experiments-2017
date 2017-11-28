@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Nov 27 17:16:48 PST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0160-0032-ab09-00000a691408 
+on database directory /Users/jasonxie/Desktop/personal_git/Quick-Data-Science-Experiments-2017/_etc_or_homeless/spark_regression_parallelization/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@79642a15 
+Loaded from file:/usr/local/Cellar/apache-spark/2.2.0/libexec/jars/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=/Users/jasonxie/Desktop/personal_git/Quick-Data-Science-Experiments-2017/_etc_or_homeless/spark_regression_parallelization
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.12.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

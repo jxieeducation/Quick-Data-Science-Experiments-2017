@@ -13,6 +13,7 @@
 
 
 ### to do:
+* leakGan for text generation (https://arxiv.org/pdf/1709.08624.pdf)
 * dual-path convolutonal image-text embedding (https://arxiv.org/pdf/1711.05535.pdf)
 * deep matching autoencoders (https://arxiv.org/pdf/1711.06047.pdf)
 * time contrastive learning (https://arxiv.org/pdf/1704.06888.pdf)
