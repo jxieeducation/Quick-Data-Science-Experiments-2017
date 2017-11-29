@@ -13,6 +13,8 @@
 
 
 ### to do:
+* connectionist temporal classification for language recognition (https://distill.pub/2017/ctc/)
+* distilling a NN into a soft decision tree (https://arxiv.org/pdf/1711.09784.pdf)
 * leakGan for text generation (https://arxiv.org/pdf/1709.08624.pdf)
 * dual-path convolutonal image-text embedding (https://arxiv.org/pdf/1711.05535.pdf)
 * deep matching autoencoders (https://arxiv.org/pdf/1711.06047.pdf)
