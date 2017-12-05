@@ -13,6 +13,12 @@
 
 
 ### to do:
+* Survey of text summarization (https://www.cs.cmu.edu/~afm/Home_files/Das_Martins_survey_summarization.pdf)
+* Neural Attention Model for Abstract Sentence Summarization (https://arxiv.org/pdf/1509.00685v2.pdf)
+* chatbot iwth RL (https://marsan-ma.github.io/tensorflow-seq2seq-chatbot/)
+* noisy channel model for spelling (https://sandipanweb.wordpress.com/2017/05/06/some-nlp-spelling-correction-with-noisy-channel-model/)
+* Data augmentation with cyclegan (https://www.arxiv-vanity.com/papers/1711.00648v1/)
+* Smart Augmentation Learning an Optimal Data Augmentation Strategy (https://arxiv.org/pdf/1703.08383.pdf)
 * connectionist temporal classification for language recognition (https://distill.pub/2017/ctc/)
 * distilling a NN into a soft decision tree (https://arxiv.org/pdf/1711.09784.pdf)
 * leakGan for text generation (https://arxiv.org/pdf/1709.08624.pdf)
@@ -255,6 +261,7 @@
 
 
 ### done:
+* a gentle introduction to blockchain (https://bitsonblocks.net/2015/09/09/a-gentle-introduction-to-blockchain-technology/)
 * clustering of time series subsequences is meaningless (http://www.cs.ucr.edu/~eamonn/meaningless.pdf)
 * unpaired image-to-image translation using cycle-consistent adversarial network (https://arxiv.org/pdf/1703.10593.pdf)
 * multiple time series forecasting (http://mariofilho.com/how-to-predict-multiple-time-series-with-scikit-learn-with-sales-forecasting-example/)
