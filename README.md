@@ -10,11 +10,11 @@
 * bayesian ML McGill (http://www.cs.mcgill.ca/~dprecup/courses/ML/Lectures/)
 * cs224 stanford NLP notes (http://web.stanford.edu/class/cs224n/syllabus.html)
 * cs10si tensorflow tut (http://web.stanford.edu/class/cs20si/syllabus.html)
-
+* David Duvenaud courses (http://www.cs.toronto.edu/~duvenaud/)
 
 ### to do:
+* nvidia digits object detection (https://github.com/NVIDIA/DIGITS/tree/master/examples/object-detection)
 * Survey of text summarization (https://www.cs.cmu.edu/~afm/Home_files/Das_Martins_survey_summarization.pdf)
-* Neural Attention Model for Abstract Sentence Summarization (https://arxiv.org/pdf/1509.00685v2.pdf)
 * chatbot iwth RL (https://marsan-ma.github.io/tensorflow-seq2seq-chatbot/)
 * noisy channel model for spelling (https://sandipanweb.wordpress.com/2017/05/06/some-nlp-spelling-correction-with-noisy-channel-model/)
 * Data augmentation with cyclegan (https://www.arxiv-vanity.com/papers/1711.00648v1/)
@@ -261,6 +261,7 @@
 
 
 ### done:
+* Neural Attention Model for Abstract Sentence Summarization (https://arxiv.org/pdf/1509.00685v2.pdf)
 * a gentle introduction to blockchain (https://bitsonblocks.net/2015/09/09/a-gentle-introduction-to-blockchain-technology/)
 * clustering of time series subsequences is meaningless (http://www.cs.ucr.edu/~eamonn/meaningless.pdf)
 * unpaired image-to-image translation using cycle-consistent adversarial network (https://arxiv.org/pdf/1703.10593.pdf)
