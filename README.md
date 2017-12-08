@@ -261,6 +261,7 @@
 
 
 ### done:
+* Unsupervised Machine Translation Using Monolingual Corpora Only (https://arxiv.org/pdf/1711.00043.pdf)
 * Neural Attention Model for Abstract Sentence Summarization (https://arxiv.org/pdf/1509.00685v2.pdf)
 * a gentle introduction to blockchain (https://bitsonblocks.net/2015/09/09/a-gentle-introduction-to-blockchain-technology/)
 * clustering of time series subsequences is meaningless (http://www.cs.ucr.edu/~eamonn/meaningless.pdf)
