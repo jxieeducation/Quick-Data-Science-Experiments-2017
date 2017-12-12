@@ -238,6 +238,7 @@
 
 
 ### courses:
+* Algorithmic marketing (https://algorithmicweb.files.wordpress.com/2017/11/algorithmic-marketing-r1-0-20171125.pdf)
 * Deep RL Camp (https://sites.google.com/view/deep-rl-bootcamp/lectures)
 * berkeley cs194 Russell (https://people.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/)
 * berkeley stat 153 (https://www.stat.berkeley.edu/~yuekai/153/)
